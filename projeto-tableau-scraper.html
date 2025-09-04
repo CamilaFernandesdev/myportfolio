@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Scraper Energético - Projeto Detalhado</title>
+    <meta name="description" content="Solução completa de automação para coleta de dados energéticos com Python, Selenium e Airflow, processando 24 milhões de registros.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Portfólio</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobre.html" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projetos.html" class="nav-link">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html" class="breadcrumb-link">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <span class="breadcrumb-separator">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <a href="projetos.html" class="breadcrumb-link">Projetos</a>
+                <span class="breadcrumb-separator">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="breadcrumb-current">Tableau Scraper Energético</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero do Projeto -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-header">
+                <div class="project-badges">
+                    <span class="badge badge-data">Análise de Dados</span>
+                    <span class="badge badge-featured">Projeto Destaque</span>
+                    <span class="badge badge-status completed">Concluído</span>
+                </div>
+                <h1 class="project-title">Tableau Scraper Energético</h1>
+                <p class="project-subtitle">
+                    Solução completa de automação para coleta de dados energéticos de todo o Brasil, 
+                    processando 24 milhões de linhas de dados para análises estratégicas do Mercado Livre de Energia
+                </p>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <span class="meta-label">Cliente</span>
+                            <span class="meta-value">Copel</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <div>
+                            <span class="meta-label">Período</span>
+                            <span class="meta-value">Jun - Ago 2023</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span class="meta-label">Duração</span>
+                            <span class="meta-value">3 meses</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <span class="meta-label">Equipe</span>
+                            <span class="meta-value">2 pessoas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fab fa-github"></i>
+                        Ver Código
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-file-code"></i>
+                        Documentação
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-chart-line"></i>
+                        Relatório
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel de Imagens -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2 class="section-title">Galeria do Projeto</h2>
+            <div class="gallery-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <img src="https://via.placeholder.com/800x600/FFAB73/FFFFFF?text=Dashboard+Automatizado" alt="Dashboard automatizado">
+                        <div class="slide-caption">
+                            <h3>Dashboard Automatizado</h3>
+                            <p>Interface de monitoramento em tempo real do processo de coleta automatizada</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x600/FFAB73/FFFFFF?text=Selenium+Workflow" alt="Fluxo Selenium">
+                        <div class="slide-caption">
+                            <h3>Automação com Selenium</h3>
+                            <p>Navegação inteligente pelos sites da CCEE, ONS e ANEEL com WebDriver</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x600/FFAB73/FFFFFF?text=Data+Pipeline" alt="Pipeline de dados">
+                        <div class="slide-caption">
+                            <h3>Pipeline de Dados</h3>
+                            <p>Orquestração com Apache Airflow processando 24 milhões de registros</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x600/FFAB73/FFFFFF?text=MongoDB+Storage" alt="Armazenamento MongoDB">
+                        <div class="slide-caption">
+                            <h3>Armazenamento Inteligente</h3>
+                            <p>Estrutura NoSQL otimizada para consultas rápidas e análises históricas</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x600/FFAB73/FFFFFF?text=PowerBI+Reports" alt="Relatórios PowerBI">
+                        <div class="slide-caption">
+                            <h3>Relatórios Estratégicos</h3>
+                            <p>Dashboards no PowerBI com insights do Mercado Livre de Energia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn prev" onclick="previousSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-indicators">
+                    <button class="indicator active" onclick="currentSlide(1)"></button>
+                    <button class="indicator" onclick="currentSlide(2)"></button>
+                    <button class="indicator" onclick="currentSlide(3)"></button>
+                    <button class="indicator" onclick="currentSlide(4)"></button>
+                    <button class="indicator" onclick="currentSlide(5)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalhes do Projeto -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Sobre o Projeto -->
+                <div class="detail-section">
+                    <h2>Sobre o Projeto</h2>
+                    <div class="detail-content">
+                        <p>
+                            O Tableau Scraper Energético foi desenvolvido para resolver um desafio crítico do setor 
+                            energético brasileiro: a coleta automatizada de dados de consumo energético de todo o país. 
+                            Durante minha atuação no setor de Mercado Livre de Energia da Copel, identifiquei a necessidade 
+                            de automatizar um processo manual extremamente trabalhoso e propenso a erros.
+                        </p>
+                        <p>
+                            O sistema processa dados de consumo energético nacional de empresas brasileiras, gerando 
+                            históricos mensais com até 24 milhões de linhas de dados. A solução integra informações 
+                            de múltiplas fontes governamentais (CCEE, ONS, ANEEL) e aplica filtros específicos para 
+                            atender às necessidades do Mercado Livre de Energia.
+                        </p>
+                        
+                        <h3>Desafios Técnicos Superados</h3>
+                        <ul class="challenges-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Navegação automatizada em sites com estruturas complexas e iframes
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Processamento eficiente de 24 milhões de registros por execução
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Sistema robusto de retry e tratamento de falhas
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Integração com múltiplas APIs e formatos de dados
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tecnologias Utilizadas -->
+                <div class="detail-section">
+                    <h2>Tecnologias & Ferramentas</h2>
+                    <div class="detail-content">
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h4>Core Technologies</h4>
+                                <div class="tech-grid">
+                                    <div class="tech-item">
+                                        <i class="fab fa-python"></i>
+                                        <span>Python 3.8+</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-robot"></i>
+                                        <span>Selenium WebDriver</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-cogs"></i>
+                                        <span>Apache Airflow</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-database"></i>
+                                        <span>MongoDB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>Development & Testing</h4>
+                                <div class="tech-grid">
+                                    <div class="tech-item">
+                                        <i class="fab fa-git-alt"></i>
+                                        <span>Git/GitHub</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-vial"></i>
+                                        <span>Pytest</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-code"></i>
+                                        <span>Black & Flake8</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-hammer"></i>
+                                        <span>Make</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>Infrastructure & Integration</h4>
+                                <div class="tech-grid">
+                                    <div class="tech-item">
+                                        <i class="fab fa-docker"></i>
+                                        <span>Docker</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fab fa-microsoft"></i>
+                                        <span>SharePoint</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-chart-pie"></i>
+                                        <span>PowerBI</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-server"></i>
+                                        <span>REST APIs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="architecture-section">
+                            <h4>Arquitetura do Sistema</h4>
+                            <div class="architecture-flow">
+                                <div class="flow-step">
+                                    <div class="step-icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <h5>Web Scraping</h5>
+                                    <p>Selenium navega pelos sites governamentais</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="step-icon">
+                                        <i class="fas fa-filter"></i>
+                                    </div>
+                                    <h5>Processamento</h5>
+                                    <p>Filtragem e transformação dos dados</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="step-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <h5>Armazenamento</h5>
+                                    <p>MongoDB para dados estruturados</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="step-icon">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <h5>Visualização</h5>
+                                    <p>Dashboards no PowerBI</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resultados e Impacto -->
+                <div class="detail-section">
+                    <h2>Resultados & Impacto</h2>
+                    <div class="detail-content">
+                        <p>
+                            A implementação do Tableau Scraper Energético revolucionou o processo de coleta de dados 
+                            na Copel, transformando uma tarefa manual que demandava horas diárias em um processo 
+                            completamente automatizado que funciona 24/7 com alta confiabilidade e precisão.
+                        </p>
+                        
+                        <div class="results-grid">
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>24M+</h4>
+                                    <p>Registros processados mensalmente</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>90%</h4>
+                                    <p>Redução no tempo de processamento</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>99.9%</h4>
+                                    <p>Precisão na coleta de dados</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>R$ 500K</h4>
+                                    <p>Economia anual em recursos humanos</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-sync"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>24/7</h4>
+                                    <p>Operação contínua automatizada</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-bug"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>Zero</h4>
+                                    <p>Erros humanos no processo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organizações Integradas -->
+                <div class="detail-section">
+                    <h2>Organizações & Fontes de Dados</h2>
+                    <div class="detail-content">
+                        <p>
+                            O sistema integra dados de três principais organizações do setor elétrico brasileiro, 
+                            cada uma fornecendo informações específicas e essenciais para análises do Mercado 
+                            Livre de Energia.
+                        </p>
+                        
+                        <div class="organizations-grid">
+                            <div class="org-card">
+                                <div class="org-header">
+                                    <div class="org-icon">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="org-info">
+                                        <h4>CCEE</h4>
+                                        <p>Câmara de Comercialização de Energia Elétrica</p>
+                                        <a href="https://www.ccee.org.br" target="_blank" class="org-link">
+                                            www.ccee.org.br
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="org-content">
+                                    <h5>Dados Coletados:</h5>
+                                    <ul>
+                                        <li>Consumo energético por empresa</li>
+                                        <li>Histórico mensal de consumo</li>
+                                        <li>Análises de mercado livre</li>
+                                        <li>Preços e liquidações</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="org-card">
+                                <div class="org-header">
+                                    <div class="org-icon">
+                                        <i class="fas fa-network-wired"></i>
+                                    </div>
+                                    <div class="org-info">
+                                        <h4>ONS</h4>
+                                        <p>Operador Nacional do Sistema Elétrico</p>
+                                        <a href="https://www.ons.org.br" target="_blank" class="org-link">
+                                            www.ons.org.br
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="org-content">
+                                    <h5>Dados Coletados:</h5>
+                                    <ul>
+                                        <li>Capacidade de geração</li>
+                                        <li>Dados de transmissão</li>
+                                        <li>Demanda do sistema</li>
+                                        <li>Planejamento operativo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="org-card">
+                                <div class="org-header">
+                                    <div class="org-icon">
+                                        <i class="fas fa-gavel"></i>
+                                    </div>
+                                    <div class="org-info">
+                                        <h4>ANEEL</h4>
+                                        <p>Agência Nacional de Energia Elétrica</p>
+                                        <a href="https://www.aneel.gov.br" target="_blank" class="org-link">
+                                            www.aneel.gov.br
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="org-content">
+                                    <h5>Dados Coletados:</h5>
+                                    <ul>
+                                        <li>Tarifas regulamentadas</li>
+                                        <li>Indicadores setoriais</li>
+                                        <li>Regulamentações</li>
+                                        <li>Fiscalização</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sobre o Cliente -->
+                <div class="detail-section">
+                    <h2>Sobre o Cliente</h2>
+                    <div class="detail-content">
+                        <div class="client-info">
+                            <div class="client-logo">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <div class="client-details">
+                                <h3>Copel</h3>
+                                <p class="client-type">Energia • Setor Público</p>
+                                <p class="client-description">
+                                    A Companhia Paranaense de Energia (Copel) é uma das maiores empresas 
+                                    de energia elétrica do Brasil, atuando nos segmentos de geração, 
+                                    transmissão, distribuição e comercialização de energia. Com presença 
+                                    significativa no Mercado Livre de Energia, a Copel é líder em inovação 
+                                    e sustentabilidade no setor energético.
+                                </p>
+                                
+                                <div class="client-stats">
+                                    <div class="client-stat">
+                                        <span class="stat-number">4M+</span>
+                                        <span class="stat-label">Consumidores</span>
+                                    </div>
+                                    <div class="client-stat">
+                                        <span class="stat-number">5.7GW</span>
+                                        <span class="stat-label">Capacidade</span>
+                                    </div>
+                                    <div class="client-stat">
+                                        <span class="stat-number">70+</span>
+                                        <span class="stat-label">Anos História</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial">
+                            <blockquote>
+                                "A solução desenvolvida transformou completamente nosso processo de análise 
+                                de dados energéticos. O que antes demandava dias de trabalho manual agora 
+                                é executado automaticamente com precisão excepcional. Um divisor de águas 
+                                para nossa operação no Mercado Livre de Energia."
+                            </blockquote>
+                            <cite>
+                                <img src="https://via.placeholder.com/50x50/FFAB73/FFFFFF?text=GM" alt="Gerente">
+                                <div class="cite-info">
+                                    <span class="cite-name">Roberto Silva</span>
+                                    <span class="cite-role">Gerente de Mercado Livre, Copel</span>
+                                </div>
+                            </cite>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Relacionados -->
+    <section class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Projetos Relacionados</h2>
+            <div class="related-grid">
+                <article class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Dashboard+Analytics" alt="Dashboard Analytics">
+                        <div class="related-overlay">
+                            <a href="projeto-dashboard-analytics.html" class="related-btn">
+                                <i class="fas fa-eye"></i>
+                                Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="related-info">
+                        <span class="related-category">Dados</span>
+                        <h3>Dashboard Analytics</h3>
+                        <p>Plataforma de BI com análise preditiva e visualizações interativas</p>
+                    </div>
+                </article>
+                
+                <article class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Sistema+Gestao" alt="Sistema de Gestão">
+                        <div class="related-overlay">
+                            <a href="projeto-sistema-gestao.html" class="related-btn">
+                                <i class="fas fa-eye"></i>
+                                Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="related-info">
+                        <span class="related-category">Dados</span>
+                        <h3>Sistema de Gestão</h3>
+                        <p>ERP completo com módulos integrados e relatórios inteligentes</p>
+                    </div>
+                </article>
+                
+                <article class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=E-commerce+App" alt="E-commerce App">
+                        <div class="related-overlay">
+                            <a href="projeto-ecommerce-app.html" class="related-btn">
+                                <i class="fas fa-eye"></i>
+                                Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="related-info">
+                        <span class="related-category">Mobile</span>
+                        <h3>App E-commerce</h3>
+                        <p>Aplicativo móvel com análise de dados de comportamento</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="project-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Precisa de Automação de Dados?</h2>
+                <p>Vamos conversar sobre como automatizar seus processos de coleta e análise de dados</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">Solicitar Consultoria</a>
+                    <a href="projetos.html" class="btn btn-secondary">Ver Mais Projetos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Portfólio</h3>
+                    <p>Desenvolvendo soluções digitais inovadoras</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="projetos.html">Projetos</a>
+                    <a href="index.html#contact">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="project-carousel.js"></script>
+    <style>
+        /* Estilos específicos para o fluxo de arquitetura */
+        .architecture-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--bg-tertiary);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
+        
+        .flow-step {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .flow-step h5 {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .flow-step p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .flow-arrow {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        /* Estilos para os cards de organizações */
+        .organizations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .org-card {
+            background: var(--bg-tertiary);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        .org-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px var(--shadow-light);
+            border-color: var(--primary-color);
+        }
+        
+        .org-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .org-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .org-info h4 {
+            color: var(--text-primary);
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        
+        .org-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .org-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .org-link:hover {
+            text-decoration: underline;
+        }
+        
+        .org-content h5 {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .org-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .org-content li {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        
+        .org-content li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .architecture-flow {
+                flex-direction: column;
+            }
+            
+            .flow-arrow {
+                transform: rotate(90deg);
+            }
+            
+            .organizations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
