@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App E-commerce Mobile - Projeto Detalhado</title>
+    <meta name="description" content="Detalhes completos do projeto App E-commerce Mobile desenvolvido com React Native, Firebase e Stripe.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Portfólio</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projetos.html" class="nav-link">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html" class="breadcrumb-link">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <span class="breadcrumb-separator">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <a href="projetos.html" class="breadcrumb-link">Projetos</a>
+                <span class="breadcrumb-separator">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="breadcrumb-current">App E-commerce Mobile</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero do Projeto -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-header">
+                <div class="project-badges">
+                    <span class="badge badge-mobile">Mobile</span>
+                    <span class="badge badge-featured">Projeto Destaque</span>
+                    <span class="badge badge-status completed">Concluído</span>
+                </div>
+                <h1 class="project-title">App E-commerce Mobile</h1>
+                <p class="project-subtitle">
+                    Aplicativo completo de e-commerce com experiência de usuário excepcional e performance otimizada
+                </p>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <span class="meta-label">Cliente</span>
+                            <span class="meta-value">ShopTech Inc.</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <div>
+                            <span class="meta-label">Período</span>
+                            <span class="meta-value">Out 2023 - Jan 2024</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span class="meta-label">Duração</span>
+                            <span class="meta-value">4 meses</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <span class="meta-label">Equipe</span>
+                            <span class="meta-value">3 pessoas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fab fa-github"></i>
+                        Ver Código
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Demo Live
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fab fa-app-store"></i>
+                        App Store
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel de Imagens -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2 class="section-title">Galeria do Projeto</h2>
+            <div class="gallery-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <img src="https://via.placeholder.com/800x600/FFAB73/FFFFFF?text=Home+Screen" alt="Tela inicial do app">
+                        <div class="slide-caption">
+                            <h3>Tela Inicial</h3>
+                            <p>Interface principal com navegação intuitiva e produtos em destaque</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x600/FFAB73/FFFFFF?text=Product+Details" alt="Detalhes do produto">
+                        <div class="slide-caption">
+                            <h3>Detalhes do Produto</h3>
+                            <p>Página detalhada com galeria de imagens, especificações e avaliações</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x600/FFAB73/FFFFFF?text=Shopping+Cart" alt="Carrinho de compras">
+                        <div class="slide-caption">
+                            <h3>Carrinho de Compras</h3>
+                            <p>Gestão de itens com cálculo automático de frete e descont
+s</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x600/FFAB73/FFFFFF?text=Payment+Screen" alt="Tela de pagamento">
+                        <div class="slide-caption">
+                            <h3>Pagamento Seguro</h3>
+                            <p>Integração com Stripe para pagamentos seguros e confiáveis</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x600/FFAB73/FFFFFF?text=User+Profile" alt="Perfil do usuário">
+                        <div class="slide-caption">
+                            <h3>Perfil do Usuário</h3>
+                            <p>Área personalizada com histórico de pedidos e preferências</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn prev" onclick="previousSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-indicators">
+                    <button class="indicator active" onclick="currentSlide(1)"></button>
+                    <button class="indicator" onclick="currentSlide(2)"></button>
+                    <button class="indicator" onclick="currentSlide(3)"></button>
+                    <button class="indicator" onclick="currentSlide(4)"></button>
+                    <button class="indicator" onclick="currentSlide(5)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalhes do Projeto -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Sobre o Projeto -->
+                <div class="detail-section">
+                    <h2>Sobre o Projeto</h2>
+                    <div class="detail-content">
+                        <p>
+                            O App E-commerce Mobile foi desenvolvido para a ShopTech Inc. com o objetivo de criar 
+                            uma experiência de compra mobile excepcional. O projeto envolveu a criação de um 
+                            aplicativo nativo para iOS e Android usando React Native, com foco em performance, 
+                            usabilidade e conversão.
+                        </p>
+                        <p>
+                            O aplicativo conta com funcionalidades avançadas como busca inteligente, 
+                            recomendações personalizadas, sistema de avaliações, chat de suporte em tempo real 
+                            e integração completa com sistemas de pagamento e logística.
+                        </p>
+                        
+                        <h3>Desafios Enfrentados</h3>
+                        <ul class="challenges-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Integração com múltiplos gateways de pagamento
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Otimização de performance para catálogo com +10k produtos
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Sincronização offline e online em tempo real
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Sistema de notificações push personalizadas
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tecnologias Utilizadas -->
+                <div class="detail-section">
+                    <h2>Tecnologias & Ferramentas</h2>
+                    <div class="detail-content">
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h4>Frontend Mobile</h4>
+                                <div class="tech-grid">
+                                    <div class="tech-item">
+                                        <i class="fab fa-react"></i>
+                                        <span>React Native</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fab fa-js-square"></i>
+                                        <span>TypeScript</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <span>React Navigation</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-store"></i>
+                                        <span>Redux Toolkit</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>Backend & Database</h4>
+                                <div class="tech-grid">
+                                    <div class="tech-item">
+                                        <i class="fas fa-fire"></i>
+                                        <span>Firebase</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-database"></i>
+                                        <span>Firestore</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fab fa-node-js"></i>
+                                        <span>Node.js</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-server"></i>
+                                        <span>Express</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>Serviços & Integração</h4>
+                                <div class="tech-grid">
+                                    <div class="tech-item">
+                                        <i class="fab fa-stripe"></i>
+                                        <span>Stripe</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Push Notifications</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Analytics</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-cloud"></i>
+                                        <span>Cloud Functions</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resultados e Impacto -->
+                <div class="detail-section">
+                    <h2>Resultados & Impacto</h2>
+                    <div class="detail-content">
+                        <p>
+                            O projeto foi um sucesso completo, superando todas as expectativas iniciais. 
+                            O aplicativo foi lançado simultaneamente nas lojas iOS e Android, obtendo 
+                            excelente recepção dos usuários e resultados comerciais impressionantes.
+                        </p>
+                        
+                        <div class="results-grid">
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>10,000+</h4>
+                                    <p>Downloads na primeira semana</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>4.8/5</h4>
+                                    <p>Avaliação média nas lojas</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>+35%</h4>
+                                    <p>Aumento nas vendas mobile</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>2.1s</h4>
+                                    <p>Tempo médio de carregamento</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>78%</h4>
+                                    <p>Taxa de retenção mensal</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="result-info">
+                                    <h4>Top 10</h4>
+                                    <p>Ranking categoria Shopping</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organização/Cliente -->
+                <div class="detail-section">
+                    <h2>Sobre o Cliente</h2>
+                    <div class="detail-content">
+                        <div class="client-info">
+                            <div class="client-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="client-details">
+                                <h3>ShopTech Inc.</h3>
+                                <p class="client-type">E-commerce • Tecnologia</p>
+                                <p class="client-description">
+                                    A ShopTech Inc. é uma empresa líder em soluções de e-commerce, 
+                                    especializada em tecnologia para varejo digital. Com mais de 10 anos 
+                                    de experiência no mercado, a empresa atende grandes marcas e retailers 
+                                    em todo o país.
+                                </p>
+                                
+                                <div class="client-stats">
+                                    <div class="client-stat">
+                                        <span class="stat-number">500+</span>
+                                        <span class="stat-label">Clientes</span>
+                                    </div>
+                                    <div class="client-stat">
+                                        <span class="stat-number">50M+</span>
+                                        <span class="stat-label">Transações/mês</span>
+                                    </div>
+                                    <div class="client-stat">
+                                        <span class="stat-number">15+</span>
+                                        <span class="stat-label">Países</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial">
+                            <blockquote>
+                                "O trabalho executado superou nossas expectativas. A equipe demonstrou 
+                                excelência técnica e compreensão profunda das necessidades do negócio. 
+                                O aplicativo se tornou um diferencial competitivo importante para nossa empresa."
+                            </blockquote>
+                            <cite>
+                                <img src="https://via.placeholder.com/50x50/FFAB73/FFFFFF?text=CEO" alt="CEO">
+                                <div class="cite-info">
+                                    <span class="cite-name">Maria Silva</span>
+                                    <span class="cite-role">CEO, ShopTech Inc.</span>
+                                </div>
+                            </cite>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Relacionados -->
+    <section class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Projetos Relacionados</h2>
+            <div class="related-grid">
+                <article class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=App+Delivery" alt="App Delivery">
+                        <div class="related-overlay">
+                            <a href="projeto-delivery-app.html" class="related-btn">
+                                <i class="fas fa-eye"></i>
+                                Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="related-info">
+                        <span class="related-category">Mobile</span>
+                        <h3>App Delivery</h3>
+                        <p>Plataforma completa de delivery com rastreamento em tempo real</p>
+                    </div>
+                </article>
+                
+                <article class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=E-commerce+Luxury" alt="E-commerce Luxury">
+                        <div class="related-overlay">
+                            <a href="projeto-ecommerce-luxury.html" class="related-btn">
+                                <i class="fas fa-eye"></i>
+                                Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="related-info">
+                        <span class="related-category">Web</span>
+                        <h3>E-commerce Luxury</h3>
+                        <p>Loja virtual premium com experiência de compra exclusiva</p>
+                    </div>
+                </article>
+                
+                <article class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Fitness+Tracker" alt="Fitness Tracker">
+                        <div class="related-overlay">
+                            <a href="projeto-fitness-tracker.html" class="related-btn">
+                                <i class="fas fa-eye"></i>
+                                Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="related-info">
+                        <span class="related-category">Mobile</span>
+                        <h3>Fitness Tracker</h3>
+                        <p>App de acompanhamento fitness com gamificação</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="project-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interessado em um projeto similar?</h2>
+                <p>Vamos conversar sobre como posso ajudar você a criar soluções digitais excepcionais</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">Solicitar Orçamento</a>
+                    <a href="projetos.html" class="btn btn-secondary">Ver Mais Projetos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Portfólio</h3>
+                    <p>Desenvolvendo soluções digitais inovadoras</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">Sobre</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="projetos.html">Projetos</a>
+                    <a href="index.html#contact">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="project-carousel.js"></script>
+</body>
+</html>

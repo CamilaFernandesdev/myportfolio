@@ -2,7 +2,7 @@
 
 Um portfólio moderno e responsivo com tema pêssego outonal, modo claro/escuro e animações suaves.
 
-## 🎨 Características
+## Características
 
 - **Design Profissional**: Interface limpa e moderna com tema pêssego outonal
 - **Modo Claro/Escuro**: Toggle entre temas com preferência do sistema
@@ -11,7 +11,7 @@ Um portfólio moderno e responsivo com tema pêssego outonal, modo claro/escuro 
 - **Performance Otimizada**: Carregamento rápido e scroll suave
 - **SEO Friendly**: Estrutura semântica e metadados otimizados
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 ### Seções Principais
 - **Home**: Hero section com apresentação e call-to-actions
@@ -29,14 +29,14 @@ Um portfólio moderno e responsivo com tema pêssego outonal, modo claro/escuro 
 - Tema persistente no localStorage
 - Efeitos parallax sutis
 
-## 📱 Responsividade
+## Responsividade
 
 O site é totalmente responsivo e foi testado em:
 - Desktop (1200px+)
 - Tablet (768px - 1199px)
 - Mobile (até 767px)
 
-## 🎨 Paleta de Cores
+## Paleta de Cores
 
 ### Tema Claro
 - **Primária**: #FF8C42 (Pêssego vibrante)
@@ -86,7 +86,7 @@ Substitua os placeholders por suas imagens:
 - Screenshots dos projetos
 - Ícones personalizados
 
-## 📂 Estrutura de Arquivos
+## Estrutura de Arquivos
 
 ```
 portfolio/
@@ -96,7 +96,7 @@ portfolio/
 └── README.md           # Documentação
 ```
 
-## 🔧 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica
 - **CSS3**: Grid, Flexbox, Custom Properties, Animações
@@ -104,14 +104,14 @@ portfolio/
 - **Font Awesome**: Ícones
 - **Google Fonts**: Tipografia (Inter)
 
-## 📊 Performance
+## Performance
 
 - **Lighthouse Score**: 95+ em todas as métricas
 - **First Contentful Paint**: < 1.5s
 - **Cumulative Layout Shift**: < 0.1
 - **Acessibilidade**: WCAG 2.1 AA compliant
 
-## 🌐 Compatibilidade
+## Compatibilidade
 
 ### Navegadores Suportados
 - Chrome 90+
@@ -125,16 +125,16 @@ portfolio/
 - Intersection Observer API
 - Local Storage API
 
-## 📞 Contato
+## Contato
 
 Para dúvidas sobre personalização ou melhorias:
 - Abra uma issue no repositório
 - Entre em contato através do formulário do site
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
 ---
 
-**Desenvolvido com ❤️ para profissionais que querem se destacar no mercado digital.**
+**Desenvolvido com ❤️ **
