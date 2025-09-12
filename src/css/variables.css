@@ -4,31 +4,39 @@
     --primary-color: #FF8C42;
     --secondary-color: #D4A574;
     --accent-color: #FFAB73;
+    --tertiary-color: #E07A5F;
+    --quaternary-color: #F2CC8F;
+    --autumn-orange: #D2691E;
+    --autumn-red: #CD853F;
+    --autumn-yellow: #DEB887;
     --primary-light: rgba(255, 140, 66, 0.1);
     --primary-medium: rgba(255, 140, 66, 0.3);
     
     /* Cores de Texto */
-    --text-primary: #2D3748;
-    --text-secondary: #4A5568;
-    --text-light: #718096;
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-light: #6a6a6a;
     --text-inverse: #FFFFFF;
     
     /* Cores de Fundo */
     --bg-primary: #FFFFFF;
-    --bg-secondary: #FEFEFE;
-    --bg-tertiary: #F8F9FA;
+    --bg-secondary: #FAFAFA;
+    --bg-tertiary: #F5F5F5;
     --bg-card: #FFFFFF;
     
     /* Cores de Borda e Shadow */
-    --border-color: #E2E8F0;
-    --border-light: #EDF2F7;
-    --shadow-light: rgba(0, 0, 0, 0.1);
-    --shadow-medium: rgba(0, 0, 0, 0.15);
-    --shadow-dark: rgba(0, 0, 0, 0.2);
+    --border-color: #E5E5E5;
+    --border-light: #F0F0F0;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.08);
+    --shadow-dark: rgba(0, 0, 0, 0.12);
     
     /* Gradientes */
     --primary-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     --hero-gradient: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(212, 165, 116, 0.1));
+    --autumn-gradient: linear-gradient(135deg, var(--autumn-orange), var(--autumn-red), var(--autumn-yellow));
+    --warm-gradient: linear-gradient(135deg, var(--tertiary-color), var(--quaternary-color));
+    --peach-gradient: linear-gradient(135deg, #FFCBA4, #FFE4CC, #F2CC8F);
     
     /* Tipografia */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -80,24 +88,26 @@
 /* Tema Escuro */
 [data-theme="dark"] {
     /* Cores de Texto */
-    --text-primary: #F7FAFC;
-    --text-secondary: #E2E8F0;
-    --text-light: #CBD5E0;
-    --text-inverse: #1A1A1A;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+    --text-light: #888888;
+    --text-inverse: #1a1a1a;
     
     /* Cores de Fundo */
-    --bg-primary: #1A202C;
-    --bg-secondary: #2D3748;
-    --bg-tertiary: #4A5568;
-    --bg-card: #2D3748;
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #2a2a2a;
+    --bg-card: #1a1a1a;
     
     /* Cores de Borda e Shadow */
-    --border-color: #4A5568;
-    --border-light: #2D3748;
-    --shadow-light: rgba(0, 0, 0, 0.3);
-    --shadow-medium: rgba(0, 0, 0, 0.4);
-    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --border-color: #333333;
+    --border-light: #2a2a2a;
+    --shadow-light: rgba(255, 255, 255, 0.05);
+    --shadow-medium: rgba(255, 255, 255, 0.08);
+    --shadow-dark: rgba(255, 255, 255, 0.12);
     
     /* Gradientes */
     --hero-gradient: linear-gradient(135deg, rgba(255, 140, 66, 0.2), rgba(212, 165, 116, 0.2));
+    --autumn-gradient: linear-gradient(135deg, rgba(210, 105, 30, 0.3), rgba(205, 133, 63, 0.3), rgba(222, 184, 135, 0.3));
+    --warm-gradient: linear-gradient(135deg, rgba(224, 122, 95, 0.3), rgba(242, 204, 143, 0.3));
 }

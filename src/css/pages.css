@@ -79,7 +79,7 @@
 
 /* ===== ABOUT SECTION ===== */
 .about {
-    background: var(--bg-secondary);
+    /* Remove fundo cinza - usar background padrão */
 }
 
 .about-content {
@@ -386,8 +386,9 @@
 }
 
 .project-tags span {
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
+    background: var(--primary-light);
+    color: var(--autumn-orange);
+    border: 1px solid var(--primary-medium);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--border-radius-sm);
     font-size: var(--font-size-sm);
@@ -395,7 +396,7 @@
 
 /* ===== CONTACT SECTION ===== */
 .contact {
-    background: var(--bg-secondary);
+    /* Remove fundo cinza - usar background padrão */
 }
 
 .contact-content {

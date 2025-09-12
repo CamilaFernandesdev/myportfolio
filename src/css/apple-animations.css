@@ -12,25 +12,25 @@
 
 /* ===== GLASSMORPHISM NAVBAR ===== */
 .navbar {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 248, 243, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 140, 66, 0.2);
     transition: all 0.3s var(--apple-timing);
 }
 
 [data-theme="dark"] .navbar {
-    background: rgba(26, 32, 44, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(45, 24, 16, 0.8);
+    border-bottom: 1px solid rgba(255, 140, 66, 0.3);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 248, 243, 0.95);
     box-shadow: var(--apple-shadow);
 }
 
 [data-theme="dark"] .navbar.scrolled {
-    background: rgba(26, 32, 44, 0.95);
+    background: rgba(45, 24, 16, 0.95);
 }
 
 /* ===== APPLE-STYLE BUTTONS ===== */
@@ -88,9 +88,9 @@
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 140, 66, 0.2);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 30px rgba(255, 140, 66, 0.05);
     transition: all 0.4s var(--apple-timing);
     transform: translateY(0) scale(1);
 }
@@ -98,8 +98,8 @@
 [data-theme="dark"] .service-card,
 [data-theme="dark"] .project-card,
 [data-theme="dark"] .card {
-    background: rgba(45, 55, 72, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(61, 36, 21, 0.7);
+    border: 1px solid rgba(255, 140, 66, 0.3);
 }
 
 .service-card:hover,
@@ -108,12 +108,13 @@
     transform: translateY(-8px) scale(1.02);
     box-shadow: var(--apple-shadow-hover);
     background: rgba(255, 255, 255, 0.9);
+    border-color: var(--primary-color);
 }
 
 [data-theme="dark"] .service-card:hover,
 [data-theme="dark"] .project-card:hover,
 [data-theme="dark"] .card:hover {
-    background: rgba(45, 55, 72, 0.9);
+    background: rgba(61, 36, 21, 0.9);
 }
 
 /* ===== HERO ANIMATIONS ===== */
@@ -337,15 +338,15 @@
 
 /* ===== FOOTER GLASS EFFECT ===== */
 .footer {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 248, 243, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 140, 66, 0.2);
 }
 
 [data-theme="dark"] .footer {
-    background: rgba(26, 32, 44, 0.8);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(45, 24, 16, 0.8);
+    border-top: 1px solid rgba(255, 140, 66, 0.3);
 }
 
 /* ===== MOBILE OPTIMIZATIONS ===== */

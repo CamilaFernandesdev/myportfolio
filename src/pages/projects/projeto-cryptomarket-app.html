@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoMarketApp - Aplicação iOS de Criptomoedas</title>
+    <meta name="description" content="Aplicação iOS moderna para listagem e visualização de criptomoedas com Clean Architecture, SwiftUI e Core Data desenvolvida no Santander BootCamp.">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../../backup/project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../../index.html">Portfólio</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#services" class="nav-link">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#contact" class="nav-link">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li aria-current="page">CryptoMarketApp</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero do Projeto -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-badges">
+                    <span class="badge badge-mobile">iOS</span>
+                    <span class="badge badge-swift">Swift</span>
+                    <span class="badge badge-bootcamp">Santander BootCamp</span>
+                    <span class="badge badge-completed">Concluído</span>
+                </div>
+                <h1 class="project-title">CryptoMarketApp</h1>
+                <p class="project-subtitle">Aplicação iOS de Criptomoedas</p>
+                <p class="project-hero-description">
+                    Aplicação iOS moderna desenvolvida durante o Santander BootCamp que implementa uma plataforma 
+                    completa para listagem e visualização de criptomoedas. Segue os princípios da Clean Architecture 
+                    (VIP) e utiliza as tecnologias mais avançadas do ecossistema iOS como SwiftUI, Core Data e Combine Framework.
+                </p>
+                <div class="project-status">
+                    <div class="status-item">
+                        <i class="fab fa-apple"></i>
+                        <span>iOS 13.0+</span>
+                    </div>
+                    <div class="status-item">
+                        <i class="fas fa-code"></i>
+                        <span>Swift 5.0+</span>
+                    </div>
+                    <div class="status-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>iPhone & iPad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel de Imagens -->
+    <section class="project-carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide active">
+                        <img src="https://via.placeholder.com/800x500/FF8C42/FFFFFF?text=CryptoMarketApp+Interface" alt="Interface Principal CryptoMarketApp" onerror="this.src='https://via.placeholder.com/800x500/FF8C42/FFFFFF?text=CryptoMarketApp+Interface'">
+                        <div class="slide-caption">Interface Principal - Lista de Criptomoedas</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/D4A574/FFFFFF?text=Gráficos+SwiftUI+Charts" alt="Gráficos de Preços">
+                        <div class="slide-caption">Gráficos Interativos com SwiftUI Charts</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/FFAB73/FFFFFF?text=Core+Data+Persistência" alt="Core Data Persistência">
+                        <div class="slide-caption">Persistência Local com Core Data</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/FF8C42/FFFFFF?text=Clean+Architecture" alt="Clean Architecture">
+                        <div class="slide-caption">Arquitetura Limpa (VIP Pattern)</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/D4A574/FFFFFF?text=Notificações+iOS" alt="Sistema de Notificações">
+                        <div class="slide-caption">Sistema de Notificações Nativo</div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" aria-label="Próximo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                    <button class="indicator" data-slide="3"></button>
+                    <button class="indicator" data-slide="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalhes do Projeto -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Coluna Principal -->
+                <div class="details-main">
+                    <div class="detail-section">
+                        <h2>Sobre o Projeto</h2>
+                        <p>
+                            O <strong>CryptoMarketApp</strong> é uma aplicação iOS moderna desenvolvida durante 
+                            o Santander BootCamp que implementa uma plataforma completa para listagem e visualização 
+                            de criptomoedas. O projeto segue rigorosamente os princípios da Clean Architecture (VIP) 
+                            e utiliza as tecnologias mais avançadas do ecossistema iOS.
+                        </p>
+                        <p>
+                            Com foco em performance e experiência do usuário, a aplicação oferece gráficos interativos, 
+                            sistema de notificações, persistência local com Core Data e gerenciamento reativo de estado 
+                            usando o <strong>Combine Framework</strong>.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Arquitetura e Padrões</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Clean Architecture (VIP)</h3>
+                                    <p>Separação clara entre Domain, Data e Presentation layers com dependency injection</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cube"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Repository Pattern</h3>
+                                    <p>Abstração de fontes de dados com implementações local e remota</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>MVVM Pattern</h3>
+                                    <p>Separação de responsabilidades entre Views e ViewModels usando Combine</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-plug"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Dependency Injection</h3>
+                                    <p>Container próprio para inversão de controle e testabilidade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Funcionalidades Implementadas</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fab fa-swift"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Interface SwiftUI</h3>
+                                    <p>Interface moderna e responsiva construída com SwiftUI e suporte a orientações</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Gráficos Interativos</h3>
+                                    <p>SwiftUI Charts com múltiplos timeframes (1H, 24H, 7D, 30D) e gestos de toque</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Core Data</h3>
+                                    <p>Persistência local otimizada com histórico de preços e operações em background</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Sistema de Notificações</h3>
+                                    <p>Alertas de preço configuráveis e notificações de mudanças significativas</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Busca Avançada</h3>
+                                    <p>Barra de busca com debounce e busca local/remota de criptomoedas</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Pull-to-Refresh</h3>
+                                    <p>Atualização de dados com cache inteligente e tratamento de estados</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Modelo de Dados Robusto</h2>
+                        <p>
+                            O projeto implementa um modelo de dados completo para criptomoedas com mais de 25 propriedades, 
+                            incluindo métricas de mercado avançadas:
+                        </p>
+                        <div class="architecture-list">
+                            <div class="arch-item">
+                                <i class="fas fa-coins"></i>
+                                <span><strong>Propriedades Essenciais:</strong> Preço, volume, ranking, capitalização</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-chart-area"></i>
+                                <span><strong>Métricas de Mercado:</strong> Variações 1h, 24h, 7d, 30d, 1 ano</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-code"></i>
+                                <span><strong>Conformidade Codable:</strong> Serialização JSON robusta</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span><strong>Tratamento de Nulos:</strong> Valores opcionais bem tratados</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Testes e Qualidade</h2>
+                        <p>
+                            O projeto inclui uma suíte completa de testes para garantir qualidade e confiabilidade:
+                        </p>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-vial"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Testes Unitários</h3>
+                                    <p>Cobertura de modelos, ViewModels e casos de uso com mocks</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Testes de UI</h3>
+                                    <p>Automação de testes para funcionalidades de interface do usuário</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar com Informações -->
+                <div class="details-sidebar">
+                    <div class="info-card">
+                        <h3>Informações do Projeto</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="label">Programa:</span>
+                                <span class="value">Santander BootCamp</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Período:</span>
+                                <span class="value">2023</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Categoria:</span>
+                                <span class="value">Mobile / iOS</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Plataforma:</span>
+                                <span class="value">iOS (iPhone & iPad)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Status:</span>
+                                <span class="value status-completed">✅ Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h3>Tecnologias Utilizadas</h3>
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h4>iOS Framework</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">SwiftUI</span>
+                                    <span class="tech-tag">UIKit</span>
+                                    <span class="tech-tag">Combine</span>
+                                    <span class="tech-tag">Swift 5.0+</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Persistência</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Core Data</span>
+                                    <span class="tech-tag">UserDefaults</span>
+                                    <span class="tech-tag">Keychain</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Networking</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">URLSession</span>
+                                    <span class="tech-tag">CoinGecko API</span>
+                                    <span class="tech-tag">JSON Codable</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>UI/UX</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">SwiftUI Charts</span>
+                                    <span class="tech-tag">Animations</span>
+                                    <span class="tech-tag">Dark Mode</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Notificações</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">UserNotifications</span>
+                                    <span class="tech-tag">Local Notifications</span>
+                                    <span class="tech-tag">Push Notifications</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Testes</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">XCTest</span>
+                                    <span class="tech-tag">UI Testing</span>
+                                    <span class="tech-tag">Mocking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <h3>Links do Projeto</h3>
+                        <div class="links-list">
+                            <a href="#" class="project-link-btn disabled">
+                                <i class="fab fa-app-store-ios"></i>
+                                <span>App Store (Projeto Educacional)</span>
+                            </a>
+                            <a href="#" class="project-link-btn disabled">
+                                <i class="fab fa-github"></i>
+                                <span>Código (Privado)</span>
+                            </a>
+                            <a href="#" class="project-link-btn demo" target="_blank">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Documentação</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap de Desenvolvimento -->
+    <section class="project-roadmap">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fases de Desenvolvimento</h2>
+                <p>Evolução do projeto durante o Santander BootCamp</p>
+            </div>
+            <div class="roadmap-timeline">
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Fase 1 - Fundação & Modelo</h3>
+                        <span class="timeline-date">Semana 1-2</span>
+                        <p>Setup do projeto, modelo de dados robusto e arquitetura Clean Architecture</p>
+                        <div class="timeline-status completed">✅ Concluído</div>
+                    </div>
+                </div>
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Fase 2 - Interface & Networking</h3>
+                        <span class="timeline-date">Semana 3-4</span>
+                        <p>Interface SwiftUI, integração com API CoinGecko e sistema de cache</p>
+                        <div class="timeline-status completed">✅ Concluído</div>
+                    </div>
+                </div>
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Fase 3 - Core Data & Gráficos</h3>
+                        <span class="timeline-date">Semana 5-6</span>
+                        <p>Persistência local com Core Data e gráficos interativos com SwiftUI Charts</p>
+                        <div class="timeline-status completed">✅ Concluído</div>
+                    </div>
+                </div>
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Fase 4 - Notificações & Testes</h3>
+                        <span class="timeline-date">Semana 7-8</span>
+                        <p>Sistema de notificações completo e suíte de testes unitários e UI</p>
+                        <div class="timeline-status completed">✅ Concluído</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto e Aprendizados -->
+    <section class="project-impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Aprendizados e Conquistas</h2>
+                <p>Resultados obtidos durante o desenvolvimento no BootCamp</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Clean Architecture</h3>
+                    <div class="impact-stat">VIP</div>
+                    <p>Domínio completo dos padrões de arquitetura iOS profissional</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>SwiftUI</h3>
+                    <div class="impact-stat">100%</div>
+                    <p>Interface moderna e responsiva com as últimas tecnologias Apple</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Core Data</h3>
+                    <div class="impact-stat">25+</div>
+                    <p>Propriedades gerenciadas com persistência local otimizada</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Testes</h3>
+                    <div class="impact-stat">85%</div>
+                    <p>Cobertura de código com testes unitários e de interface</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Relacionados -->
+    <section class="related-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projetos Relacionados</h2>
+                <p>Outros trabalhos em desenvolvimento mobile e dados</p>
+            </div>
+            <div class="related-grid">
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=E-commerce+Mobile" alt="E-commerce App">
+                    </div>
+                    <div class="related-info">
+                        <h3>App E-commerce Mobile</h3>
+                        <p>Aplicativo com 10K+ downloads e integração com sistemas de pagamento</p>
+                        <a href="projeto-ecommerce-app.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Dashboard+Analytics" alt="Dashboard Analytics">
+                    </div>
+                    <div class="related-info">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Plataforma de BI premiada que gerou R$ 2M em economia anual</p>
+                        <a href="projeto-dashboard-analytics.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=onADV+LegalTech" alt="onADV">
+                    </div>
+                    <div class="related-info">
+                        <h3>onADV - LegalTech</h3>
+                        <p>Processamento inteligente para o poder judiciário com IA</p>
+                        <a href="projeto-onadv.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="project-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interessado em Desenvolvimento iOS?</h2>
+                <p>Desenvolvo aplicações iOS modernas com as melhores práticas e tecnologias Apple</p>
+                <div class="cta-buttons">
+                    <a href="../../../index.html#contact" class="btn btn-primary">Solicitar Orçamento</a>
+                    <a href="../portfolio.html" class="btn btn-secondary">Ver Mais Projetos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Portfólio</h3>
+                    <p>Desenvolvendo soluções digitais inovadoras</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../index.html#about">Sobre</a>
+                    <a href="../../../index.html#services">Serviços</a>
+                    <a href="../portfolio.html">Portfolio</a>
+                    <a href="../../../index.html#contact">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Camila Fernandes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/portfolio-simple.js"></script>
+    <script src="../../js/simple-carousel.js"></script>
+</body>
+</html>

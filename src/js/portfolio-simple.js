@@ -14,17 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
     loadAppleAnimations();
 });
 
-// ===== CARREGAR ANIMAÇÕES APPLE =====
+// ===== CARREGAR ANIMAÇÕES SIMPLES =====
 function loadAppleAnimations() {
     const script = document.createElement('script');
-    script.src = 'src/js/apple-animations.js';
+    script.src = 'src/js/simple-clean.js';
     script.onerror = () => {
         // Se não conseguir carregar, usar o caminho relativo baseado na página atual
         const newScript = document.createElement('script');
         if (window.location.pathname.includes('/pages/')) {
-            newScript.src = '../js/apple-animations.js';
+            newScript.src = '../js/simple-clean.js';
         } else {
-            newScript.src = '../../js/apple-animations.js';
+            newScript.src = '../../js/simple-clean.js';
         }
         document.head.appendChild(newScript);
     };
