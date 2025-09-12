@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onADV - Processamento Inteligente para o Poder Judiciário</title>
+    <meta name="description" content="Sistema revolucionário de processamento inteligente para o poder judiciário com IA, assinatura digital e privacidade total.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Portfólio</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#services" class="nav-link">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li aria-current="page">onADV</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero do Projeto -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-badges">
+                    <span class="badge badge-web">Web</span>
+                    <span class="badge badge-mobile">Mobile</span>
+                    <span class="badge badge-ai">IA</span>
+                    <span class="badge badge-development">Em Desenvolvimento</span>
+                </div>
+                <h1 class="project-title">onADV</h1>
+                <p class="project-subtitle">Processamento Inteligente para o Poder Judiciário</p>
+                <p class="project-hero-description">
+                    Plataforma web de processamento inteligente para o poder judiciário que processa PDFs e vídeos 
+                    com privacidade total. Assinatura digital A1/A3, integração com Explorer e aplicação mobile 
+                    em breve para otimizar o trabalho jurídico.
+                </p>
+                <div class="project-status">
+                    <div class="status-item">
+                        <i class="fas fa-code"></i>
+                        <span>Em Desenvolvimento</span>
+                    </div>
+                    <div class="status-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Lançamento: 2024</span>
+                    </div>
+                    <div class="status-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>Desktop & Mobile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel de Imagens -->
+    <section class="project-carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide active">
+                        <img src="assets/images/onadv-landing.png" alt="Interface Principal onADV - Processamento Inteligente para o Poder Judiciário" onerror="this.src='https://via.placeholder.com/800x500/DC143C/FFFFFF?text=onADV+Landing+Page'">
+                        <div class="slide-caption">Interface Principal - Landing Page onADV</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/DC143C/FFFFFF?text=Upload+de+Documentos" alt="Sistema de Upload">
+                        <div class="slide-caption">Sistema de Upload com Drag & Drop</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/DC143C/FFFFFF?text=Processamento+IA" alt="Processamento com IA">
+                        <div class="slide-caption">Processamento Inteligente com IA</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/DC143C/FFFFFF?text=Assinatura+Digital" alt="Assinatura Digital">
+                        <div class="slide-caption">Integração com Certificados A1/A3</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/DC143C/FFFFFF?text=Dashboard+Analytics" alt="Dashboard de Estatísticas">
+                        <div class="slide-caption">Dashboard com Estatísticas e Métricas</div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" aria-label="Próximo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                    <button class="indicator" data-slide="3"></button>
+                    <button class="indicator" data-slide="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalhes do Projeto -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Coluna Principal -->
+                <div class="details-main">
+                    <div class="detail-section">
+                        <h2>Sobre o Projeto</h2>
+                        <p>
+                            O <strong>onADV</strong> é uma solução inovadora que revoluciona o processamento 
+                            de documentos no poder judiciário brasileiro. Utilizando tecnologias de ponta em 
+                            inteligência artificial, o sistema oferece processamento seguro de PDFs e vídeos 
+                            com foco total na privacidade e conformidade legal.
+                        </p>
+                        <p>
+                            O projeto está em desenvolvimento ativo e será lançado em 2024 com versões 
+                            para <strong>desktop</strong> e <strong>mobile</strong>, proporcionando máxima 
+                            flexibilidade e acessibilidade para profissionais do direito.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Funcionalidades Principais</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Processamento de PDFs</h3>
+                                    <p>Análise inteligente de documentos jurídicos com extração automática de dados relevantes</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Análise de Vídeos</h3>
+                                    <p>Processamento avançado de conteúdo audiovisual para audiências e depoimentos</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Privacidade Total</h3>
+                                    <p>Processamento local com criptografia end-to-end garantindo sigilo absoluto</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Assinatura Digital</h3>
+                                    <p>Integração nativa com certificados A1/A3 para validação e assinatura legal</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Inteligência Artificial</h3>
+                                    <p>IA especializada em documentos jurídicos para análise e classificação automática</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Aplicação Mobile</h3>
+                                    <p>App nativo para iOS e Android com funcionalidades completas em breve</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Arquitetura do Sistema</h2>
+                        <p>
+                            O onADV foi desenvolvido com uma arquitetura moderna e escalável que prioriza 
+                            a segurança e performance:
+                        </p>
+                        <div class="architecture-list">
+                            <div class="arch-item">
+                                <i class="fas fa-desktop"></i>
+                                <span><strong>Frontend Web:</strong> Interface responsiva e intuitiva</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-server"></i>
+                                <span><strong>Backend Seguro:</strong> API robusta com criptografia avançada</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-database"></i>
+                                <span><strong>Banco Criptografado:</strong> Armazenamento seguro de metadados</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-cloud"></i>
+                                <span><strong>Processamento Local:</strong> IA executada localmente para privacidade</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar com Informações -->
+                <div class="details-sidebar">
+                    <div class="info-card">
+                        <h3>Informações do Projeto</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="label">Cliente:</span>
+                                <span class="value">Poder Judiciário</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Período:</span>
+                                <span class="value">2024 - Em Desenvolvimento</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Categoria:</span>
+                                <span class="value">LegalTech / IA</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Plataforma:</span>
+                                <span class="value">Web, Desktop, Mobile</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Status:</span>
+                                <span class="value status-development">🚧 Em Desenvolvimento</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h3>Tecnologias Utilizadas</h3>
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h4>Frontend</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">React.js</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
+                                    <span class="tech-tag">Vite</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Backend</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Express</span>
+                                    <span class="tech-tag">JWT</span>
+                                    <span class="tech-tag">Crypto</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>IA & Processamento</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">OpenCV</span>
+                                    <span class="tech-tag">NLP</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Mobile</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">Expo</span>
+                                    <span class="tech-tag">Async Storage</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Segurança</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">PKI</span>
+                                    <span class="tech-tag">AES-256</span>
+                                    <span class="tech-tag">RSA</span>
+                                    <span class="tech-tag">HTTPS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <h3>Links do Projeto</h3>
+                        <div class="links-list">
+                            <a href="#" class="project-link-btn demo" target="_blank">
+                                <i class="fas fa-eye"></i>
+                                <span>Preview (Em Breve)</span>
+                            </a>
+                            <a href="#" class="project-link-btn disabled">
+                                <i class="fab fa-github"></i>
+                                <span>Código (Privado)</span>
+                            </a>
+                            <a href="#" class="project-link-btn disabled">
+                                <i class="fas fa-download"></i>
+                                <span>Download (Em Breve)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap & Expectativas -->
+    <section class="project-roadmap">
+        <div class="container">
+            <div class="section-header">
+                <h2>Roadmap de Desenvolvimento</h2>
+                <p>Acompanhe as próximas etapas e lançamentos planejados</p>
+            </div>
+            <div class="roadmap-timeline">
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Fase 1 - Fundação</h3>
+                        <span class="timeline-date">Q4 2023</span>
+                        <p>Desenvolvimento da arquitetura base e prototipagem inicial da interface</p>
+                        <div class="timeline-status completed">✅ Concluído</div>
+                    </div>
+                </div>
+                <div class="timeline-item in-progress">
+                    <div class="timeline-marker">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Fase 2 - Core Features</h3>
+                        <span class="timeline-date">Q1 2024</span>
+                        <p>Implementação do processamento de PDFs, sistema de IA e integração com assinatura digital</p>
+                        <div class="timeline-status in-progress">🚧 Em Desenvolvimento</div>
+                    </div>
+                </div>
+                <div class="timeline-item upcoming">
+                    <div class="timeline-marker">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Fase 3 - Mobile App</h3>
+                        <span class="timeline-date">Q2 2024</span>
+                        <p>Desenvolvimento do aplicativo mobile nativo para iOS e Android</p>
+                        <div class="timeline-status upcoming">📅 Planejado</div>
+                    </div>
+                </div>
+                <div class="timeline-item upcoming">
+                    <div class="timeline-marker">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Fase 4 - Lançamento</h3>
+                        <span class="timeline-date">Q3 2024</span>
+                        <p>Lançamento oficial das versões web, desktop e mobile para o mercado</p>
+                        <div class="timeline-status upcoming">🎯 Meta</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto Esperado -->
+    <section class="project-impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Impacto Esperado</h2>
+                <p>Como o onADV transformará o processamento de documentos jurídicos</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Redução de Tempo</h3>
+                    <div class="impact-stat">80%</div>
+                    <p>Menos tempo gasto no processamento manual de documentos</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Segurança Máxima</h3>
+                    <div class="impact-stat">100%</div>
+                    <p>Privacidade garantida com processamento local e criptografia</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Usuários Impactados</h3>
+                    <div class="impact-stat">10K+</div>
+                    <p>Profissionais do direito beneficiados pela solução</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Eficiência</h3>
+                    <div class="impact-stat">300%</div>
+                    <p>Aumento na produtividade do processamento de documentos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Relacionados -->
+    <section class="related-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projetos Relacionados</h2>
+                <p>Outros trabalhos na área de dados e automação</p>
+            </div>
+            <div class="related-grid">
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Tableau+Scraper" alt="Tableau Scraper">
+                    </div>
+                    <div class="related-info">
+                        <h3>Tableau Scraper Energético</h3>
+                        <p>Automação para coleta de dados energéticos com 24M+ registros processados</p>
+                        <a href="projeto-tableau-scraper.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Dashboard+Analytics" alt="Dashboard Analytics">
+                    </div>
+                    <div class="related-info">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Plataforma de BI premiada que gerou R$ 2M em economia anual</p>
+                        <a href="projeto-dashboard-analytics.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=E-commerce+App" alt="E-commerce App">
+                    </div>
+                    <div class="related-info">
+                        <h3>App E-commerce Mobile</h3>
+                        <p>Aplicativo com 10K+ downloads e integração com sistemas de pagamento</p>
+                        <a href="projeto-ecommerce-app.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="project-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interessado em Projetos de LegalTech?</h2>
+                <p>Desenvolvo soluções personalizadas para o setor jurídico com foco em IA e segurança</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">Solicitar Consultoria</a>
+                    <a href="portfolio.html" class="btn btn-secondary">Ver Mais Projetos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Portfólio</h3>
+                    <p>Desenvolvendo soluções digitais inovadoras</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">Sobre</a>
+                    <a href="index.html#services">Serviços</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="index.html#contact">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="project-carousel.js"></script>
+</body>
+</html>

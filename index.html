@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Desenvolvedor Mobile & Web | Analista de Dados</title>
     <meta name="description" content="Desenvolvedor especializado em aplicações mobile, análise de dados e criação de sites e e-commerces profissionais.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -23,13 +23,13 @@
                     <a href="#home" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="sobre.html" class="nav-link">Sobre</a>
+                    <a href="#about" class="nav-link">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="#services" class="nav-link">Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a href="projetos.html" class="nav-link">Projetos</a>
+                    <a href="src/pages/portfolio.html" class="nav-link">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contato</a>
@@ -93,31 +93,59 @@
                         de sites e e-commerces.
                     </p>
                     <div class="skills">
-                        <h3>Tecnologias</h3>
+                        <h3>Principais Tecnologias</h3>
                         <div class="skills-grid">
                             <div class="skill-item">
                                 <i class="fab fa-react"></i>
                                 <span>React/React Native</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-js-square"></i>
-                                <span>JavaScript/TypeScript</span>
+                                <div class="skill-level">95%</div>
                             </div>
                             <div class="skill-item">
                                 <i class="fab fa-python"></i>
                                 <span>Python</span>
+                                <div class="skill-level">92%</div>
                             </div>
                             <div class="skill-item">
-                                <i class="fas fa-database"></i>
-                                <span>SQL/NoSQL</span>
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript/TypeScript</span>
+                                <div class="skill-level">90%</div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-area"></i>
+                                <span>Data Analysis</span>
+                                <div class="skill-level">90%</div>
                             </div>
                             <div class="skill-item">
                                 <i class="fab fa-node-js"></i>
                                 <span>Node.js</span>
+                                <div class="skill-level">88%</div>
                             </div>
                             <div class="skill-item">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Data Analysis</span>
+                                <i class="fas fa-database"></i>
+                                <span>MongoDB/PostgreSQL</span>
+                                <div class="skill-level">82%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-compact">
+                        <h3>Marcos Principais</h3>
+                        <div class="timeline-items">
+                            <div class="timeline-item-compact">
+                                <div class="timeline-year">2024</div>
+                                <div class="timeline-title">App E-commerce (10K+ downloads)</div>
+                            </div>
+                            <div class="timeline-item-compact">
+                                <div class="timeline-year">2023</div>
+                                <div class="timeline-title">Dashboard Analytics - Prêmio BI</div>
+                            </div>
+                            <div class="timeline-item-compact">
+                                <div class="timeline-year">2023</div>
+                                <div class="timeline-title">Tableau Scraper - 24M registros</div>
+                            </div>
+                            <div class="timeline-item-compact">
+                                <div class="timeline-year">2021</div>
+                                <div class="timeline-title">Graduação em Ciência da Computação</div>
                             </div>
                         </div>
                     </div>
@@ -198,26 +226,24 @@
                 <h2 class="section-title">Projetos</h2>
                 <p class="section-subtitle">Alguns dos meus trabalhos recentes</p>
             </div>
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="data">Dados</button>
+            <div class="projects-intro">
+                <p>Confira alguns dos meus projetos mais destacados</p>
+                    <a href="src/pages/portfolio.html" class="btn btn-primary">Ver Portfolio Completo</a>
             </div>
             <div class="projects-grid">
                 <div class="project-card" data-category="mobile">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=App+Mobile" alt="Projeto Mobile">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=App+E-commerce" alt="App E-commerce Mobile">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="src/pages/projects/projeto-ecommerce-app.html" class="project-link"><i class="fas fa-eye"></i></a>
                                 <a href="#" class="project-link"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>App E-commerce Mobile</h3>
-                        <p>Aplicativo de e-commerce com React Native, sistema de pagamento integrado e notificações push.</p>
+                        <p>Aplicativo completo com React Native, 10K+ downloads e nota 4.8/5 nas lojas.</p>
                         <div class="project-tags">
                             <span>React Native</span>
                             <span>Firebase</span>
@@ -225,63 +251,43 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="data">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Site+Responsivo" alt="Projeto Web">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Tableau+Scraper" alt="Tableau Scraper">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="src/pages/projects/projeto-tableau-scraper.html" class="project-link"><i class="fas fa-eye"></i></a>
                                 <a href="#" class="project-link"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Portal Corporativo</h3>
-                        <p>Site institucional responsivo com CMS personalizado e otimização para SEO.</p>
+                        <h3>Tableau Scraper Energético</h3>
+                        <p>Automação para coleta de dados energéticos processando 24 milhões de registros.</p>
                         <div class="project-tags">
-                            <span>Next.js</span>
-                            <span>Tailwind</span>
-                            <span>Strapi</span>
+                            <span>Python</span>
+                            <span>Selenium</span>
+                            <span>Airflow</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card" data-category="data">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Dashboard+BI" alt="Projeto Data">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Dashboard+Analytics" alt="Dashboard Analytics">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="src/pages/projects/projeto-dashboard-analytics.html" class="project-link"><i class="fas fa-eye"></i></a>
                                 <a href="#" class="project-link"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Dashboard Analytics</h3>
-                        <p>Painel de Business Intelligence com análise preditiva e visualizações interativas.</p>
+                        <p>Plataforma de BI que gerou R$ 2M em economia anual e ganhou prêmio de melhor projeto.</p>
                         <div class="project-tags">
                             <span>Python</span>
                             <span>Plotly</span>
-                            <span>Pandas</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=E-commerce" alt="E-commerce">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Loja Virtual Premium</h3>
-                        <p>E-commerce completo com gestão de estoque, múltiplas formas de pagamento e área administrativa.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
+                            <span>ML</span>
                         </div>
                     </div>
                 </div>
@@ -367,6 +373,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="src/js/portfolio-simple.js"></script>
 </body>
 </html>

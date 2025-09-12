@@ -1,0 +1,99 @@
+/* ===== VARIÁVEIS CSS ===== */
+:root {
+    /* Cores Principais */
+    --primary-color: #FF8C42;
+    --secondary-color: #D4A574;
+    --accent-color: #FFAB73;
+    
+    /* Cores de Texto */
+    --text-primary: #2D3748;
+    --text-secondary: #4A5568;
+    --text-light: #718096;
+    --text-inverse: #FFFFFF;
+    
+    /* Cores de Fundo */
+    --bg-primary: #FEFEFE;
+    --bg-secondary: #F8F9FA;
+    --bg-tertiary: #F1F3F4;
+    --bg-card: #FFFFFF;
+    
+    /* Cores de Borda e Shadow */
+    --border-color: #E2E8F0;
+    --border-light: #EDF2F7;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+    
+    /* Gradientes */
+    --primary-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --hero-gradient: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(212, 165, 116, 0.1));
+    
+    /* Tipografia */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    
+    /* Espaçamentos */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    
+    /* Border Radius */
+    --border-radius-sm: 0.25rem;
+    --border-radius: 0.5rem;
+    --border-radius-lg: 0.75rem;
+    --border-radius-xl: 1rem;
+    --border-radius-2xl: 1.5rem;
+    --border-radius-full: 9999px;
+    
+    /* Transições */
+    --transition: all 0.3s ease;
+    --transition-fast: all 0.15s ease;
+    --transition-slow: all 0.5s ease;
+    
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-toast: 1080;
+}
+
+/* Tema Escuro */
+[data-theme="dark"] {
+    /* Cores de Texto */
+    --text-primary: #F7FAFC;
+    --text-secondary: #E2E8F0;
+    --text-light: #CBD5E0;
+    --text-inverse: #1A1A1A;
+    
+    /* Cores de Fundo */
+    --bg-primary: #1A1A1A;
+    --bg-secondary: #2D3748;
+    --bg-tertiary: #4A5568;
+    --bg-card: #2D3748;
+    
+    /* Cores de Borda e Shadow */
+    --border-color: #4A5568;
+    --border-light: #2D3748;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.4);
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    
+    /* Gradientes */
+    --hero-gradient: linear-gradient(135deg, rgba(255, 140, 66, 0.2), rgba(212, 165, 116, 0.2));
+}

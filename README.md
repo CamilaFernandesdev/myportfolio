@@ -90,9 +90,15 @@ Substitua os placeholders por suas imagens:
 
 ```
 portfolio/
-├── index.html          # Estrutura principal
-├── styles.css          # Estilos e temas
+├── index.html          # Landing page principal
+├── portfolio.html      # Página de projetos
+├── projeto-*.html      # Páginas individuais dos projetos
+├── styles.css          # Estilos globais e temas
 ├── script.js           # Funcionalidades JavaScript
+├── projects-page.css   # Estilos específicos do portfolio
+├── projects-filter.js  # Filtros de projetos
+├── project-detail.css  # Estilos das páginas de projetos
+├── project-carousel.js # Carrossel de imagens
 └── README.md           # Documentação
 ```
 
@@ -137,4 +143,4 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 ---
 
-**Desenvolvido com ❤️ **
+**Desenvolvido com ❤️**

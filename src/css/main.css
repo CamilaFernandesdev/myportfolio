@@ -1,0 +1,78 @@
+/* ===== PORTFOLIO CSS PRINCIPAL ===== */
+
+/* Importação dos módulos CSS */
+@import url('./variables.css');
+@import url('./base.css');
+@import url('./components.css');
+@import url('./pages.css');
+
+/* ===== ESTILOS ESPECÍFICOS EXTRAS ===== */
+
+/* Estilos para elementos específicos que não se encaixam nos módulos acima */
+.status-development {
+    color: #ff9800;
+    font-weight: 600;
+}
+
+.project-btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Ajustes finais para compatibilidade */
+body {
+    padding-top: 70px; /* Espaço para navbar fixa */
+}
+
+/* Scroll suave para seções */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* Melhorias de acessibilidade */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Prévia para carregamento de imagens */
+.image-placeholder {
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+}
+
+/* Smooth transitions para tema */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .footer,
+    .theme-toggle,
+    .hamburger {
+        display: none !important;
+    }
+    
+    body {
+        padding-top: 0;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-xl) 0;
+    }
+}

@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos - Portfólio de Desenvolvimento</title>
-    <meta name="description" content="Conheça meus projetos de desenvolvimento mobile, análise de dados e criação de sites e e-commerces.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="projects-page.css">
+    <title>Portfolio - Projetos e Trabalhos</title>
+    <meta name="description" content="Portfolio completo com todos os meus projetos de desenvolvimento mobile, análise de dados e criação de sites.">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,23 +23,23 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">Portfólio</a>
+                <a href="../../index.html">Portfólio</a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="../../index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="sobre.html" class="nav-link">Sobre</a>
+                    <a href="../../index.html#about" class="nav-link">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="../../index.html#services" class="nav-link">Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a href="projetos.html" class="nav-link active">Projetos</a>
+                    <a href="portfolio.html" class="nav-link active">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html#contact" class="nav-link">Contato</a>
+                    <a href="../../index.html#contact" class="nav-link">Contato</a>
                 </li>
                 <li class="nav-item">
                     <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
@@ -56,52 +55,44 @@
         </div>
     </nav>
 
-    <!-- Hero da Página de Projetos -->
+    <!-- Hero do Portfolio -->
     <section class="projects-hero">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="title-line">Meus</span>
-                    <span class="title-line">Projetos</span>
+                    <span class="title-line">Meu</span>
+                    <span class="title-line">Portfolio</span>
                 </h1>
                 <p class="hero-description">
-                    Explore uma seleção dos meus trabalhos mais recentes e significativos, 
-                    desde aplicações mobile até análises de dados complexas e e-commerces de alto desempenho.
+                    Explore todos os meus projetos de desenvolvimento mobile, análise de dados e criação de sites. 
+                    Cada projeto representa um desafio superado e uma solução inovadora entregue.
                 </p>
                 <div class="hero-stats">
                     <div class="stat">
-                        <h3>50+</h3>
-                        <p>Projetos Concluídos</p>
+                        <h3>10</h3>
+                        <p>Projetos Destacados</p>
                     </div>
                     <div class="stat">
-                        <h3>15+</h3>
-                        <p>Clientes Satisfeitos</p>
+                        <h3>3</h3>
+                        <p>Categorias</p>
                     </div>
                     <div class="stat">
-                        <h3>3+</h3>
-                        <p>Anos de Experiência</p>
+                        <h3>60+</h3>
+                        <p>Total de Projetos</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Filtros e Pesquisa -->
+    <!-- Filtros -->
     <section class="projects-filters">
         <div class="container">
-            <div class="filters-header">
-                <h2>Explore por Categoria</h2>
-                <div class="search-container">
-                    <input type="text" id="project-search" placeholder="Pesquisar projetos..." class="search-input">
-                    <i class="fas fa-search search-icon"></i>
-                </div>
-            </div>
-            
             <div class="filter-controls">
                 <div class="category-filters">
                     <button class="filter-btn active" data-filter="all">
                         <i class="fas fa-th"></i>
-                        Todos <span class="count">9</span>
+                        Todos <span class="count">10</span>
                     </button>
                     <button class="filter-btn" data-filter="mobile">
                         <i class="fas fa-mobile-alt"></i>
@@ -109,7 +100,7 @@
                     </button>
                     <button class="filter-btn" data-filter="web">
                         <i class="fas fa-laptop-code"></i>
-                        Web <span class="count">3</span>
+                        Web <span class="count">4</span>
                     </button>
                     <button class="filter-btn" data-filter="data">
                         <i class="fas fa-chart-bar"></i>
@@ -117,20 +108,9 @@
                     </button>
                 </div>
                 
-                <div class="sort-controls">
-                    <select id="sort-select" class="sort-select">
-                        <option value="recent">Mais Recentes</option>
-                        <option value="alphabetical">A-Z</option>
-                        <option value="category">Por Categoria</option>
-                    </select>
-                    <div class="view-toggle">
-                        <button class="view-btn active" data-view="grid">
-                            <i class="fas fa-th"></i>
-                        </button>
-                        <button class="view-btn" data-view="list">
-                            <i class="fas fa-list"></i>
-                        </button>
-                    </div>
+                <div class="search-container">
+                    <input type="text" id="project-search" placeholder="Pesquisar projetos..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
                 </div>
             </div>
         </div>
@@ -140,8 +120,59 @@
     <section class="projects-showcase">
         <div class="container">
             <div class="projects-grid" id="projects-grid">
-                <!-- Projeto 1 - App E-commerce Mobile -->
-                <article class="project-card" data-category="mobile" data-date="2024-01" data-title="App E-commerce Mobile">
+                <!-- Projeto 1 - onADV (Em Desenvolvimento) -->
+                <article class="project-card" data-category="web" data-title="onADV - Processamento Inteligente">
+                    <div class="project-image">
+                        <img src="assets/images/onadv-landing.png" alt="onADV - Processamento Inteligente para o Poder Judiciário" onerror="this.src='https://via.placeholder.com/400x250/DC143C/FFFFFF?text=onADV+Legal+Tech'">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-web">Web</span>
+                                <span class="badge badge-ai">IA</span>
+                                <span class="badge badge-development">Em Desenvolvimento</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="projeto-onadv.html" class="project-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Projeto
+                                </a>
+                                <a href="#" class="project-btn secondary disabled">
+                                    <i class="fas fa-rocket"></i>
+                                    Em Breve
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-date">2024</span>
+                            <span class="project-client">Poder Judiciário</span>
+                        </div>
+                        <h3 class="project-title">onADV - Legal Tech</h3>
+                        <p class="project-description">
+                            Sistema revolucionário de processamento inteligente para o poder judiciário 
+                            com IA, assinatura digital A1/A3 e privacidade total.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">IA</span>
+                            <span class="tag">PKI</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>100% Privacidade</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-code"></i>
+                                <span>Em Desenvolvimento</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 2 - App E-commerce Mobile -->
+                <article class="project-card" data-category="mobile" data-title="App E-commerce Mobile">
                     <div class="project-image">
                         <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=E-commerce+App" alt="App E-commerce Mobile">
                         <div class="project-overlay">
@@ -168,14 +199,13 @@
                         </div>
                         <h3 class="project-title">App E-commerce Mobile</h3>
                         <p class="project-description">
-                            Aplicativo de e-commerce completo com React Native, sistema de pagamento integrado, 
-                            notificações push e sincronização em tempo real.
+                            Aplicativo de e-commerce completo com React Native, 10K+ downloads na primeira semana 
+                            e nota 4.8/5 nas lojas.
                         </p>
                         <div class="project-tags">
                             <span class="tag">React Native</span>
                             <span class="tag">Firebase</span>
                             <span class="tag">Stripe</span>
-                            <span class="tag">Redux</span>
                         </div>
                         <div class="project-metrics">
                             <div class="metric">
@@ -190,303 +220,8 @@
                     </div>
                 </article>
 
-                <!-- Projeto 2 - Dashboard Analytics -->
-                <article class="project-card" data-category="data" data-date="2023-12" data-title="Dashboard Analytics">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Analytics+Dashboard" alt="Dashboard Analytics">
-                        <div class="project-overlay">
-                            <div class="project-badges">
-                                <span class="badge badge-data">Dados</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="projeto-dashboard-analytics.html" class="project-btn">
-                                    <i class="fas fa-eye"></i>
-                                    Ver Projeto
-                                </a>
-                                <a href="#" class="project-btn secondary">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-date">Dez 2023</span>
-                            <span class="project-client">DataCorp</span>
-                        </div>
-                        <h3 class="project-title">Dashboard Analytics</h3>
-                        <p class="project-description">
-                            Painel de Business Intelligence com análise preditiva, visualizações interativas 
-                            e relatórios automatizados para tomada de decisões estratégicas.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Plotly</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">FastAPI</span>
-                        </div>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <i class="fas fa-chart-line"></i>
-                                <span>500K+ Registros</span>
-                            </div>
-                            <div class="metric">
-                                <i class="fas fa-clock"></i>
-                                <span>Real-time</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Projeto 3 - Portal Corporativo -->
-                <article class="project-card" data-category="web" data-date="2023-11" data-title="Portal Corporativo">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Portal+Corporativo" alt="Portal Corporativo">
-                        <div class="project-overlay">
-                            <div class="project-badges">
-                                <span class="badge badge-web">Web</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="projeto-portal-corporativo.html" class="project-btn">
-                                    <i class="fas fa-eye"></i>
-                                    Ver Projeto
-                                </a>
-                                <a href="#" class="project-btn secondary">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Site
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-date">Nov 2023</span>
-                            <span class="project-client">TechSolutions</span>
-                        </div>
-                        <h3 class="project-title">Portal Corporativo</h3>
-                        <p class="project-description">
-                            Site institucional responsivo com CMS personalizado, sistema de gestão de conteúdo 
-                            e otimização completa para SEO e performance.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">Tailwind</span>
-                            <span class="tag">Strapi</span>
-                            <span class="tag">Vercel</span>
-                        </div>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <span>95 PageSpeed</span>
-                            </div>
-                            <div class="metric">
-                                <i class="fas fa-search"></i>
-                                <span>SEO 100%</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Projeto 4 - App Fitness Tracker -->
-                <article class="project-card" data-category="mobile" data-date="2023-10" data-title="App Fitness Tracker">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Fitness+Tracker" alt="App Fitness Tracker">
-                        <div class="project-overlay">
-                            <div class="project-badges">
-                                <span class="badge badge-mobile">Mobile</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="projeto-fitness-tracker.html" class="project-btn">
-                                    <i class="fas fa-eye"></i>
-                                    Ver Projeto
-                                </a>
-                                <a href="#" class="project-btn secondary">
-                                    <i class="fab fa-app-store"></i>
-                                    App Store
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-date">Out 2023</span>
-                            <span class="project-client">FitLife Startup</span>
-                        </div>
-                        <h3 class="project-title">App Fitness Tracker</h3>
-                        <p class="project-description">
-                            Aplicativo de acompanhamento fitness com integração de sensores, gamificação 
-                            e análise inteligente de dados de saúde e exercícios.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">HealthKit</span>
-                            <span class="tag">ML Kit</span>
-                            <span class="tag">Firebase</span>
-                        </div>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <i class="fas fa-users"></i>
-                                <span>5K+ Usuários</span>
-                            </div>
-                            <div class="metric">
-                                <i class="fas fa-trophy"></i>
-                                <span>App do Ano</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Projeto 5 - E-commerce Luxury -->
-                <article class="project-card" data-category="web" data-date="2023-09" data-title="E-commerce Luxury">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Luxury+Store" alt="E-commerce Luxury">
-                        <div class="project-overlay">
-                            <div class="project-badges">
-                                <span class="badge badge-web">Web</span>
-                                <span class="badge badge-featured">Destaque</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="projeto-ecommerce-luxury.html" class="project-btn">
-                                    <i class="fas fa-eye"></i>
-                                    Ver Projeto
-                                </a>
-                                <a href="#" class="project-btn secondary">
-                                    <i class="fas fa-shopping-bag"></i>
-                                    Loja
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-date">Set 2023</span>
-                            <span class="project-client">Luxury Brands</span>
-                        </div>
-                        <h3 class="project-title">E-commerce Luxury</h3>
-                        <p class="project-description">
-                            Loja virtual premium com experiência de compra exclusiva, realidade aumentada 
-                            para produtos e sistema de personalização avançado.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">AR.js</span>
-                        </div>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <i class="fas fa-chart-line"></i>
-                                <span>+40% Conversão</span>
-                            </div>
-                            <div class="metric">
-                                <i class="fas fa-dollar-sign"></i>
-                                <span>R$ 1M+ Vendas</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Projeto 6 - Sistema de Gestão -->
-                <article class="project-card" data-category="data" data-date="2023-08" data-title="Sistema de Gestão">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Sistema+Gestao" alt="Sistema de Gestão">
-                        <div class="project-overlay">
-                            <div class="project-badges">
-                                <span class="badge badge-data">Dados</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="projeto-sistema-gestao.html" class="project-btn">
-                                    <i class="fas fa-eye"></i>
-                                    Ver Projeto
-                                </a>
-                                <a href="#" class="project-btn secondary">
-                                    <i class="fas fa-cog"></i>
-                                    Sistema
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-date">Ago 2023</span>
-                            <span class="project-client">ManageCorp</span>
-                        </div>
-                        <h3 class="project-title">Sistema de Gestão</h3>
-                        <p class="project-description">
-                            ERP completo com módulos de vendas, estoque, financeiro e RH, 
-                            incluindo relatórios inteligentes e automação de processos.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Django</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Celery</span>
-                            <span class="tag">Docker</span>
-                        </div>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <i class="fas fa-building"></i>
-                                <span>50+ Empresas</span>
-                            </div>
-                            <div class="metric">
-                                <i class="fas fa-clock"></i>
-                                <span>70% Menos Tempo</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Projeto 7 - App Delivery -->
-                <article class="project-card" data-category="mobile" data-date="2023-07" data-title="App Delivery">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Delivery+App" alt="App Delivery">
-                        <div class="project-overlay">
-                            <div class="project-badges">
-                                <span class="badge badge-mobile">Mobile</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="projeto-delivery-app.html" class="project-btn">
-                                    <i class="fas fa-eye"></i>
-                                    Ver Projeto
-                                </a>
-                                <a href="#" class="project-btn secondary">
-                                    <i class="fab fa-google-play"></i>
-                                    Play Store
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-date">Jul 2023</span>
-                            <span class="project-client">QuickFood</span>
-                        </div>
-                        <h3 class="project-title">App Delivery</h3>
-                        <p class="project-description">
-                            Plataforma completa de delivery com app para clientes, restaurantes e entregadores, 
-                            rastreamento em tempo real e sistema de pagamento integrado.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Google Maps</span>
-                            <span class="tag">Socket.io</span>
-                            <span class="tag">Stripe</span>
-                        </div>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <i class="fas fa-utensils"></i>
-                                <span>200+ Restaurantes</span>
-                            </div>
-                            <div class="metric">
-                                <i class="fas fa-motorcycle"></i>
-                                <span>500+ Entregadores</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Projeto 8 - Tableau Scraper -->
-                <article class="project-card" data-category="data" data-date="2023-08" data-title="Tableau Scraper Energético">
+                <!-- Projeto 2 - Tableau Scraper -->
+                <article class="project-card" data-category="data" data-title="Tableau Scraper Energético">
                     <div class="project-image">
                         <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Tableau+Scraper" alt="Tableau Scraper Energético">
                         <div class="project-overlay">
@@ -514,13 +249,12 @@
                         <h3 class="project-title">Tableau Scraper Energético</h3>
                         <p class="project-description">
                             Solução completa de automação para coleta de dados energéticos do Brasil, 
-                            processando 24 milhões de linhas de dados para o Mercado Livre de Energia.
+                            processando 24 milhões de linhas de dados.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Selenium</span>
                             <span class="tag">Airflow</span>
-                            <span class="tag">MongoDB</span>
                         </div>
                         <div class="project-metrics">
                             <div class="metric">
@@ -535,8 +269,297 @@
                     </div>
                 </article>
 
+                <!-- Projeto 3 - Dashboard Analytics -->
+                <article class="project-card" data-category="data" data-title="Dashboard Analytics">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Analytics+Dashboard" alt="Dashboard Analytics">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-data">Dados</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="projeto-dashboard-analytics.html" class="project-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Projeto
+                                </a>
+                                <a href="#" class="project-btn secondary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-date">Dez 2023</span>
+                            <span class="project-client">DataCorp</span>
+                        </div>
+                        <h3 class="project-title">Dashboard Analytics</h3>
+                        <p class="project-description">
+                            Plataforma de BI que gerou R$ 2M em economia anual e conquistou o prêmio 
+                            "Melhor Projeto de BI 2023".
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Plotly</span>
+                            <span class="tag">ML</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-chart-line"></i>
+                                <span>500K+ Registros</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-trophy"></i>
+                                <span>Prêmio BI 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 4 - App Fitness Tracker -->
+                <article class="project-card" data-category="mobile" data-title="App Fitness Tracker">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Fitness+Tracker" alt="App Fitness Tracker">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-mobile">Mobile</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="projeto-fitness-tracker.html" class="project-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Projeto
+                                </a>
+                                <a href="#" class="project-btn secondary">
+                                    <i class="fab fa-app-store"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-date">Out 2023</span>
+                            <span class="project-client">FitLife Startup</span>
+                        </div>
+                        <h3 class="project-title">App Fitness Tracker</h3>
+                        <p class="project-description">
+                            Aplicativo de acompanhamento fitness com integração de sensores e gamificação 
+                            para motivar usuários.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">HealthKit</span>
+                            <span class="tag">ML Kit</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-users"></i>
+                                <span>5K+ Usuários</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-trophy"></i>
+                                <span>App do Ano</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 5 - E-commerce Luxury -->
+                <article class="project-card" data-category="web" data-title="E-commerce Luxury">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Luxury+Store" alt="E-commerce Luxury">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-web">Web</span>
+                                <span class="badge badge-featured">Destaque</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="projeto-ecommerce-luxury.html" class="project-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Projeto
+                                </a>
+                                <a href="#" class="project-btn secondary">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    Loja
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-date">Set 2023</span>
+                            <span class="project-client">Luxury Brands</span>
+                        </div>
+                        <h3 class="project-title">E-commerce Luxury</h3>
+                        <p class="project-description">
+                            Loja virtual premium com experiência de compra exclusiva e realidade aumentada 
+                            para produtos de luxo.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">AR.js</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-chart-line"></i>
+                                <span>+40% Conversão</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>R$ 1M+ Vendas</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 6 - Sistema de Gestão -->
+                <article class="project-card" data-category="data" data-title="Sistema de Gestão">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Sistema+Gestao" alt="Sistema de Gestão">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-data">Dados</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="projeto-sistema-gestao.html" class="project-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Projeto
+                                </a>
+                                <a href="#" class="project-btn secondary">
+                                    <i class="fas fa-cog"></i>
+                                    Sistema
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-date">Ago 2023</span>
+                            <span class="project-client">ManageCorp</span>
+                        </div>
+                        <h3 class="project-title">Sistema de Gestão</h3>
+                        <p class="project-description">
+                            ERP completo com módulos integrados de vendas, estoque, financeiro e RH 
+                            para empresas de médio porte.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-building"></i>
+                                <span>50+ Empresas</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-clock"></i>
+                                <span>70% Menos Tempo</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 7 - App Delivery -->
+                <article class="project-card" data-category="mobile" data-title="App Delivery">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Delivery+App" alt="App Delivery">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-mobile">Mobile</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="projeto-delivery-app.html" class="project-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Projeto
+                                </a>
+                                <a href="#" class="project-btn secondary">
+                                    <i class="fab fa-google-play"></i>
+                                    Play Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-date">Jul 2023</span>
+                            <span class="project-client">QuickFood</span>
+                        </div>
+                        <h3 class="project-title">App Delivery</h3>
+                        <p class="project-description">
+                            Plataforma completa de delivery com rastreamento em tempo real e sistema 
+                            multi-usuário para clientes, restaurantes e entregadores.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Google Maps</span>
+                            <span class="tag">Socket.io</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-utensils"></i>
+                                <span>200+ Restaurantes</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-motorcycle"></i>
+                                <span>500+ Entregadores</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 8 - Portal Corporativo -->
+                <article class="project-card" data-category="web" data-title="Portal Corporativo">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Portal+Corporativo" alt="Portal Corporativo">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-web">Web</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="projeto-portal-corporativo.html" class="project-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Projeto
+                                </a>
+                                <a href="#" class="project-btn secondary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Site
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-date">Nov 2023</span>
+                            <span class="project-client">TechSolutions</span>
+                        </div>
+                        <h3 class="project-title">Portal Corporativo</h3>
+                        <p class="project-description">
+                            Site institucional responsivo com CMS personalizado e otimização 
+                            completa para SEO e performance.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Tailwind</span>
+                            <span class="tag">Strapi</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>95 PageSpeed</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-search"></i>
+                                <span>SEO 100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- Projeto 9 - Site Institucional -->
-                <article class="project-card" data-category="web" data-date="2023-06" data-title="Site Institucional">
+                <article class="project-card" data-category="web" data-title="Site Institucional">
                     <div class="project-image">
                         <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Site+Institucional" alt="Site Institucional">
                         <div class="project-overlay">
@@ -562,14 +585,13 @@
                         </div>
                         <h3 class="project-title">Site Institucional</h3>
                         <p class="project-description">
-                            Website moderno e sustentável com animações CSS avançadas, 
-                            otimização completa para conversão e integração com CRM.
+                            Website moderno e sustentável com animações CSS avançadas e 
+                            integração completa com CRM.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Vue.js</span>
                             <span class="tag">Nuxt.js</span>
                             <span class="tag">GSAP</span>
-                            <span class="tag">Netlify</span>
                         </div>
                         <div class="project-metrics">
                             <div class="metric">
@@ -584,23 +606,6 @@
                     </div>
                 </article>
             </div>
-
-            <!-- Paginação -->
-            <div class="pagination">
-                <button class="pagination-btn prev" disabled>
-                    <i class="fas fa-chevron-left"></i>
-                    Anterior
-                </button>
-                <div class="pagination-numbers">
-                    <button class="pagination-number active">1</button>
-                    <button class="pagination-number">2</button>
-                    <button class="pagination-number">3</button>
-                </div>
-                <button class="pagination-btn next">
-                    Próximo
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
         </div>
     </section>
 
@@ -608,11 +613,11 @@
     <section class="projects-cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Gostou do que viu?</h2>
-                <p>Vamos conversar sobre como posso ajudar você com seu próximo projeto</p>
+                <h2>Interessado em um projeto similar?</h2>
+                <p>Vamos conversar sobre como posso ajudar você a criar soluções digitais excepcionais</p>
                 <div class="cta-buttons">
-                    <a href="index.html#contact" class="btn btn-primary">Iniciar Projeto</a>
-                    <a href="servicos.html" class="btn btn-secondary">Ver Serviços</a>
+                    <a href="index.html#contact" class="btn btn-primary">Solicitar Orçamento</a>
+                    <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
                 </div>
             </div>
         </div>
@@ -629,8 +634,8 @@
                 <div class="footer-links">
                     <a href="index.html">Home</a>
                     <a href="index.html#about">Sobre</a>
-                    <a href="servicos.html">Serviços</a>
-                    <a href="projetos.html">Projetos</a>
+                    <a href="index.html#services">Serviços</a>
+                    <a href="portfolio.html">Portfolio</a>
                     <a href="index.html#contact">Contato</a>
                 </div>
                 <div class="footer-social">

@@ -336,6 +336,110 @@ section {
     padding: 5rem 0;
 }
 
+/* Estilos para elementos adicionados no index.html */
+.projects-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.projects-intro p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.skill-level {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.timeline-compact {
+    margin-top: 2rem;
+}
+
+.timeline-compact h3 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.timeline-item-compact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.timeline-item-compact:hover {
+    transform: translateX(5px);
+    border-color: var(--primary-color);
+}
+
+.timeline-year {
+    background: var(--primary-color);
+    color: var(--text-inverse);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 70px;
+    text-align: center;
+}
+
+.timeline-title {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Estilos para badges e status do onADV */
+.badge-ai {
+    background: linear-gradient(45deg, #9c27b0, #e91e63);
+    color: var(--text-inverse);
+}
+
+.badge-development {
+    background: linear-gradient(45deg, #ff9800, #f44336);
+    color: var(--text-inverse);
+    animation: pulse 2s infinite;
+}
+
+.project-btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.status-development {
+    color: #ff9800;
+    font-weight: 600;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
