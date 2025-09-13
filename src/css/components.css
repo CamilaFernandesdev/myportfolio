@@ -248,6 +248,16 @@
     color: var(--text-inverse);
 }
 
+.badge-python {
+    background: linear-gradient(45deg, #3776AB, #FFD343);
+    color: var(--text-inverse);
+}
+
+.badge-copel {
+    background: linear-gradient(45deg, #FF8C42, #D4A574);
+    color: var(--text-inverse);
+}
+
 /* ===== LOADING ===== */
 .loading {
     display: inline-block;

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard ONS - Operador Nacional do Sistema Elétrico</title>
+    <meta name="description" content="Dashboard interativo desenvolvido para a Copel utilizando dados do ONS para análise de informações energéticas, reservatórios e fontes geradoras de energia.">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../../index.html">Portfólio</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#services" class="nav-link">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#contact" class="nav-link">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li aria-current="page">Dashboard ONS</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero do Projeto -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-badges">
+                    <span class="badge badge-data">Dados</span>
+                    <span class="badge badge-python">Python</span>
+                    <span class="badge badge-copel">Copel</span>
+                    <span class="badge badge-completed">Concluído</span>
+                </div>
+                <h1 class="project-title">Dashboard ONS</h1>
+                <p class="project-subtitle">Operador Nacional do Sistema Elétrico</p>
+                <p class="project-hero-description">
+                    Dashboard interativo desenvolvido para a Copel (Companhia Paranaense de Energia) utilizando 
+                    dados do ONS para análise de informações energéticas. Permite visualizar os principais 
+                    reservatórios do país, comparar anos e diferentes fontes geradoras, otimizando tempo e 
+                    proporcionando análises mais concisas para engenheiros do setor.
+                </p>
+                <div class="project-status">
+                    <div class="status-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Dashboard Interativo</span>
+                    </div>
+                    <div class="status-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Setor Energético</span>
+                    </div>
+                    <div class="status-item">
+                        <i class="fas fa-building"></i>
+                        <span>Copel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel de Imagens -->
+    <section class="project-carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide active">
+                        <img src="https://via.placeholder.com/800x500/D4A574/FFFFFF?text=Dashboard+ONS+Principal" alt="Dashboard Principal ONS" onerror="this.src='https://via.placeholder.com/800x500/D4A574/FFFFFF?text=Dashboard+ONS+Principal'">
+                        <div class="slide-caption">Dashboard Principal - Visão Geral do Sistema Elétrico</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/FF8C42/FFFFFF?text=Reservatórios+Brasil" alt="Reservatórios do Brasil">
+                        <div class="slide-caption">Principais Reservatórios do País</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/FFAB73/FFFFFF?text=Comparativo+Anual" alt="Comparativo entre Anos">
+                        <div class="slide-caption">Comparativos entre Anos</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/D4A574/FFFFFF?text=Fontes+Geradoras" alt="Fontes Geradoras de Energia">
+                        <div class="slide-caption">Análise de Diferentes Fontes Geradoras</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/FF8C42/FFFFFF?text=Interface+Holoviz" alt="Interface Holoviz">
+                        <div class="slide-caption">Interface Interativa com Holoviz e Panel</div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" aria-label="Próximo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                    <button class="indicator" data-slide="3"></button>
+                    <button class="indicator" data-slide="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalhes do Projeto -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Coluna Principal -->
+                <div class="details-main">
+                    <div class="detail-section">
+                        <h2>Sobre o Projeto</h2>
+                        <p>
+                            O <strong>Dashboard ONS</strong> foi desenvolvido para a <strong>Copel</strong> 
+                            (Companhia Paranaense de Energia) como uma solução inovadora para análise de dados 
+                            do ONS (Operador Nacional do Sistema Elétrico). O projeto atende às necessidades 
+                            específicas dos engenheiros do setor que necessitam dos relatórios do ONS para 
+                            realizar análises e insights semanais.
+                        </p>
+                        <p>
+                            Com este dashboard é possível visualizar os principais reservatórios do país, 
+                            realizar comparativos entre anos e analisar diferentes fontes geradoras de energia, 
+                            <strong>otimizando tempo</strong> e permitindo análises mais concisas e eficientes.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>O que é o ONS?</h2>
+                        <p>
+                            O <strong>ONS</strong> (Operador Nacional do Sistema Elétrico) é uma entidade 
+                            privada, sem fins lucrativos, responsável pela coordenação e controle da operação 
+                            das instalações de geração e transmissão de energia elétrica no Sistema Interligado 
+                            Nacional (SIN) do Brasil.
+                        </p>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Coordenação da Operação</h3>
+                                    <p>Coordenação e controle do sistema elétrico brasileiro</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Monitoramento em Tempo Real</h3>
+                                    <p>Acompanhamento contínuo da geração e transmissão de energia</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Gestão da Rede</h3>
+                                    <p>Gestão completa da rede de transmissão nacional</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Fornecimento de Dados</h3>
+                                    <p>Disponibilização de dados sobre o sistema elétrico</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Funcionalidades do Dashboard</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Visualizações Interativas</h3>
+                                    <p>Gráficos interativos com atualizações automáticas e múltiplas abas para análise</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Reservatórios Nacionais</h3>
+                                    <p>Visualização dos principais reservatórios do país com dados em tempo real</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Comparativos Temporais</h3>
+                                    <p>Análise comparativa entre diferentes anos e períodos sazonais</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Fontes Geradoras</h3>
+                                    <p>Comparação entre diferentes fontes de geração de energia elétrica</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-filter"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Filtros Dinâmicos</h3>
+                                    <p>Sistema de filtros avançados para segmentação precisa dos dados</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Exportação de Dados</h3>
+                                    <p>Exportação em múltiplos formatos para relatórios e análises externas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Arquitetura e Tecnologias</h2>
+                        <p>
+                            O dashboard foi construído utilizando as tecnologias mais modernas para visualização 
+                            de dados e interface web interativa:
+                        </p>
+                        <div class="architecture-list">
+                            <div class="arch-item">
+                                <i class="fab fa-python"></i>
+                                <span><strong>Python:</strong> Linguagem principal para processamento de dados</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-desktop"></i>
+                                <span><strong>Panel:</strong> Framework para interface web interativa</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-chart-area"></i>
+                                <span><strong>Holoviz:</strong> Biblioteca para visualizações avançadas</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span><strong>Bokeh:</strong> Gráficos interativos e responsivos</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-table"></i>
+                                <span><strong>Pandas:</strong> Manipulação e análise de dados</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-database"></i>
+                                <span><strong>MongoDB:</strong> Armazenamento e gestão de dados</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Casos de Uso e Impacto</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Para Analistas de Energia</h3>
+                                    <p>Monitoramento de tendências, análise de padrões de consumo e relatórios</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Para Gestores</h3>
+                                    <p>Visão geral do sistema, tomada de decisões e planejamento estratégico</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Para Operadores</h3>
+                                    <p>Monitoramento em tempo real, alertas e controle operacional</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-hard-hat"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Para Engenheiros</h3>
+                                    <p>Análises técnicas semanais e insights para tomada de decisão</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar com Informações -->
+                <div class="details-sidebar">
+                    <div class="info-card">
+                        <h3>Informações do Projeto</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="label">Cliente:</span>
+                                <span class="value">Copel</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Período:</span>
+                                <span class="value">2023-2024</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Categoria:</span>
+                                <span class="value">Data Analytics / BI</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Setor:</span>
+                                <span class="value">Energia Elétrica</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Status:</span>
+                                <span class="value status-completed">✅ Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h3>Tecnologias Utilizadas</h3>
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h4>Backend</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">NumPy</span>
+                                    <span class="tech-tag">Jupyter</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Visualização</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Panel</span>
+                                    <span class="tech-tag">Holoviz</span>
+                                    <span class="tech-tag">Bokeh</span>
+                                    <span class="tech-tag">HoloViews</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Banco de Dados</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">PyMongo</span>
+                                    <span class="tech-tag">JSON</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Interface</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Responsive</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <h3>Links do Projeto</h3>
+                        <div class="links-list">
+                            <a href="#" class="project-link-btn disabled">
+                                <i class="fas fa-eye"></i>
+                                <span>Demo (Interno Copel)</span>
+                            </a>
+                            <a href="#" class="project-link-btn disabled">
+                                <i class="fab fa-github"></i>
+                                <span>Código (Confidencial)</span>
+                            </a>
+                            <a href="#" class="project-link-btn demo" target="_blank">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Documentação</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto e Resultados -->
+    <section class="project-impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Impacto e Resultados</h2>
+                <p>Benefícios obtidos com a implementação do dashboard</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Otimização de Tempo</h3>
+                    <div class="impact-stat">70%</div>
+                    <p>Redução no tempo para análise de relatórios semanais do ONS</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Análises Concisas</h3>
+                    <div class="impact-stat">100%</div>
+                    <p>Melhoria na precisão e qualidade das análises energéticas</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Engenheiros Beneficiados</h3>
+                    <div class="impact-stat">50+</div>
+                    <p>Profissionais da Copel utilizando a solução regularmente</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Dados Processados</h3>
+                    <div class="impact-stat">1M+</div>
+                    <p>Registros de dados energéticos processados e visualizados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Relacionados -->
+    <section class="related-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projetos Relacionados</h2>
+                <p>Outros trabalhos na área de análise de dados e dashboards</p>
+            </div>
+            <div class="related-grid">
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Tableau+Scraper" alt="Tableau Scraper">
+                    </div>
+                    <div class="related-info">
+                        <h3>Tableau Scraper Energético</h3>
+                        <p>Automação para coleta de dados energéticos com 24M+ registros processados</p>
+                        <a href="projeto-tableau-scraper.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Dashboard+Analytics" alt="Dashboard Analytics">
+                    </div>
+                    <div class="related-info">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Plataforma de BI premiada que gerou R$ 2M em economia anual</p>
+                        <a href="projeto-dashboard-analytics.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=CryptoMarketApp" alt="CryptoMarketApp">
+                    </div>
+                    <div class="related-info">
+                        <h3>CryptoMarketApp iOS</h3>
+                        <p>Aplicação iOS com Clean Architecture desenvolvida no Santander BootCamp</p>
+                        <a href="projeto-cryptomarket-app.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="project-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Precisa de Dashboards de Dados?</h2>
+                <p>Desenvolvo soluções de visualização de dados personalizadas para empresas do setor energético</p>
+                <div class="cta-buttons">
+                    <a href="../../../index.html#contact" class="btn btn-primary">Solicitar Consultoria</a>
+                    <a href="../portfolio.html" class="btn btn-secondary">Ver Mais Projetos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Portfólio</h3>
+                    <p>Desenvolvendo soluções digitais inovadoras</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../index.html#about">Sobre</a>
+                    <a href="../../../index.html#services">Serviços</a>
+                    <a href="../portfolio.html">Portfolio</a>
+                    <a href="../../../index.html#contact">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Camila Fernandes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/portfolio-simple.js"></script>
+    <script src="../../js/simple-carousel.js"></script>
+</body>
+</html>
