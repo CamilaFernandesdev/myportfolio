@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Hub - Organização Colaborativa de Desenvolvimento</title>
+    <meta name="description" content="Participação ativa na organização Vibrant Hub, uma iniciativa colaborativa de desenvolvimento de software no GitHub focada em projetos inovadores e soluções tecnológicas.">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../../index.html">Portfólio</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#services" class="nav-link">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#contact" class="nav-link">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li aria-current="page">Vibrant Hub</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero do Projeto -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-badges">
+                    <span class="badge badge-organization">Organização</span>
+                    <span class="badge badge-collaboration">Colaboração</span>
+                    <span class="badge badge-github">GitHub</span>
+                    <span class="badge badge-active">Ativo</span>
+                </div>
+                <h1 class="project-title">Vibrant Hub</h1>
+                <p class="project-subtitle">Organização Colaborativa de Desenvolvimento</p>
+                <p class="project-hero-description">
+                    Participação ativa na organização Vibrant Hub, uma iniciativa colaborativa de desenvolvimento 
+                    de software no GitHub. A organização foca em projetos inovadores e soluções tecnológicas, 
+                    promovendo colaboração entre desenvolvedores e compartilhamento de conhecimento técnico.
+                </p>
+                <div class="project-status">
+                    <div class="status-item">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub Organization</span>
+                    </div>
+                    <div class="status-item">
+                        <i class="fas fa-users"></i>
+                        <span>Colaboração</span>
+                    </div>
+                    <div class="status-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Brasil</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel de Imagens -->
+    <section class="project-carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide active">
+                        <img src="https://via.placeholder.com/800x500/FF8C42/FFFFFF?text=Vibrant+Hub+Organization" alt="Vibrant Hub Organization" onerror="this.src='https://via.placeholder.com/800x500/FF8C42/FFFFFF?text=Vibrant+Hub+Organization'">
+                        <div class="slide-caption">Vibrant Hub - Organização no GitHub</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/D4A574/FFFFFF?text=Colaboração+GitHub" alt="Colaboração GitHub">
+                        <div class="slide-caption">Colaboração e Desenvolvimento em Equipe</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/FFAB73/FFFFFF?text=Projetos+Inovadores" alt="Projetos Inovadores">
+                        <div class="slide-caption">Projetos Inovadores e Soluções Tecnológicas</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/FF8C42/FFFFFF?text=Open+Source" alt="Open Source">
+                        <div class="slide-caption">Contribuições Open Source</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/D4A574/FFFFFF?text=Comunidade+Dev" alt="Comunidade de Desenvolvedores">
+                        <div class="slide-caption">Comunidade de Desenvolvedores</div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" aria-label="Próximo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                    <button class="indicator" data-slide="3"></button>
+                    <button class="indicator" data-slide="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalhes do Projeto -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Coluna Principal -->
+                <div class="details-main">
+                    <div class="detail-section">
+                        <h2>Sobre a Vibrant Hub</h2>
+                        <p>
+                            A <strong>Vibrant Hub</strong> é uma organização colaborativa no GitHub que reúne 
+                            desenvolvedores apaixonados por tecnologia e inovação. Como membro ativo desta 
+                            organização, participo de iniciativas que visam criar soluções tecnológicas 
+                            impactantes e promover o compartilhamento de conhecimento na comunidade de desenvolvimento.
+                        </p>
+                        <p>
+                            A organização serve como um hub vibrante (daí o nome) para projetos colaborativos, 
+                            onde desenvolvedores podem contribuir com suas expertises em diferentes áreas 
+                            tecnológicas, desde desenvolvimento web até análise de dados e inteligência artificial.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Minha Participação</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Desenvolvimento Colaborativo</h3>
+                                    <p>Contribuição ativa em projetos da organização com foco em qualidade de código</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Trabalho em Equipe</h3>
+                                    <p>Colaboração com outros desenvolvedores em projetos multidisciplinares</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Inovação Tecnológica</h3>
+                                    <p>Participação em projetos inovadores e exploração de novas tecnologias</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Compartilhamento de Conhecimento</h3>
+                                    <p>Mentoria e troca de experiências com a comunidade de desenvolvedores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Áreas de Contribuição</h2>
+                        <p>
+                            Como membro da Vibrant Hub, contribuo em diversas áreas tecnológicas, 
+                            aplicando minha experiência em diferentes domínios:
+                        </p>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Análise de Dados</h3>
+                                    <p>Projetos envolvendo processamento e visualização de dados complexos</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Desenvolvimento Mobile</h3>
+                                    <p>Aplicações móveis modernas com foco em experiência do usuário</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Desenvolvimento Web</h3>
+                                    <p>Aplicações web responsivas e interfaces interativas</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Automação</h3>
+                                    <p>Scripts e ferramentas para automação de processos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Metodologias e Práticas</h2>
+                        <p>
+                            Na Vibrant Hub, seguimos as melhores práticas de desenvolvimento colaborativo 
+                            e metodologias ágeis para garantir a qualidade e eficiência dos projetos:
+                        </p>
+                        <div class="architecture-list">
+                            <div class="arch-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span><strong>Git Flow:</strong> Controle de versão estruturado e colaborativo</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span><strong>Pull Requests:</strong> Revisão de código e discussões técnicas</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-bug"></i>
+                                <span><strong>Issue Tracking:</strong> Gestão de bugs e melhorias</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-rocket"></i>
+                                <span><strong>CI/CD:</strong> Integração e deploy contínuos</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span><strong>Code Review:</strong> Garantia de qualidade e segurança</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-book"></i>
+                                <span><strong>Documentação:</strong> Documentação clara e abrangente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Impacto e Objetivos</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Comunidade</h3>
+                                    <p>Fortalecimento da comunidade de desenvolvedores brasileiros</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Aprendizado</h3>
+                                    <p>Ambiente de aprendizado contínuo e troca de experiências</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Networking</h3>
+                                    <p>Conexões profissionais e oportunidades de colaboração</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Excelência</h3>
+                                    <p>Busca pela excelência técnica em todos os projetos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar com Informações -->
+                <div class="details-sidebar">
+                    <div class="info-card">
+                        <h3>Informações da Organização</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="label">Organização:</span>
+                                <span class="value">Vibrant Hub</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Tipo:</span>
+                                <span class="value">GitHub Organization</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Localização:</span>
+                                <span class="value">Brasil</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Contato:</span>
+                                <span class="value">vhub.suporte@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Status:</span>
+                                <span class="value status-active">🟢 Ativo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h3>Tecnologias Utilizadas</h3>
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h4>Plataformas</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">GitHub</span>
+                                    <span class="tech-tag">Git</span>
+                                    <span class="tech-tag">Open Source</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Desenvolvimento</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Mobile</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">Swift</span>
+                                    <span class="tech-tag">Flutter</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Dados</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>DevOps</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">CI/CD</span>
+                                    <span class="tech-tag">AWS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <h3>Links da Organização</h3>
+                        <div class="links-list">
+                            <a href="https://github.com/Vibrant-Hub" class="project-link-btn demo" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub Organization</span>
+                            </a>
+                            <a href="mailto:vhub.suporte@gmail.com" class="project-link-btn demo">
+                                <i class="fas fa-envelope"></i>
+                                <span>Contato</span>
+                            </a>
+                            <a href="https://github.com/Vibrant-Hub" class="project-link-btn demo" target="_blank">
+                                <i class="fas fa-users"></i>
+                                <span>Membros</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contribuições e Estatísticas -->
+    <section class="project-impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contribuições e Impacto</h2>
+                <p>Minha participação ativa na organização Vibrant Hub</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Projetos Colaborativos</h3>
+                    <div class="impact-stat">Ativo</div>
+                    <p>Participação em projetos multidisciplinares da organização</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Colaboração</h3>
+                    <div class="impact-stat">Team</div>
+                    <p>Trabalho em equipe com desenvolvedores de diferentes especialidades</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Comunidade</h3>
+                    <div class="impact-stat">BR</div>
+                    <p>Contribuição para a comunidade de desenvolvedores brasileiros</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Open Source</h3>
+                    <div class="impact-stat">100%</div>
+                    <p>Compromisso com projetos de código aberto e colaboração</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Relacionados -->
+    <section class="related-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projetos Relacionados</h2>
+                <p>Outros trabalhos que demonstram colaboração e desenvolvimento</p>
+            </div>
+            <div class="related-grid">
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FF8C42/FFFFFF?text=CryptoMarketApp" alt="CryptoMarketApp">
+                    </div>
+                    <div class="related-info">
+                        <h3>CryptoMarketApp iOS</h3>
+                        <p>Aplicação iOS com Clean Architecture desenvolvida no Santander BootCamp</p>
+                        <a href="projeto-cryptomarket-app.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/D4A574/FFFFFF?text=Leitor+PAR(p)" alt="Leitor PAR(p)">
+                    </div>
+                    <div class="related-info">
+                        <h3>Leitor PAR(p)</h3>
+                        <p>Ferramenta Python para processamento de arquivos do setor energético</p>
+                        <a href="projeto-leitor-newave.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Dashboard+ONS" alt="Dashboard ONS">
+                    </div>
+                    <div class="related-info">
+                        <h3>Dashboard ONS</h3>
+                        <p>Dashboard interativo desenvolvido para a Copel com dados do ONS</p>
+                        <a href="projeto-dashboard-ons.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="project-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interessado em Colaboração?</h2>
+                <p>Estou sempre aberto a novos projetos colaborativos e oportunidades de desenvolvimento em equipe</p>
+                <div class="cta-buttons">
+                    <a href="../../../index.html#contact" class="btn btn-primary">Entrar em Contato</a>
+                    <a href="../portfolio.html" class="btn btn-secondary">Ver Mais Projetos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Portfólio</h3>
+                    <p>Desenvolvendo soluções digitais inovadoras</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../index.html#about">Sobre</a>
+                    <a href="../../../index.html#services">Serviços</a>
+                    <a href="../portfolio.html">Portfolio</a>
+                    <a href="../../../index.html#contact">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Camila Fernandes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/portfolio-simple.js"></script>
+    <script src="../../js/simple-carousel.js"></script>
+</body>
+</html>

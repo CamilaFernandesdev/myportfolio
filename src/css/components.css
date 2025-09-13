@@ -258,6 +258,37 @@
     color: var(--text-inverse);
 }
 
+.badge-algorithm {
+    background: linear-gradient(45deg, #8B5CF6, #7C3AED);
+    color: var(--text-inverse);
+}
+
+.badge-energy {
+    background: linear-gradient(45deg, #FFAB73, #FF8C42);
+    color: var(--text-inverse);
+}
+
+.badge-organization {
+    background: linear-gradient(45deg, #6366F1, #8B5CF6);
+    color: var(--text-inverse);
+}
+
+.badge-collaboration {
+    background: linear-gradient(45deg, #10B981, #059669);
+    color: var(--text-inverse);
+}
+
+.badge-github {
+    background: linear-gradient(45deg, #24292E, #586069);
+    color: var(--text-inverse);
+}
+
+.badge-active {
+    background: linear-gradient(45deg, #10B981, #059669);
+    color: var(--text-inverse);
+    animation: pulse 2s infinite;
+}
+
 /* ===== LOADING ===== */
 .loading {
     display: inline-block;

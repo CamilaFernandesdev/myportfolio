@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor PAR(p) - Arquivo de Saída do NEWAVE</title>
+    <meta name="description" content="Leitor especializado para arquivos PAR(p) gerados pelo NEWAVE (CCEEE), processando modelos estocásticos de geração de energias sintéticas para análise do setor elétrico.">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../../index.html">Portfólio</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#services" class="nav-link">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../index.html#contact" class="nav-link">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li aria-current="page">Leitor PAR(p)</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero do Projeto -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-badges">
+                    <span class="badge badge-python">Python</span>
+                    <span class="badge badge-algorithm">Algoritmos</span>
+                    <span class="badge badge-energy">Energia</span>
+                    <span class="badge badge-completed">Concluído</span>
+                </div>
+                <h1 class="project-title">Leitor PAR(p)</h1>
+                <p class="project-subtitle">Arquivo de Saída do NEWAVE - Energias Sintéticas</p>
+                <p class="project-hero-description">
+                    Ferramenta especializada em Python para leitura e processamento do arquivo PAR(p) gerado pelo NEWAVE 
+                    (Acervo CCEEE). Processa modelos estocásticos de geração de energias sintéticas, essencial 
+                    para análise de planejamento energético no setor elétrico brasileiro.
+                </p>
+                <div class="project-status">
+                    <div class="status-item">
+                        <i class="fas fa-file-code"></i>
+                        <span>Processamento de Arquivos</span>
+                    </div>
+                    <div class="status-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Modelos Estocásticos</span>
+                    </div>
+                    <div class="status-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Setor Energético</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel de Imagens -->
+    <section class="project-carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide active">
+                        <img src="https://via.placeholder.com/800x500/D4A574/FFFFFF?text=NEWAVE+PAR(p)+Reader" alt="Leitor NEWAVE PAR(p)" onerror="this.src='https://via.placeholder.com/800x500/D4A574/FFFFFF?text=NEWAVE+PAR(p)+Reader'">
+                        <div class="slide-caption">Interface do Leitor NEWAVE - Modelo PAR(p)</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/FF8C42/FFFFFF?text=Arquivo+Saída+NEWAVE" alt="Processamento de Arquivos NEWAVE">
+                        <div class="slide-caption">Processamento de Arquivos de Saída do NEWAVE</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/FFAB73/FFFFFF?text=Modelos+Estocásticos" alt="Modelos Estocásticos">
+                        <div class="slide-caption">Análise de Modelos Estocásticos de Energia</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/D4A574/FFFFFF?text=Energias+Sintéticas" alt="Geração de Energias Sintéticas">
+                        <div class="slide-caption">Geração de Energias Sintéticas PAR(p)</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://via.placeholder.com/800x500/FF8C42/FFFFFF?text=Python+Scripts" alt="Scripts Python">
+                        <div class="slide-caption">Scripts Python Especializados</div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" aria-label="Próximo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                    <button class="indicator" data-slide="3"></button>
+                    <button class="indicator" data-slide="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalhes do Projeto -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Coluna Principal -->
+                <div class="details-main">
+                    <div class="detail-section">
+                        <h2>Sobre o Projeto</h2>
+                        <p>
+                            O <strong>Leitor PAR(p)</strong> é uma ferramenta especializada desenvolvida em Python 
+                            para processar o arquivo de saída PAR(p) gerado pelo NEWAVE (Acervo CCEEE). Este arquivo 
+                            contém modelos estocásticos de geração de energias sintéticas utilizando a metodologia 
+                            <strong>PAR(p)</strong> - Processo Auto-Regressivo Periódico de ordem p.
+                        </p>
+                        <p>
+                            Este projeto é fundamental para profissionais do setor elétrico que trabalham com 
+                            planejamento energético e análise de cenários estocásticos, permitindo a extração 
+                            e interpretação eficiente dos dados do arquivo PAR(p) do sistema elétrico brasileiro.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>O que é o NEWAVE?</h2>
+                        <p>
+                            O <strong>NEWAVE</strong> é um modelo computacional desenvolvido pelo CEPEL (Centro 
+                            de Pesquisas de Energia Elétrica) em conjunto com o CCEEE (Comitê Coordenador de 
+                            Estudos Energéticos) para o planejamento da operação energética do Sistema 
+                            Interligado Nacional (SIN).
+                        </p>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Modelo Matemático</h3>
+                                    <p>Otimização estocástica da operação do sistema elétrico brasileiro</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Hidrologia Sintética</h3>
+                                    <p>Geração de cenários hidrológicos sintéticos para planejamento</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-random"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Modelos Estocásticos</h3>
+                                    <p>Utilização de processos auto-regressivos PAR(p) para modelagem</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-area"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Análise de Cenários</h3>
+                                    <p>Avaliação de múltiplos cenários para tomada de decisão</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Metodologia PAR(p)</h2>
+                        <p>
+                            O <strong>PAR(p)</strong> (Processo Auto-Regressivo Periódico de ordem p) é uma 
+                            metodologia estatística avançada utilizada para modelar a estocasticidade das 
+                            energias naturais afluentes aos reservatórios do sistema elétrico.
+                        </p>
+                        <div class="architecture-list">
+                            <div class="arch-item">
+                                <i class="fas fa-sine-wave"></i>
+                                <span><strong>Sazonalidade:</strong> Captura padrões sazonais das afluências</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-link"></i>
+                                <span><strong>Correlação:</strong> Modela dependências temporais e espaciais</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-dice"></i>
+                                <span><strong>Estocasticidade:</strong> Incorpora incertezas hidrológicas</span>
+                            </div>
+                            <div class="arch-item">
+                                <i class="fas fa-infinity"></i>
+                                <span><strong>Séries Sintéticas:</strong> Gera cenários futuros possíveis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Estrutura do Projeto</h2>
+                        <p>
+                            O projeto está organizado em módulos Python especializados, cada um com 
+                            funcionalidades específicas para o processamento dos dados do NEWAVE:
+                        </p>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-file-code"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>parp.py</h3>
+                                    <p>Módulo principal para processamento dos modelos PAR(p) e análise estocástica</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>leitor_ree.py</h3>
+                                    <p>Leitor especializado para dados de Regiões Elétricas Equivalentes (REE)</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cut"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>extract_parts_text_file.py</h3>
+                                    <p>Extrator de seções específicas dos arquivos de texto do NEWAVE</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>README.md</h3>
+                                    <p>Documentação completa do projeto e instruções de uso</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Funcionalidades Principais</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-file-import"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Leitura de Arquivos</h3>
+                                    <p>Processamento automático de arquivos de saída do NEWAVE com múltiplos formatos</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-filter"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Extração de Dados</h3>
+                                    <p>Identificação e extração de seções específicas dos modelos PAR(p)</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-table"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Estruturação</h3>
+                                    <p>Organização dos dados em estruturas Python para análise posterior</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Validação</h3>
+                                    <p>Verificação de integridade e consistência dos dados extraídos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Aplicações Práticas</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Planejamento Energético</h3>
+                                    <p>Análise de cenários para planejamento da operação do sistema elétrico</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Pesquisa Acadêmica</h3>
+                                    <p>Ferramenta para estudos sobre modelos estocásticos em energia</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Automação</h3>
+                                    <p>Processamento automatizado de grandes volumes de dados do NEWAVE</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>Auditoria</h3>
+                                    <p>Verificação e validação de resultados de estudos energéticos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar com Informações -->
+                <div class="details-sidebar">
+                    <div class="info-card">
+                        <h3>Informações do Projeto</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="label">Setor:</span>
+                                <span class="value">Energia Elétrica</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Área:</span>
+                                <span class="value">Planejamento Energético</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Metodologia:</span>
+                                <span class="value">PAR(p) - Processo Auto-Regressivo</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Fonte:</span>
+                                <span class="value">NEWAVE (CCEEE)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Status:</span>
+                                <span class="value status-completed">✅ Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h3>Tecnologias Utilizadas</h3>
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h4>Linguagem</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python 100%</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Processamento</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">File I/O</span>
+                                    <span class="tech-tag">Text Processing</span>
+                                    <span class="tech-tag">Data Parsing</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Análise</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Modelos Estocásticos</span>
+                                    <span class="tech-tag">Séries Temporais</span>
+                                    <span class="tech-tag">Estatística</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Domínio</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">NEWAVE</span>
+                                    <span class="tech-tag">PAR(p)</span>
+                                    <span class="tech-tag">REE</span>
+                                    <span class="tech-tag">CCEEE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <h3>Links do Projeto</h3>
+                        <div class="links-list">
+                            <a href="https://github.com/CamilaFernandesdev/project_leitor_parp/tree/main" class="project-link-btn demo" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>Repositório GitHub</span>
+                            </a>
+                            <a href="https://github.com/CamilaFernandesdev/project_leitor_parp/blob/main/README.md" class="project-link-btn demo" target="_blank">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Documentação</span>
+                            </a>
+                            <a href="https://github.com/CamilaFernandesdev/project_leitor_parp/blob/main/parp.py" class="project-link-btn demo" target="_blank">
+                                <i class="fas fa-code"></i>
+                                <span>Código Principal</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto Técnico -->
+    <section class="project-impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Impacto Técnico</h2>
+                <p>Contribuições para o setor de planejamento energético</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <h3>Arquivos Processados</h3>
+                    <div class="impact-stat">100%</div>
+                    <p>Automatização completa da leitura de arquivos NEWAVE</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Tempo Economizado</h3>
+                    <div class="impact-stat">90%</div>
+                    <p>Redução significativa no tempo de processamento manual</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Precisão</h3>
+                    <div class="impact-stat">99.9%</div>
+                    <p>Alta precisão na extração e validação de dados</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Reutilização</h3>
+                    <div class="impact-stat">Open</div>
+                    <p>Código aberto disponível para a comunidade técnica</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Relacionados -->
+    <section class="related-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projetos Relacionados</h2>
+                <p>Outros trabalhos na área de análise de dados energéticos</p>
+            </div>
+            <div class="related-grid">
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/D4A574/FFFFFF?text=Dashboard+ONS" alt="Dashboard ONS">
+                    </div>
+                    <div class="related-info">
+                        <h3>Dashboard ONS</h3>
+                        <p>Dashboard interativo desenvolvido para a Copel com dados do ONS</p>
+                        <a href="projeto-dashboard-ons.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Tableau+Scraper" alt="Tableau Scraper">
+                    </div>
+                    <div class="related-info">
+                        <h3>Tableau Scraper Energético</h3>
+                        <p>Automação para coleta de dados energéticos com 24M+ registros</p>
+                        <a href="projeto-tableau-scraper.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">
+                        <img src="https://via.placeholder.com/300x200/FFAB73/FFFFFF?text=Dashboard+Analytics" alt="Dashboard Analytics">
+                    </div>
+                    <div class="related-info">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Plataforma de BI premiada que gerou R$ 2M em economia anual</p>
+                        <a href="projeto-dashboard-analytics.html" class="related-link">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="project-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Precisa de Soluções para o Setor Energético?</h2>
+                <p>Desenvolvo ferramentas especializadas para processamento de dados e modelos do setor elétrico</p>
+                <div class="cta-buttons">
+                    <a href="../../../index.html#contact" class="btn btn-primary">Solicitar Consultoria</a>
+                    <a href="../portfolio.html" class="btn btn-secondary">Ver Mais Projetos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Portfólio</h3>
+                    <p>Desenvolvendo soluções digitais inovadoras</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../index.html#about">Sobre</a>
+                    <a href="../../../index.html#services">Serviços</a>
+                    <a href="../portfolio.html">Portfolio</a>
+                    <a href="../../../index.html#contact">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Camila Fernandes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/portfolio-simple.js"></script>
+    <script src="../../js/simple-carousel.js"></script>
+</body>
+</html>
