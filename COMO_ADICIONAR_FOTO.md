@@ -27,7 +27,7 @@ No arquivo `index.html`, encontre esta seção (linha ~55):
         C
     </div>
     <!-- Para quando adicionar uma foto, use:
-    <img src="assets/images/profile-photo.jpg" alt="Seu Nome" class="hero-profile-photo" id="hero-profile-photo">
+    <img src="assets/images/profile-photo.jpg" alt="Camila Fernandes" class="hero-profile-photo" id="hero-profile-photo">
     -->
 </div>
 ```
@@ -36,7 +36,7 @@ No arquivo `index.html`, encontre esta seção (linha ~55):
 ```html
 <!-- Foto de perfil centralizada -->
 <div class="hero-profile">
-    <img src="assets/images/profile-photo.jpg" alt="Seu Nome" class="hero-profile-photo" id="hero-profile-photo">
+    <img src="assets/images/profile-photo.jpg" alt="Camila Fernandes" class="hero-profile-photo" id="hero-profile-photo">
 </div>
 ```
 

@@ -289,6 +289,20 @@
     animation: pulse 2s infinite;
 }
 
+/* ===== EXTERNAL LINKS ===== */
+.external-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.external-link:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
 /* ===== LOADING ===== */
 .loading {
     display: inline-block;
