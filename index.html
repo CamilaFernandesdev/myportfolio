@@ -18,16 +18,30 @@
                 <span>Camila</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#projects" class="nav-link">Portfolio</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-controls">
+                <!-- Language Switch -->
+                <div class="language-switch">
+                    <button class="lang-btn active" data-lang="pt">PT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <!-- Theme Switch -->
+                <div class="theme-switch">
+                    <button class="theme-btn" id="themeToggle" title="Alternar tema">
+                        <span class="theme-icon">●</span>
+                    </button>
+                </div>
+                <!-- Mobile Menu Toggle -->
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -37,12 +51,12 @@
         <!-- Hero Section -->
         <section class="hero-card">
             <div class="hero-content">
-                <div class="hero-badge">Full Stack Developer & Data Analyst</div>
+                <div class="hero-badge" data-i18n="hero.badge">Mobile Developer & Data Analyst</div>
                 <h1 class="hero-title">
                     Camila<br>
                     <span class="highlight">Fernandes</span>
                 </h1>
-                <p class="hero-description">
+                <p class="hero-description" data-i18n="hero.description">
                     Crafting Meaningful Brands & Intuitive Digital Experiences That Stand Out
                 </p>
                 <div class="hero-avatar">
@@ -196,23 +210,138 @@
 
         <!-- Project Showcase -->
         <section class="project-showcase">
-            <h2>Let's Create Something Exceptional</h2>
-            <p>I collaborate closely with clients to create meaningful digital experiences that drive results and exceed expectations.</p>
-            <div class="project-gallery">
-                <div class="project-item">
-                    <div class="project-preview">onADV</div>
+            <h2>Featured Projects</h2>
+            <p>Explore my latest work in mobile development, data analysis, and web applications.</p>
+            <div class="projects-container">
+                <!-- Project 1: onADV -->
+                <div class="project-card-modern" data-project="onadv">
+                    <div class="project-image-container">
+                        <img src="https://via.placeholder.com/400x250/FF6B35/FFFFFF?text=onADV+Legal+Tech" alt="onADV Legal Tech Platform" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-web">Web</span>
+                                <span class="badge badge-ai">IA</span>
+                                <span class="badge badge-development">Em Desenvolvimento</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="project-btn primary" onclick="openProjectModal('onadv')">
+                                    Ver Detalhes
+                                </button>
+                                <a href="https://github.com/CamilaFernandesdev" class="project-btn secondary" target="_blank">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>onADV Legal Tech</h3>
+                        <p>Sistema revolucionário de processamento inteligente para o poder judiciário com IA e assinatura digital.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">IA</span>
+                            <span class="tech-tag">PKI</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-item">
-                    <div class="project-preview">Dashboard</div>
+
+                <!-- Project 2: CryptoMarket App -->
+                <div class="project-card-modern" data-project="crypto">
+                    <div class="project-image-container">
+                        <img src="https://via.placeholder.com/400x250/667eea/FFFFFF?text=CryptoMarket+iOS" alt="CryptoMarket iOS App" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-mobile">iOS</span>
+                                <span class="badge badge-swift">Swift</span>
+                                <span class="badge badge-completed">Concluído</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="project-btn primary" onclick="openProjectModal('crypto')">
+                                    Ver Detalhes
+                                </button>
+                                <a href="https://github.com/CamilaFernandesdev" class="project-btn secondary" target="_blank">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>CryptoMarket iOS App</h3>
+                        <p>Aplicação iOS moderna para visualização de criptomoedas com gráficos interativos e Core Data.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">SwiftUI</span>
+                            <span class="tech-tag">Core Data</span>
+                            <span class="tech-tag">Charts</span>
+                            <span class="tech-tag">Combine</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-item">
-                    <div class="project-preview">CryptoApp</div>
+
+                <!-- Project 3: Dashboard Analytics -->
+                <div class="project-card-modern" data-project="dashboard">
+                    <div class="project-image-container">
+                        <img src="https://via.placeholder.com/400x250/f093fb/FFFFFF?text=Analytics+Dashboard" alt="Dashboard Analytics BI" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-data">Data</span>
+                                <span class="badge badge-python">Python</span>
+                                <span class="badge badge-featured">Premiado</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="project-btn primary" onclick="openProjectModal('dashboard')">
+                                    Ver Detalhes
+                                </button>
+                                <a href="https://github.com/CamilaFernandesdev" class="project-btn secondary" target="_blank">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Plataforma de BI que gerou R$ 2M em economia anual e conquistou prêmio de melhor projeto.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Plotly</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-item">
-                    <div class="project-preview">Scraper</div>
+
+                <!-- Project 4: Tableau Scraper -->
+                <div class="project-card-modern" data-project="scraper">
+                    <div class="project-image-container">
+                        <img src="https://via.placeholder.com/400x250/FF8C42/FFFFFF?text=Tableau+Scraper" alt="Tableau Scraper Energético" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-data">Data</span>
+                                <span class="badge badge-automation">Automação</span>
+                                <span class="badge badge-completed">Concluído</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="project-btn primary" onclick="openProjectModal('scraper')">
+                                    Ver Detalhes
+                                </button>
+                                <a href="https://github.com/CamilaFernandesdev" class="project-btn secondary" target="_blank">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Tableau Scraper Energético</h3>
+                        <p>Automação para coleta de dados energéticos processando 24 milhões de registros.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">ETL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button class="cta-button">View Portfolio</button>
+            <button class="cta-button" onclick="showAllProjects()">View All Projects</button>
         </section>
 
         <!-- Testimonials -->
@@ -254,6 +383,39 @@
             <button class="cta-button">Get In Touch</button>
         </section>
     </main>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Details</h2>
+                <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Project Screenshot">
+                </div>
+                <div class="modal-info">
+                    <div class="modal-badges" id="modalBadges"></div>
+                    <p id="modalDescription"></p>
+                    <div class="modal-details">
+                        <div class="detail-section">
+                            <h4>Technologies Used</h4>
+                            <div id="modalTechStack" class="tech-stack-modal"></div>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Key Features</h4>
+                            <ul id="modalFeatures"></ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Project Links</h4>
+                            <div class="modal-links" id="modalLinks"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

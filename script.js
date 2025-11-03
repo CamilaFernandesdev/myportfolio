@@ -490,3 +490,412 @@ function initLazyLoading() {
 
 // Initialize mobile menu
 initMobileMenu();
+
+// ===== PROJECTS SYSTEM =====
+const projectsData = {
+    onadv: {
+        title: "onADV Legal Tech",
+        image: "https://via.placeholder.com/800x400/FF6B35/FFFFFF?text=onADV+Legal+Tech+Platform",
+        description: "Sistema revolucionário de processamento inteligente para o poder judiciário brasileiro, integrando Inteligência Artificial com assinatura digital PKI para automatizar e acelerar processos legais.",
+        badges: ["Web", "IA", "Em Desenvolvimento"],
+        technologies: ["React", "Node.js", "Python", "TensorFlow", "PKI", "PostgreSQL", "Docker"],
+        features: [
+            "Processamento inteligente de documentos legais com IA",
+            "Assinatura digital integrada com certificados PKI",
+            "Dashboard analytics para acompanhamento de processos",
+            "API RESTful para integração com sistemas existentes",
+            "Interface responsiva e acessível",
+            "Segurança de nível bancário"
+        ],
+        links: [
+            { text: "GitHub", url: "https://github.com/CamilaFernandesdev" },
+            { text: "Demo", url: "#" },
+            { text: "Documentação", url: "#" }
+        ]
+    },
+    crypto: {
+        title: "CryptoMarket iOS App",
+        image: "https://via.placeholder.com/800x400/667eea/FFFFFF?text=CryptoMarket+iOS+App",
+        description: "Aplicação iOS nativa desenvolvida em SwiftUI para visualização e acompanhamento de criptomoedas em tempo real, com gráficos interativos e persistência de dados local.",
+        badges: ["iOS", "Swift", "Concluído"],
+        technologies: ["SwiftUI", "Core Data", "Combine", "Charts", "URLSession", "Keychain"],
+        features: [
+            "Cotações em tempo real de 100+ criptomoedas",
+            "Gráficos interativos com múltiplos períodos",
+            "Portfólio pessoal com cálculo de lucros/perdas",
+            "Notificações push para alertas de preço",
+            "Modo escuro/claro automático",
+            "Sincronização com iCloud"
+        ],
+        links: [
+            { text: "GitHub", url: "https://github.com/CamilaFernandesdev" },
+            { text: "App Store", url: "#" },
+            { text: "Demo Video", url: "#" }
+        ]
+    },
+    dashboard: {
+        title: "Dashboard Analytics BI",
+        image: "https://via.placeholder.com/800x400/f093fb/FFFFFF?text=Analytics+Dashboard+BI",
+        description: "Plataforma de Business Intelligence que revolucionou a análise de dados da empresa, gerando R$ 2M em economia anual através de insights automatizados e machine learning.",
+        badges: ["Data", "Python", "Premiado"],
+        technologies: ["Python", "Plotly", "Pandas", "Scikit-learn", "MongoDB", "FastAPI", "Docker"],
+        features: [
+            "Dashboards interativos com 50+ métricas KPI",
+            "Machine Learning para previsão de tendências",
+            "Processamento de 10M+ registros diários",
+            "Alertas inteligentes baseados em anomalias",
+            "Exportação automática de relatórios",
+            "Integração com múltiplas fontes de dados"
+        ],
+        links: [
+            { text: "GitHub", url: "https://github.com/CamilaFernandesdev" },
+            { text: "Prêmio", url: "#" },
+            { text: "Dashboard Demo", url: "#" }
+        ]
+    },
+    scraper: {
+        title: "Tableau Scraper Energético",
+        image: "https://via.placeholder.com/800x400/FF8C42/FFFFFF?text=Tableau+Scraper+Energético",
+        description: "Sistema de automação para coleta e processamento de dados do setor energético brasileiro, processando 24 milhões de registros mensais com pipeline ETL otimizado.",
+        badges: ["Data", "Automação", "Concluído"],
+        technologies: ["Python", "Selenium", "Apache Airflow", "PostgreSQL", "Tableau", "AWS"],
+        features: [
+            "Coleta automatizada de 15+ fontes governamentais",
+            "Pipeline ETL com processamento paralelo",
+            "Validação automática de qualidade dos dados",
+            "Dashboards Tableau atualizados em tempo real",
+            "Monitoramento e alertas de falhas",
+            "Arquitetura escalável na AWS"
+        ],
+        links: [
+            { text: "GitHub", url: "https://github.com/CamilaFernandesdev" },
+            { text: "Tableau Public", url: "#" },
+            { text: "Documentação", url: "#" }
+        ]
+    }
+};
+
+function initProjects() {
+    // Add click events to project cards
+    const projectCards = document.querySelectorAll('.project-card-modern');
+    projectCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Don't open modal if clicking on a link
+            if (e.target.tagName === 'A' || e.target.closest('a')) {
+                return;
+            }
+            
+            const projectId = card.dataset.project;
+            if (projectId) {
+                openProjectModal(projectId);
+            }
+        });
+    });
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+        const modal = document.getElementById('projectModal');
+        if (e.target === modal) {
+            closeProjectModal();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeProjectModal();
+        }
+    });
+}
+
+function openProjectModal(projectId) {
+    const project = projectsData[projectId];
+    if (!project) return;
+    
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImage = document.getElementById('modalImage');
+    const modalBadges = document.getElementById('modalBadges');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalTechStack = document.getElementById('modalTechStack');
+    const modalFeatures = document.getElementById('modalFeatures');
+    const modalLinks = document.getElementById('modalLinks');
+    
+    // Update modal content
+    modalTitle.textContent = project.title;
+    modalImage.src = project.image;
+    modalImage.alt = project.title;
+    modalDescription.textContent = project.description;
+    
+    // Update badges
+    modalBadges.innerHTML = project.badges.map(badge => 
+        `<span class="badge badge-${badge.toLowerCase().replace(/\s+/g, '-')}">${badge}</span>`
+    ).join('');
+    
+    // Update tech stack
+    modalTechStack.innerHTML = project.technologies.map(tech => 
+        `<span class="tech-tag">${tech}</span>`
+    ).join('');
+    
+    // Update features
+    modalFeatures.innerHTML = project.features.map(feature => 
+        `<li>${feature}</li>`
+    ).join('');
+    
+    // Update links
+    modalLinks.innerHTML = project.links.map(link => 
+        `<a href="${link.url}" target="_blank">${link.text}</a>`
+    ).join('');
+    
+    // Show modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function showAllProjects() {
+    showNotification('Página de projetos completa em desenvolvimento!', 'info');
+}
+
+// Make functions globally available
+window.openProjectModal = openProjectModal;
+window.closeProjectModal = closeProjectModal;
+window.showAllProjects = showAllProjects;
+
+// Initialize projects when DOM is loaded
+document.addEventListener('DOMContentLoaded', initProjects);
+
+// ===== INTERNATIONALIZATION SYSTEM =====
+const translations = {
+    pt: {
+        nav: {
+            home: "Home",
+            about: "Sobre",
+            services: "Serviços",
+            portfolio: "Portfólio",
+            contact: "Contato"
+        },
+        hero: {
+            badge: "Desenvolvedora Full Stack & Analista de Dados",
+            description: "Criando Marcas Significativas e Experiências Digitais Intuitivas que se Destacam"
+        },
+        technologies: {
+            title: "TECNOLOGIAS",
+            subtitle: "Ferramentas e frameworks que uso para construir soluções digitais excepcionais",
+            flutter: "Desenvolvimento mobile multiplataforma com interfaces nativas bonitas e alta performance",
+            swift: "Desenvolvimento iOS nativo com SwiftUI e UIKit para experiências premium",
+            react: "Apps mobile baseados em JavaScript com performance nativa e base de código compartilhada",
+            android: "Desenvolvimento Android nativo com Kotlin e arquitetura Android moderna",
+            python: "Análise de dados, machine learning e desenvolvimento backend com bibliotecas poderosas",
+            powerbi: "Business intelligence e visualização de dados para insights acionáveis",
+            etl: "Pipelines Extract, Transform, Load para processamento eficiente de dados",
+            sql: "Design de banco de dados, otimização e desenvolvimento de consultas complexas"
+        },
+        services: {
+            mobile: {
+                title: "Desenvolvimento Mobile",
+                description: "Aplicações mobile nativas e multiplataforma com experiência excepcional do usuário"
+            },
+            data: {
+                title: "Análise de Dados",
+                description: "Transforme dados brutos em insights acionáveis usando analytics avançado e ferramentas de BI"
+            },
+            fullstack: {
+                title: "Desenvolvimento Full Stack",
+                description: "Aplicações web end-to-end com frameworks modernos e arquitetura escalável"
+            }
+        },
+        projects: {
+            title: "Projetos em Destaque",
+            subtitle: "Explore meu trabalho mais recente em desenvolvimento mobile, análise de dados e aplicações web.",
+            viewAll: "Ver Todos os Projetos",
+            viewDetails: "Ver Detalhes",
+            github: "GitHub"
+        },
+        testimonials: {
+            title: "Confiado por Marcas, Amado por Clientes"
+        },
+        contact: {
+            title: "Vamos Dar Vida à Sua Visão",
+            subtitle: "Pronto para começar seu próximo projeto? Vamos discutir como podemos trabalhar juntos para criar algo incrível.",
+            email: "Email",
+            whatsapp: "WhatsApp",
+            getInTouch: "Entre em Contato"
+        }
+    },
+    en: {
+        nav: {
+            home: "Home",
+            about: "About",
+            services: "Services",
+            portfolio: "Portfolio",
+            contact: "Contact"
+        },
+        hero: {
+            badge: "Full Stack Developer & Data Analyst",
+            description: "Crafting Meaningful Brands & Intuitive Digital Experiences That Stand Out"
+        },
+        technologies: {
+            title: "TECHNOLOGIES",
+            subtitle: "Tools and frameworks I use to build exceptional digital solutions",
+            flutter: "Cross-platform mobile development with beautiful native interfaces and high performance",
+            swift: "Native iOS development with SwiftUI and UIKit for premium user experiences",
+            react: "JavaScript-based mobile apps with native performance and shared codebase",
+            android: "Native Android development with Kotlin and modern Android architecture",
+            python: "Data analysis, machine learning, and backend development with powerful libraries",
+            powerbi: "Business intelligence and data visualization for actionable insights",
+            etl: "Extract, Transform, Load data pipelines for efficient data processing",
+            sql: "Database design, optimization, and complex query development"
+        },
+        services: {
+            mobile: {
+                title: "Mobile Development",
+                description: "Native and cross-platform mobile applications with exceptional user experience"
+            },
+            data: {
+                title: "Data Analysis",
+                description: "Transform raw data into actionable insights using advanced analytics and BI tools"
+            },
+            fullstack: {
+                title: "Full Stack Development",
+                description: "End-to-end web applications with modern frameworks and scalable architecture"
+            }
+        },
+        projects: {
+            title: "Featured Projects",
+            subtitle: "Explore my latest work in mobile development, data analysis, and web applications.",
+            viewAll: "View All Projects",
+            viewDetails: "View Details",
+            github: "GitHub"
+        },
+        testimonials: {
+            title: "Trusted by Brands, Loved by Clients"
+        },
+        contact: {
+            title: "Let's Bring Your Vision to Life",
+            subtitle: "Ready to start your next project? Let's discuss how we can work together to create something amazing.",
+            email: "Email",
+            whatsapp: "WhatsApp",
+            getInTouch: "Get In Touch"
+        }
+    }
+};
+
+let currentLanguage = 'pt';
+
+function initLanguageSystem() {
+    // Load saved language or detect browser language
+    const savedLanguage = localStorage.getItem('portfolio-language');
+    const browserLanguage = navigator.language.startsWith('pt') ? 'pt' : 'en';
+    currentLanguage = savedLanguage || browserLanguage;
+    
+    // Set initial language
+    setLanguage(currentLanguage);
+    
+    // Add event listeners to language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.dataset.lang;
+            setLanguage(lang);
+        });
+    });
+}
+
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('portfolio-language', lang);
+    
+    // Update active button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Update all translatable elements
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.dataset.i18n;
+        const translation = getTranslation(key);
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+    
+    // Update document language
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+}
+
+function getTranslation(key) {
+    const keys = key.split('.');
+    let translation = translations[currentLanguage];
+    
+    for (const k of keys) {
+        translation = translation?.[k];
+    }
+    
+    return translation;
+}
+
+// ===== THEME SYSTEM =====
+let currentTheme = 'dark';
+
+function initThemeSystem() {
+    // Load saved theme or detect system preference
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    currentTheme = savedTheme || systemTheme;
+    
+    // Set initial theme
+    setTheme(currentTheme);
+    
+    // Add event listener to theme button
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('portfolio-theme')) {
+            setTheme(e.matches ? 'light' : 'dark');
+        }
+    });
+}
+
+function setTheme(theme) {
+    currentTheme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+    
+    // Update document attribute
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Update theme icon
+    const themeIcon = document.querySelector('.theme-icon');
+    if (themeIcon) {
+        themeIcon.textContent = theme === 'light' ? '●' : '○';
+    }
+    
+    // Update theme button title
+    const themeBtn = document.getElementById('themeToggle');
+    if (themeBtn) {
+        themeBtn.title = theme === 'light' ? 'Alternar para tema escuro' : 'Alternar para tema claro';
+    }
+}
+
+function toggleTheme() {
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+}
+
+// Initialize systems when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initLanguageSystem();
+    initThemeSystem();
+});
+
+// Make functions globally available
+window.setLanguage = setLanguage;
+window.toggleTheme = toggleTheme;
