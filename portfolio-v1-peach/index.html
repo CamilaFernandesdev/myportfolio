@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Desenvolvedor Mobile & Web | Analista de Dados</title>
+    <meta name="description" content="Desenvolvedor especializado em aplicações mobile, análise de dados e criação de sites e e-commerces profissionais.">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Portfólio</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="src/pages/portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Home -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <!-- Foto de perfil centralizada -->
+            <div class="hero-profile">
+                <!-- Substituir por sua foto -->
+                <div class="profile-photo-placeholder" id="hero-profile-photo">
+                    C
+                </div>
+                <!-- Para quando adicionar uma foto, use:
+                <img src="assets/images/profile-photo.jpg" alt="Camila Fernandes" class="hero-profile-photo" id="hero-profile-photo">
+                -->
+            </div>
+            
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Desenvolvedor <span class="highlight">Full Stack</span><br>
+                    &amp; Analista de <span class="highlight">Dados</span>
+                </h1>
+                <p class="hero-description">
+                    Criando soluções digitais inovadoras através de desenvolvimento mobile, 
+                    análise de dados e desenvolvimento web profissional.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                    <a href="#contact" class="btn btn-secondary">Entre em Contato</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Role para baixo</span>
+            <i class="fas fa-arrow-down"></i>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Mim</h2>
+                <p class="section-subtitle">Conheça minha trajetória e experiência</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        Sou um desenvolvedor apaixonado por tecnologia, especializado em criar 
+                        soluções digitais que impactam positivamente negócios e usuários. 
+                        Com experiência em desenvolvimento mobile, análise de dados e criação 
+                        de sites e e-commerces.
+                    </p>
+                    <div class="skills">
+                        <h3>Principais Tecnologias</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i>
+                                <span>React/React Native</span>
+                                <div class="skill-level">95%</div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                                <div class="skill-level">92%</div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript/TypeScript</span>
+                                <div class="skill-level">90%</div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-area"></i>
+                                <span>Data Analysis</span>
+                                <div class="skill-level">90%</div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                                <div class="skill-level">88%</div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>MongoDB/PostgreSQL</span>
+                                <div class="skill-level">82%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-compact">
+                        <h3>Marcos Principais</h3>
+                        <div class="timeline-items">
+                            <div class="timeline-item-compact">
+                                <div class="timeline-year">2024</div>
+                                <div class="timeline-title">App E-commerce (10K+ downloads)</div>
+                            </div>
+                            <div class="timeline-item-compact">
+                                <div class="timeline-year">2023</div>
+                                <div class="timeline-title">Dashboard Analytics - Prêmio BI</div>
+                            </div>
+                            <div class="timeline-item-compact">
+                                <div class="timeline-year">2023</div>
+                                <div class="timeline-title">Tableau Scraper - 24M registros</div>
+                            </div>
+                            <div class="timeline-item-compact">
+                                <div class="timeline-year">2021</div>
+                                <div class="timeline-title">Graduação em Ciência da Computação</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>60+</h3>
+                        <p>Projetos Concluídos</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>3+</h3>
+                        <p>Anos de Experiência</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Satisfação dos Clientes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Serviços</h2>
+                <p class="section-subtitle">Soluções completas para suas necessidades digitais</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Desenvolvimento Mobile</h3>
+                    <p>Aplicações mobile nativas e híbridas para iOS e Android, com foco em performance e experiência do usuário.</p>
+                    <ul>
+                        <li>React Native</li>
+                        <li>Flutter</li>
+                        <li>Apps Nativas</li>
+                        <li>UI/UX Design</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Análise de Dados</h3>
+                    <p>Transformo dados em insights valiosos para tomada de decisões estratégicas e otimização de processos.</p>
+                    <ul>
+                        <li>Python/R</li>
+                        <li>Business Intelligence</li>
+                        <li>Machine Learning</li>
+                        <li>Dashboards Interativos</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Sites & E-commerce</h3>
+                    <p>Desenvolvimento de sites responsivos e lojas virtuais modernas, otimizadas para conversão e SEO.</p>
+                    <ul>
+                        <li>React/Next.js</li>
+                        <li>E-commerce</li>
+                        <li>SEO Otimizado</li>
+                        <li>Performance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projetos</h2>
+                <p class="section-subtitle">Alguns dos meus trabalhos recentes</p>
+            </div>
+            <div class="projects-intro">
+                <p>Confira alguns dos meus projetos mais destacados</p>
+                    <a href="src/pages/portfolio.html" class="btn btn-primary">Ver Portfolio Completo</a>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=App+E-commerce" alt="App E-commerce Mobile">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="src/pages/projects/projeto-ecommerce-app.html" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>App E-commerce Mobile</h3>
+                        <p>Aplicativo completo com React Native, 10K+ downloads e nota 4.8/5 nas lojas.</p>
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="data">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Tableau+Scraper" alt="Tableau Scraper">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="src/pages/projects/projeto-tableau-scraper.html" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tableau Scraper Energético</h3>
+                        <p>Automação para coleta de dados energéticos processando 24 milhões de registros.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Selenium</span>
+                            <span>Airflow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="data">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/FFAB73/FFFFFF?text=Dashboard+Analytics" alt="Dashboard Analytics">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="src/pages/projects/projeto-dashboard-analytics.html" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Plataforma de BI que gerou R$ 2M em economia anual e ganhou prêmio de melhor projeto.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Plotly</span>
+                            <span>ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Vamos Trabalhar Juntos?</h2>
+                <p class="section-subtitle">Entre em contato para discutir seu próximo projeto</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>camilafernandes.dev@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>+55 (41) 98728-9326</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/camilafernandesdev</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Portfólio</h3>
+                    <p>Desenvolvendo soluções digitais inovadoras</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#services">Serviços</a>
+                    <a href="#projects">Projetos</a>
+                    <a href="#contact">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/CamilaFernandesdev" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/camilafernandesdev/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/5541987289326" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/portfolio-simple.js"></script>
+</body>
+</html>
