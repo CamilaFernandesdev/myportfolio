@@ -883,6 +883,29 @@ function setTheme(theme) {
     if (themeBtn) {
         themeBtn.title = theme === 'light' ? 'Alternar para tema escuro' : 'Alternar para tema claro';
     }
+    
+    // Update avatar photo based on theme
+    updateAvatarPhoto(theme);
+}
+
+function updateAvatarPhoto(theme) {
+    const avatarPhoto = document.getElementById('avatarPhoto');
+    if (avatarPhoto) {
+        // Add fade out effect
+        avatarPhoto.style.opacity = '0';
+        
+        setTimeout(() => {
+            // Change photo source based on theme
+            if (theme === 'light') {
+                avatarPhoto.src = 'assets/images/my_photo_colored.jpg';
+            } else {
+                avatarPhoto.src = 'assets/images/my_photo_pb.jpg';
+            }
+            
+            // Fade back in
+            avatarPhoto.style.opacity = '1';
+        }, 200);
+    }
 }
 
 function toggleTheme() {

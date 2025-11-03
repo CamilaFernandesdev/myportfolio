@@ -296,27 +296,80 @@ body {
 }
 
 .hero-avatar {
-    margin: var(--spacing-2xl) 0;
-}
-
-.avatar-image {
-    width: 120px;
-    height: 120px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: var(--spacing-2xl) auto;
+    border-radius: 50%;
+    overflow: hidden;
     background: var(--orange-gradient);
-    border-radius: var(--radius-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-3xl);
-    font-weight: 800;
-    color: white;
-    box-shadow: var(--shadow-orange);
-    transition: var(--transition);
+    padding: 6px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 8px rgba(255, 140, 66, 0.1),
+        0 0 0 16px rgba(255, 140, 66, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.avatar-image:hover {
-    transform: scale(1.05);
+.hero-avatar::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        var(--accent-color),
+        transparent,
+        var(--accent-color),
+        transparent
+    );
+    animation: rotate 4s linear infinite;
+    z-index: -1;
 }
+
+.hero-avatar::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    z-index: -1;
+}
+
+.avatar-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-avatar:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        0 0 0 12px rgba(255, 140, 66, 0.2),
+        0 0 0 24px rgba(255, 140, 66, 0.1);
+}
+
+.hero-avatar:hover .avatar-photo {
+    transform: scale(1.05) rotate(-5deg);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 .hero-social {
     display: flex;
@@ -1118,10 +1171,16 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .avatar-image {
+    .hero-avatar {
         width: 80px;
         height: 80px;
-        font-size: var(--font-size-xl);
+        margin: var(--spacing-lg) auto;
+    }
+    
+    .avatar-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
