@@ -1,0 +1,184 @@
+{
+  "projects": [
+    {
+      "title": "Tableau Scraper",
+      "date": "2024",
+      "category": "Dados",
+      "projectType": "dados",
+      "slug": "tableau-scraper",
+      "thumbnailLabel": "Tableau Scraper",
+      "description": "Biblioteca Python para automatizar o download de dados de dashboards do Tableau usando Selenium WebDriver. Desenvolvida para a Copel (Companhia Paranaense de Energia), facilita a coleta de dados energéticos de fontes como CCEE, ONS e ANEEL. Inclui configuração YAML, logging estruturado, sistema de retry, CLI integrado e DAG completo para Apache Airflow. Licença MIT.",
+      "imageUrls": [],
+      "stack": ["Python", "Selenium", "YAML", "pytest", "Apache Airflow", "Black"],
+      "projectLinks": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/CamilaFernandesdev/tableau_scraper",
+          "icon": "code"
+        }
+      ]
+    },
+    {
+      "title": "Vazões Futuras e Geração Hidrelétrica",
+      "date": "2022",
+      "category": "Dados",
+      "projectType": "dados",
+      "slug": "vazoes-futuras-geracao-hidreletrica",
+      "thumbnailLabel": "Vazões Futuras ONS",
+      "description": "Leitura do histórico de vazões das principais usinas hidrelétricas brasileiras (por submercado, ONS) para análise estatística e previsão de vazões futuras. Desenvolvido no contexto de simulações NEWAVE-DECOMP encadeadas para a Copel GeT, com extensão de projeção de afluência via correlação de Pearson com o histórico. Usinas: FURNAS, GBM, SOBRADINHO, TUCURUÍ.",
+      "imageUrls": [],
+      "stack": ["Python", "Pandas", "NumPy", "Pathlib"],
+      "projectLinks": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/CamilaFernandesdev/Vazoes_Futuras_Geracao_Hidreletrica",
+          "icon": "code"
+        }
+      ]
+    },
+    {
+      "title": "ROOT TECHNOLOGY",
+      "date": "2025",
+      "category": "Web",
+      "projectType": "web",
+      "slug": "root-technology",
+      "thumbnailLabel": "ROOT TECHNOLOGY",
+      "description": "Site institucional em WordPress para a ROOT TECHNOLOGY. Apresenta desenvolvimento de software sob medida, consultoria especializada em TI e segurança avançada de dados. Páginas de portfólio, serviços, sobre e contato, com foco em conversão e identidade visual da marca.",
+      "imageUrls": [],
+      "stack": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+      "projectLinks": [
+        {
+          "label": "Site",
+          "url": "https://roottech.net/",
+          "icon": "language"
+        }
+      ]
+    },
+    {
+      "title": "CryptoMarketApp - Aplicação iOS de Criptomoedas",
+      "date": "2023",
+      "category": "Mobile",
+      "projectType": "mobile",
+      "slug": "crypto-market-app",
+      "thumbnailLabel": "CryptoMarketApp",
+      "description": "Aplicação iOS moderna para listagem e visualização de criptomoedas, desenvolvida no Santander BootCamp. Clean Architecture (VIP), SwiftUI e UIKit, integração com API CoinGecko, gráficos de preços (SwiftUI Charts), persistência com Core Data, notificações e testes unitários e de UI. Suporte a iPhone e iPad a partir do iOS 13.",
+      "imageUrls": [],
+      "stack": ["Swift", "SwiftUI", "UIKit", "Combine", "Core Data", "MVVM", "Clean Architecture", "CoinGecko API"],
+      "projectLinks": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/CamilaFernandesdev/project_iphone_bootcamp",
+          "icon": "code"
+        }
+      ]
+    },
+    {
+      "title": "Dashboard ONS - Operador Nacional do Sistema Elétrico",
+      "date": "2023",
+      "category": "Dados",
+      "projectType": "dados",
+      "slug": "dashboard-holoviz",
+      "thumbnailLabel": "Dashboard ONS",
+      "description": "Dashboard interativo desenvolvido para a Copel (Companhia Paranaense de Energia) utilizando dados do ONS (Operador Nacional do Sistema Elétrico). Oferece gráficos interativos, visualizações em tempo real, múltiplas abas de análise, filtros dinâmicos e exportação de dados. Interface responsiva com tema personalizado e integração com MongoDB para armazenamento.",
+      "imageUrls": [
+        "assets/images/projects/dashboard-holoviz/01-principais-reservatorios.png",
+        "assets/images/projects/dashboard-holoviz/02-geracao-usina-horaria.png",
+        "assets/images/projects/dashboard-holoviz/03-buscar-reservatorio.png",
+        "assets/images/projects/dashboard-holoviz/04-grid-graficos.png"
+      ],
+      "stack": ["Python", "Panel", "Holoviz", "Bokeh", "Pandas", "MongoDB"],
+      "projectLinks": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/CamilaFernandesdev/dashboard_holoviz",
+          "icon": "code"
+        }
+      ]
+    },
+    {
+      "title": "App Flutter para e-commerce",
+      "date": "2025",
+      "category": "Mobile",
+      "projectType": "mobile",
+      "slug": "ecommerce-app",
+      "thumbnailLabel": "E-commerce",
+      "description": "Aplicativo de vendas com carrinho, pagamento e gestão de pedidos. Inclui catálogo de produtos, busca, favoritos e notificações push.",
+      "imageUrls": [
+        "https://picsum.photos/seed/ecom1/800/500",
+        "https://picsum.photos/seed/ecom2/800/500",
+        "https://picsum.photos/seed/ecom3/800/500"
+      ],
+      "stack": ["Flutter", "Dart", "Firebase", "Stripe", "GetX"],
+      "projectLinks": [
+        { "label": "GitHub", "url": "https://github.com", "icon": "code" },
+        { "label": "Demo", "url": "https://example.com/demo", "icon": "play_circle_filled" }
+      ]
+    },
+    {
+      "title": "Dashboard de analytics",
+      "date": "2025",
+      "category": "Web",
+      "projectType": "web",
+      "slug": "dashboard-analytics",
+      "thumbnailLabel": "Dashboard",
+      "description": "Painel de métricas e visualização de dados em tempo real. Gráficos interativos, filtros por período e exportação de relatórios.",
+      "imageUrls": [
+        "https://picsum.photos/seed/dash1/800/500",
+        "https://picsum.photos/seed/dash2/800/500"
+      ],
+      "stack": ["React", "TypeScript", "Chart.js", "Node.js", "PostgreSQL"],
+      "projectLinks": [
+        { "label": "GitHub", "url": "https://github.com", "icon": "code" },
+        { "label": "Site", "url": "https://example.com", "icon": "language" }
+      ]
+    },
+    {
+      "title": "Pipeline de dados com Python",
+      "date": "2024",
+      "category": "Dados",
+      "projectType": "dados",
+      "slug": "pipeline-dados",
+      "thumbnailLabel": "Dados",
+      "description": "ETL, análise exploratória e relatórios automatizados.",
+      "imageUrls": [],
+      "stack": [],
+      "projectLinks": []
+    },
+    {
+      "title": "API e integrações",
+      "date": "2024",
+      "category": "Web",
+      "projectType": "web",
+      "slug": "api-integrations",
+      "thumbnailLabel": "API",
+      "description": "REST API e integração com sistemas externos.",
+      "imageUrls": [],
+      "stack": [],
+      "projectLinks": []
+    },
+    {
+      "title": "Landing page responsiva",
+      "date": "2024",
+      "category": "Web",
+      "projectType": "web",
+      "slug": "landing-page",
+      "thumbnailLabel": "Web",
+      "description": "Página de conversão responsiva e acessível.",
+      "imageUrls": [],
+      "stack": [],
+      "projectLinks": []
+    },
+    {
+      "title": "App nativo iOS (Swift)",
+      "date": "2024",
+      "category": "Mobile",
+      "projectType": "mobile",
+      "slug": "app-ios",
+      "thumbnailLabel": "Mobile",
+      "description": "Aplicativo nativo para iOS com Swift e SwiftUI.",
+      "imageUrls": [],
+      "stack": [],
+      "projectLinks": []
+    }
+  ]
+}

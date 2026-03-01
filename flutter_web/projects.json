@@ -1,0 +1,107 @@
+{
+  "projects": [
+    {
+      "title": "Dashboard ONS - Operador Nacional do Sistema Elétrico",
+      "date": "2025",
+      "category": "Dados",
+      "projectType": "dados",
+      "slug": "dashboard-holoviz",
+      "thumbnailLabel": "Dashboard ONS",
+      "description": "Dashboard interativo desenvolvido para a Copel (Companhia Paranaense de Energia) utilizando dados do ONS (Operador Nacional do Sistema Elétrico). Oferece gráficos interativos, visualizações em tempo real, múltiplas abas de análise, filtros dinâmicos e exportação de dados. Interface responsiva com tema personalizado e integração com MongoDB para armazenamento.",
+      "imageUrls": [],
+      "stack": ["Python", "Panel", "Holoviz", "Bokeh", "Pandas", "MongoDB"],
+      "projectLinks": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/CamilaFernandesdev/dashboard_holoviz",
+          "icon": "code"
+        }
+      ]
+    },
+    {
+      "title": "App Flutter para e-commerce",
+      "date": "2025",
+      "category": "Mobile",
+      "projectType": "mobile",
+      "slug": "ecommerce-app",
+      "thumbnailLabel": "E-commerce",
+      "description": "Aplicativo de vendas com carrinho, pagamento e gestão de pedidos. Inclui catálogo de produtos, busca, favoritos e notificações push.",
+      "imageUrls": [
+        "https://picsum.photos/seed/ecom1/800/500",
+        "https://picsum.photos/seed/ecom2/800/500",
+        "https://picsum.photos/seed/ecom3/800/500"
+      ],
+      "stack": ["Flutter", "Dart", "Firebase", "Stripe", "GetX"],
+      "projectLinks": [
+        { "label": "GitHub", "url": "https://github.com", "icon": "code" },
+        { "label": "Demo", "url": "https://example.com/demo", "icon": "play_circle_filled" }
+      ]
+    },
+    {
+      "title": "Dashboard de analytics",
+      "date": "2025",
+      "category": "Web",
+      "projectType": "web",
+      "slug": "dashboard-analytics",
+      "thumbnailLabel": "Dashboard",
+      "description": "Painel de métricas e visualização de dados em tempo real. Gráficos interativos, filtros por período e exportação de relatórios.",
+      "imageUrls": [
+        "https://picsum.photos/seed/dash1/800/500",
+        "https://picsum.photos/seed/dash2/800/500"
+      ],
+      "stack": ["React", "TypeScript", "Chart.js", "Node.js", "PostgreSQL"],
+      "projectLinks": [
+        { "label": "GitHub", "url": "https://github.com", "icon": "code" },
+        { "label": "Site", "url": "https://example.com", "icon": "language" }
+      ]
+    },
+    {
+      "title": "Pipeline de dados com Python",
+      "date": "2024",
+      "category": "Dados",
+      "projectType": "dados",
+      "slug": "pipeline-dados",
+      "thumbnailLabel": "Dados",
+      "description": "ETL, análise exploratória e relatórios automatizados.",
+      "imageUrls": [],
+      "stack": [],
+      "projectLinks": []
+    },
+    {
+      "title": "API e integrações",
+      "date": "2024",
+      "category": "Web",
+      "projectType": "web",
+      "slug": "api-integrations",
+      "thumbnailLabel": "API",
+      "description": "REST API e integração com sistemas externos.",
+      "imageUrls": [],
+      "stack": [],
+      "projectLinks": []
+    },
+    {
+      "title": "Landing page responsiva",
+      "date": "2024",
+      "category": "Web",
+      "projectType": "web",
+      "slug": "landing-page",
+      "thumbnailLabel": "Web",
+      "description": "Página de conversão responsiva e acessível.",
+      "imageUrls": [],
+      "stack": [],
+      "projectLinks": []
+    },
+    {
+      "title": "App nativo iOS (Swift)",
+      "date": "2024",
+      "category": "Mobile",
+      "projectType": "mobile",
+      "slug": "app-ios",
+      "thumbnailLabel": "Mobile",
+      "description": "Aplicativo nativo para iOS com Swift e SwiftUI.",
+      "imageUrls": [],
+      "stack": [],
+      "projectLinks": []
+    }
+  ]
+}

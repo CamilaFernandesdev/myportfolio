@@ -1,0 +1,62 @@
+{
+  "name": "Camila Fernandes",
+  "tagline": "Experience liftoff",
+  "role": "Desenvolvedor Flutter & Web",
+  "heroHeadline": "Desenvolvo para a próxima geração digital",
+  "heroSubhead": "Foco em aplicações web e mobile que escalam, com Flutter e tecnologias modernas.",
+  "ctaPrimary": "Ver projetos",
+  "ctaSecondary": "Entrar em contato",
+  "navCtaLabel": "Contato",
+  "sectionAvailableLabel": "Disponível",
+  "sectionAvailableTitle": "Para projetos",
+  "sectionAvailableSubtitle": "Freelance e parcerias",
+  "sectionAvailableButton": "Entrar em contato",
+  "sectionSoonLabel": "Em breve",
+  "sectionSoonTitle": "Para empresas",
+  "sectionSoonSubtitle": "Consultoria e times",
+  "sectionSoonButton": "Avise-me",
+  "aboutSectionTitle": "Sobre mim",
+  "aboutFeaturedLabel": "Destaque",
+  "aboutFeaturedHeadline": "Quem sou",
+  "aboutFeaturedMeta": "Desenvolvimento · Produto",
+  "aboutFeaturedButton": "Entrar em contato",
+  "aboutTabAll": "Tudo",
+  "aboutTabValues": "Valores",
+  "aboutCardCta": "Ler mais",
+  "aboutItems": [
+    {
+      "icon": "touch_app_outlined",
+      "title": "Foco no usuário",
+      "description": "Desenvolvimento com foco em usabilidade e experiência do usuário, da ideia ao produto final."
+    },
+    {
+      "icon": "architecture_outlined",
+      "title": "Abstração e entrega",
+      "description": "Traduzo requisitos em soluções técnicas claras e entrego com qualidade e prazos alinhados."
+    },
+    {
+      "icon": "trending_up_outlined",
+      "title": "Do 90% ao 100%",
+      "description": "Atenção aos detalhes e à etapa final: testes, performance e documentação para entregar completo."
+    }
+  ],
+  "stackSectionTitle": "Stack & Ferramentas",
+  "stackDescription": "Eu trabalho com desenvolvimento mobile, híbrido e nativo, desenvolvimento web e análise de dados.",
+  "projectsSectionTitle": "Projetos em destaque",
+  "projectsSectionCta": "Ver todos",
+  "projectsPageTitle": "Por que meus projetos",
+  "projectsPageIntro": "Desenvolvimento mobile, web e análise de dados com foco em performance, usabilidade e entrega de valor.",
+  "projectsPageCta": "Explorar projetos",
+  "projectsFilterLabel": "Por categoria",
+  "filterAll": "Todos",
+  "filterDados": "Dados",
+  "filterMobile": "Mobile",
+  "filterWeb": "Web",
+  "footerBrand": "Portfolio",
+  "footerInspired": "Inspirado no design do Google Antigravity",
+  "footerLinks": [
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/seu-perfil" },
+    { "label": "GitHub", "url": "https://github.com/seu-usuario" },
+    { "label": "Contato", "url": "mailto:seu@email.com" }
+  ]
+}

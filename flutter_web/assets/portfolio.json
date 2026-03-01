@@ -1,0 +1,62 @@
+{
+  "name": "Camila Fernandes",
+  "tagline": "Experience liftoff",
+  "role": "Desenvolvedor de software",
+  "heroHeadline": "Desenvolvo para a próxima geração digital",
+  "heroSubhead": "Foco em aplicações web e mobile que escalam, com Flutter e tecnologias modernas.",
+  "ctaPrimary": "Ver projetos",
+  "ctaSecondary": "Entrar em contato",
+  "navCtaLabel": "Contato",
+  "sectionAvailableLabel": "Disponível",
+  "sectionAvailableTitle": "Para projetos",
+  "sectionAvailableSubtitle": "Freelance e parcerias",
+  "sectionAvailableButton": "Entrar em contato",
+  "sectionSoonLabel": "Em breve",
+  "sectionSoonTitle": "Para empresas",
+  "sectionSoonSubtitle": "Consultoria e times",
+  "sectionSoonButton": "Avise-me",
+  "aboutSectionTitle": "Sobre mim",
+  "aboutFeaturedLabel": "Quem sou",
+  "aboutFeaturedHeadline": "Camila Fernandes",
+  "aboutFeaturedMeta": "Desenvolvedora de software com foco em aplicações que escalam. Trabalho com Flutter (mobile e web), análise de dados e dashboards — da ideia ao produto em produção.",
+  "aboutFeaturedButton": "Entrar em contato",
+  "aboutTabAll": "Tudo",
+  "aboutTabValues": "Valores",
+  "aboutCardCta": "Ler mais",
+  "aboutItems": [
+    {
+      "icon": "touch_app_outlined",
+      "title": "Foco no usuário",
+      "description": "Priorizo usabilidade e experiência do usuário em cada decisão técnica. Da prototipagem à entrega, o produto final precisa fazer sentido para quem usa."
+    },
+    {
+      "icon": "architecture_outlined",
+      "title": "Código e entrega",
+      "description": "Transformo requisitos em arquitetura clara e código mantível. Entrego com qualidade, prazos realistas e documentação que facilita evolução."
+    },
+    {
+      "icon": "trending_up_outlined",
+      "title": "Do desenho ao deploy",
+      "description": "Cuido da etapa final: testes, performance, acessibilidade e deploy. Entregar quase pronto não é suficiente — busco concluir com critério."
+    }
+  ],
+  "stackSectionTitle": "Stack & Ferramentas",
+  "stackDescription": "Eu trabalho com desenvolvimento mobile, híbrido e nativo, desenvolvimento web e análise de dados.",
+  "projectsSectionTitle": "Projetos em destaque",
+  "projectsSectionCta": "Ver todos",
+  "projectsPageTitle": "Por que meus projetos",
+  "projectsPageIntro": "Desenvolvimento mobile, web e análise de dados com foco em performance, usabilidade e entrega de valor.",
+  "projectsPageCta": "Explorar projetos",
+  "projectsFilterLabel": "Por categoria",
+  "filterAll": "Todos",
+  "filterDados": "Dados",
+  "filterMobile": "Mobile",
+  "filterWeb": "Web",
+  "footerBrand": "Portfolio",
+  "footerInspired": "Inspirado no design do Google Antigravity",
+  "footerLinks": [
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/seu-perfil" },
+    { "label": "GitHub", "url": "https://github.com/seu-usuario" },
+    { "label": "Contato", "url": "mailto:seu@email.com" }
+  ]
+}

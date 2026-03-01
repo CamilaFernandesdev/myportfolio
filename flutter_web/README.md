@@ -18,6 +18,12 @@ flutter pub get
 flutter run -d chrome
 ```
 
+Se aparecer **tela branca**, tente forçar o renderer HTML:
+
+```bash
+flutter run -d chrome --web-renderer html
+```
+
 Para gerar build de produção:
 
 ```bash
