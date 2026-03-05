@@ -164,6 +164,37 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
               const SizedBox(height: 28),
             ],
 
+            // Vínculo institucional (faculdade, empresa, confidencial)
+            if (project.institutions.isNotEmpty) ...[
+              Text(
+                'Vínculo institucional',
+                style: theme.textTheme.titleLarge?.copyWith(
+                  color: const Color(0xFF1A1A1A),
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(height: 12),
+              if (project.institutions.any((i) => i.type == 'confidencial'))
+                _ConfidentialDisclaimer(),
+              if (project.institutions.any((i) => i.type == 'confidencial'))
+                const SizedBox(height: 16),
+              LayoutBuilder(
+                builder: (context, constraints) {
+                  return Wrap(
+                    spacing: 20,
+                    runSpacing: 20,
+                    children: project.institutions
+                        .map((inst) => _InstitutionCard(
+                              institution: inst,
+                              onTap: () => _openUrl(inst.url),
+                            ))
+                        .toList(),
+                  );
+                },
+              ),
+              const SizedBox(height: 28),
+            ],
+
             // Links (GitHub, demo, site, etc.)
             if (project.projectLinks.isNotEmpty) ...[
               Text(
@@ -450,7 +481,6 @@ class _CarouselSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const height = 420.0;
-    final isWide = MediaQuery.sizeOf(context).width > 900;
     final hasMultiple = images.length > 1;
 
     return Column(
@@ -610,6 +640,231 @@ class _MetaChip extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+/// Mensagem de aviso quando o projeto tem vínculo confidencial.
+class _ConfidentialDisclaimer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF5F5F7),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: const Color(0xFFE0E0E5)),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(
+            Icons.lock_outline,
+            size: 22,
+            color: const Color(0xFF5F5F67),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Text(
+              'Tenho autorização para falar sobre este projeto e levar os créditos, mas não posso disponibilizar mais informações.',
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: const Color(0xFF5F5F67),
+                height: 1.45,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Card de instituição (faculdade/empresa/confidencial) com logo, nome, tipo e link.
+class _InstitutionCard extends StatelessWidget {
+  const _InstitutionCard({
+    required this.institution,
+    required this.onTap,
+  });
+
+  final ProjectInstitution institution;
+  final VoidCallback onTap;
+
+  static String _typeLabel(String type) {
+    switch (type) {
+      case 'faculdade':
+        return 'Faculdade';
+      case 'confidencial':
+        return 'Confidencial';
+      default:
+        return 'Empresa';
+    }
+  }
+
+  static IconData? _typeIcon(String type) {
+    if (type == 'confidencial') return Icons.lock_outline;
+    return null;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    const cardWidth = 340.0;
+    const logoSize = 80.0;
+    final isConfidential = institution.type == 'confidencial';
+    final typeIcon = _typeIcon(institution.type);
+
+    return SizedBox(
+      width: cardWidth,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  institution.name,
+                  style: theme.textTheme.titleMedium?.copyWith(
+                    color: const Color(0xFF1A1A1A),
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                const SizedBox(height: 6),
+                Row(
+                  children: [
+                    if (typeIcon != null) ...[
+                      Icon(typeIcon, size: 16, color: const Color(0xFF5F5F67)),
+                      const SizedBox(width: 6),
+                    ],
+                    Text(
+                      _typeLabel(institution.type),
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: const Color(0xFF5F5F67),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                if (!isConfidential) ...[
+                  const SizedBox(height: 12),
+                  Material(
+                    color: const Color(0xFFF5F5F7),
+                    borderRadius: BorderRadius.circular(8),
+                    child: InkWell(
+                      onTap: onTap,
+                      borderRadius: BorderRadius.circular(8),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 10,
+                        ),
+                        child: Text(
+                          'Visitar site',
+                          style: theme.textTheme.labelLarge?.copyWith(
+                            color: const Color(0xFF1A1A1A),
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+          const SizedBox(width: 16),
+          _InstitutionLogo(
+            name: institution.name,
+            logoUrl: institution.logoUrl,
+            size: logoSize,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _InstitutionLogo extends StatelessWidget {
+  const _InstitutionLogo({
+    required this.name,
+    this.logoUrl,
+    this.size = 80,
+  });
+
+  final String name;
+  final String? logoUrl;
+  final double size;
+
+  Widget _buildLogoImage(BuildContext context, String url, String initials) {
+    if (url.startsWith('assets/')) {
+      if (kIsWeb) {
+        final imageUrl = Uri.base.resolve(url).toString();
+        return Image.network(
+          imageUrl,
+          fit: BoxFit.cover,
+          errorBuilder: (_, __, ___) => _LogoPlaceholder(initials: initials),
+        );
+      }
+      return Image.asset(
+        url,
+        fit: BoxFit.cover,
+        errorBuilder: (_, __, ___) => _LogoPlaceholder(initials: initials),
+      );
+    }
+    return Image.network(
+      url,
+      fit: BoxFit.cover,
+      errorBuilder: (_, __, ___) => _LogoPlaceholder(initials: initials),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final initials = name.isNotEmpty
+        ? name.split(RegExp(r'\s+')).map((w) => w.isNotEmpty ? w[0] : '').take(2).join().toUpperCase()
+        : '?';
+
+    return Container(
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        color: const Color(0xFF1A1A1A),
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.08),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: logoUrl != null && logoUrl!.isNotEmpty
+          ? _buildLogoImage(context, logoUrl!, initials)
+          : _LogoPlaceholder(initials: initials),
+    );
+  }
+}
+
+class _LogoPlaceholder extends StatelessWidget {
+  const _LogoPlaceholder({required this.initials});
+
+  final String initials;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: const Color(0xFF1A1A1A),
+      alignment: Alignment.center,
+      child: Text(
+        initials,
+        style: Theme.of(context).textTheme.titleLarge?.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+            ),
+      ),
     );
   }
 }

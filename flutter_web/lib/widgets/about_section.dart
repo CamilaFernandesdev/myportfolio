@@ -38,6 +38,19 @@ class _AboutSectionState extends State<AboutSection>
     super.dispose();
   }
 
+  List<AboutItem> _currentTabItems() {
+    switch (_selectedTab) {
+      case 0:
+        return PortfolioData.instance.aboutExperiences;
+      case 1:
+        return PortfolioData.instance.aboutEducation;
+      case 2:
+        return PortfolioData.instance.aboutCompetencies;
+      default:
+        return PortfolioData.instance.aboutCompetencies;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -45,7 +58,6 @@ class _AboutSectionState extends State<AboutSection>
     final isWide = width >= _Breakpoint.md;
     final isLg = width >= _Breakpoint.lg;
     final isCompact = width < _Breakpoint.sm;
-    final items = PortfolioData.instance.aboutItems;
 
     final horizontalPadding = isCompact ? 16.0 : (isWide ? 48.0 : 24.0);
     final verticalPadding = isCompact ? 40.0 : (isLg ? 80.0 : 56.0);
@@ -94,47 +106,34 @@ class _AboutSectionState extends State<AboutSection>
           SizedBox(height: isCompact ? 28 : 40),
           Container(height: 1, color: const Color(0xFFE0E0E5)),
           SizedBox(height: isCompact ? 20 : 24),
-          // Abas
+          // Abas: Experiências, Educacional, Competências
           Wrap(
             spacing: 20,
             runSpacing: 8,
             children: [
               _AboutTab(
-                label: PortfolioData.instance.aboutTabAll,
+                label: PortfolioData.instance.aboutTabExperiences,
                 isSelected: _selectedTab == 0,
                 onTap: () => setState(() => _selectedTab = 0),
               ),
               _AboutTab(
-                label: PortfolioData.instance.aboutTabValues,
+                label: PortfolioData.instance.aboutTabEducation,
                 isSelected: _selectedTab == 1,
                 onTap: () => setState(() => _selectedTab = 1),
+              ),
+              _AboutTab(
+                label: PortfolioData.instance.aboutTabCompetencies,
+                isSelected: _selectedTab == 2,
+                onTap: () => setState(() => _selectedTab = 2),
               ),
             ],
           ),
           SizedBox(height: isCompact ? 20 : 28),
-          // Grid de itens
-          LayoutBuilder(
-            builder: (context, constraints) {
-              final crossAxisCount = isWide ? 2 : 1;
-              final aspectRatio = isCompact
-                  ? 0.95
-                  : (isWide ? 2.0 : 1.4);
-              return GridView.count(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                crossAxisCount: crossAxisCount,
-                mainAxisSpacing: isCompact ? 16 : 24,
-                crossAxisSpacing: isCompact ? 16 : 24,
-                childAspectRatio: aspectRatio,
-                children: items
-                    .map((item) => _AboutGridCard(
-                          item: item,
-                          compact: isCompact,
-                          narrow: !isWide,
-                        ))
-                    .toList(),
-              );
-            },
+          // Conteúdo da aba: blocos ícone + título + descrição (design minimalista)
+          _AboutTabContent(
+            items: _currentTabItems(),
+            isWide: isWide,
+            isCompact: isCompact,
           ),
         ],
       ),
@@ -310,156 +309,104 @@ class _AboutTab extends StatelessWidget {
   }
 }
 
-class _AboutGridCard extends StatelessWidget {
-  const _AboutGridCard({
-    required this.item,
-    required this.compact,
-    required this.narrow,
+/// Blocos de conteúdo das abas: ícone (topo), título em negrito, descrição.
+/// Layout minimalista, alinhado à esquerda, sem botão.
+class _AboutTabContent extends StatelessWidget {
+  const _AboutTabContent({
+    required this.items,
+    required this.isWide,
+    required this.isCompact,
   });
 
-  final AboutItem item;
-  final bool compact;
-  final bool narrow;
+  final List<AboutItem> items;
+  final bool isWide;
+  final bool isCompact;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final iconSize = compact ? 56 : (narrow ? 72 : 100);
-
-    // Em telas estreitas: layout vertical (ícone em cima, texto embaixo)
-    if (narrow) {
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Container(
-                  width: iconSize.toDouble(),
-                  height: iconSize.toDouble(),
-                  color: const Color(0xFF1A1A1A),
-                  child: Icon(
-                    item.icon,
-                    size: compact ? 28 : 36,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              SizedBox(width: compact ? 12 : 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      item.title,
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        color: const Color(0xFF1A1A1A),
-                        fontWeight: FontWeight.w700,
-                        fontSize: compact ? 16 : null,
-                      ),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    SizedBox(height: compact ? 4 : 6),
-                    Text(
-                      item.description,
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        color: const Color(0xFF5F5F67),
-                        height: 1.45,
-                        fontSize: compact ? 13 : null,
-                      ),
-                      maxLines: narrow ? 4 : 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: compact ? 10 : 12),
-          OutlinedButton(
-            onPressed: () {},
-            style: OutlinedButton.styleFrom(
-              foregroundColor: const Color(0xFF1A1A1A),
-              side: const BorderSide(color: Color(0xFFE0E0E5)),
-              padding: EdgeInsets.symmetric(
-                horizontal: compact ? 12 : 16,
-                vertical: compact ? 6 : 8,
-              ),
-              minimumSize: Size.zero,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(24),
-              ),
-            ),
-            child: Text(
-              PortfolioData.instance.aboutCardCta,
-              style: TextStyle(fontSize: compact ? 12 : null),
-            ),
-          ),
-        ],
-      );
-    }
-
-    // Desktop: linha com texto à esquerda e ícone à direita
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                item.title,
-                style: theme.textTheme.titleLarge?.copyWith(
-                  color: const Color(0xFF1A1A1A),
-                  fontWeight: FontWeight.w700,
-                ),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
-              Text(
-                item.description,
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: const Color(0xFF5F5F67),
-                  height: 1.45,
-                ),
-                maxLines: 3,
-                overflow: TextOverflow.ellipsis,
-              ),
-              const SizedBox(height: 12),
-              OutlinedButton(
-                onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                  foregroundColor: const Color(0xFF1A1A1A),
-                  side: const BorderSide(color: Color(0xFFE0E0E5)),
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16, vertical: 8),
-                  minimumSize: Size.zero,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                ),
-                child: Text(PortfolioData.instance.aboutCardCta),
-              ),
-            ],
+    if (items.isEmpty) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 24),
+        child: Text(
+          'Nenhum item nesta seção.',
+          style: theme.textTheme.bodyLarge?.copyWith(
+            color: const Color(0xFF5F5F67),
           ),
         ),
-        const SizedBox(width: 20),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(12),
-          child: Container(
-            width: iconSize.toDouble(),
-            height: iconSize.toDouble(),
-            color: const Color(0xFF1A1A1A),
-            child: Icon(
-              item.icon,
-              size: iconSize * 0.4,
-              color: Colors.white,
-            ),
+      );
+    }
+    final spacing = isCompact ? 24.0 : (isWide ? 40.0 : 32.0);
+
+    // Grid (desktop) e coluna (mobile) para manter consistência entre abas.
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final cols = isWide ? 3 : 1;
+        final itemWidth = cols > 1
+            ? (constraints.maxWidth - spacing * (cols - 1)) / cols
+            : constraints.maxWidth;
+
+        return Wrap(
+          spacing: cols > 1 ? spacing : 0,
+          runSpacing: spacing,
+          children: items
+              .map(
+                (item) => SizedBox(
+                  width: itemWidth,
+                  child: _AboutContentBlock(
+                    item: item,
+                    theme: theme,
+                    compact: isCompact,
+                  ),
+                ),
+              )
+              .toList(),
+        );
+      },
+    );
+  }
+}
+
+class _AboutContentBlock extends StatelessWidget {
+  const _AboutContentBlock({
+    required this.item,
+    required this.theme,
+    required this.compact,
+  });
+
+  final AboutItem item;
+  final ThemeData theme;
+  final bool compact;
+
+  @override
+  Widget build(BuildContext context) {
+    const iconColor = Color(0xFF1A1A1A);
+    final iconSize = compact ? 32.0 : 40.0;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(
+          item.icon,
+          size: iconSize,
+          color: iconColor,
+        ),
+        SizedBox(height: compact ? 12 : 16),
+        Text(
+          item.title,
+          style: theme.textTheme.titleMedium?.copyWith(
+            color: iconColor,
+            fontWeight: FontWeight.w700,
+            fontSize: compact ? 16 : 18,
+          ),
+        ),
+        SizedBox(height: compact ? 6 : 8),
+        Text(
+          item.description,
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: const Color(0xFF5F5F67),
+            height: 1.5,
+            fontSize: compact ? 14 : 15,
           ),
         ),
       ],

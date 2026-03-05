@@ -47,8 +47,14 @@ class PortfolioData {
   final String aboutFeaturedButton;
   final String aboutTabAll;
   final String aboutTabValues;
+  final String aboutTabExperiences;
+  final String aboutTabEducation;
+  final String aboutTabCompetencies;
   final String aboutCardCta;
   final List<AboutItem> aboutItems;
+  final List<AboutItem> aboutExperiences;
+  final List<AboutItem> aboutEducation;
+  final List<AboutItem> aboutCompetencies;
   final String stackSectionTitle;
   final String stackDescription;
   final String projectsSectionTitle;
@@ -90,8 +96,14 @@ class PortfolioData {
     required this.aboutFeaturedButton,
     required this.aboutTabAll,
     required this.aboutTabValues,
+    required this.aboutTabExperiences,
+    required this.aboutTabEducation,
+    required this.aboutTabCompetencies,
     required this.aboutCardCta,
     required this.aboutItems,
+    required this.aboutExperiences,
+    required this.aboutEducation,
+    required this.aboutCompetencies,
     required this.stackSectionTitle,
     required this.stackDescription,
     required this.projectsSectionTitle,
@@ -135,8 +147,26 @@ class PortfolioData {
       aboutFeaturedButton: j['aboutFeaturedButton'] as String? ?? '',
       aboutTabAll: j['aboutTabAll'] as String? ?? '',
       aboutTabValues: j['aboutTabValues'] as String? ?? '',
+      aboutTabExperiences: j['aboutTabExperiences'] as String? ?? 'Experiências',
+      aboutTabEducation: j['aboutTabEducation'] as String? ?? 'Educacional',
+      aboutTabCompetencies: j['aboutTabCompetencies'] as String? ?? 'Competências',
       aboutCardCta: j['aboutCardCta'] as String? ?? '',
       aboutItems: (j['aboutItems'] as List<dynamic>?)
+              ?.map((e) => AboutItem.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
+      aboutExperiences: (j['aboutExperiences'] as List<dynamic>?)
+              ?.map((e) => AboutItem.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
+      aboutEducation: (j['aboutEducation'] as List<dynamic>?)
+              ?.map((e) => AboutItem.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
+      aboutCompetencies: (j['aboutCompetencies'] as List<dynamic>?)
+              ?.map((e) => AboutItem.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          (j['aboutItems'] as List<dynamic>?)
               ?.map((e) => AboutItem.fromJson(e as Map<String, dynamic>))
               .toList() ??
           [],
@@ -193,6 +223,16 @@ IconData? _iconFromString(String? name) {
       return Icons.language;
     case 'open_in_new':
       return Icons.open_in_new;
+    case 'work_outline':
+      return Icons.work_outline;
+    case 'school_outlined':
+      return Icons.school_outlined;
+    case 'stars_outlined':
+      return Icons.stars_outlined;
+    case 'folder_outlined':
+      return Icons.folder_outlined;
+    case 'dashboard_outlined':
+      return Icons.dashboard_outlined;
     default:
       return Icons.link;
   }
@@ -233,6 +273,31 @@ class ProjectLink {
   }
 }
 
+/// Vínculo do projeto com instituição (faculdade, empresa).
+class ProjectInstitution {
+  final String name;
+  final String? logoUrl;
+  final String url;
+  /// Tipo do vínculo: "empresa", "faculdade", "confidencial".
+  final String type;
+
+  const ProjectInstitution({
+    required this.name,
+    this.logoUrl,
+    required this.url,
+    this.type = 'empresa',
+  });
+
+  static ProjectInstitution fromJson(Map<String, dynamic> j) {
+    return ProjectInstitution(
+      name: j['name'] as String? ?? '',
+      logoUrl: j['logoUrl'] as String?,
+      url: j['url'] as String? ?? '',
+      type: j['type'] as String? ?? 'empresa',
+    );
+  }
+}
+
 class ProjectItem {
   final String title;
   final String date;
@@ -245,6 +310,7 @@ class ProjectItem {
   final List<String> imageUrls;
   final List<String> stack;
   final List<ProjectLink> projectLinks;
+  final List<ProjectInstitution> institutions;
 
   const ProjectItem({
     required this.title,
@@ -258,6 +324,7 @@ class ProjectItem {
     this.imageUrls = const [],
     this.stack = const [],
     this.projectLinks = const [],
+    this.institutions = const [],
   });
 
   static ProjectItem fromJson(Map<String, dynamic> j) {
@@ -277,6 +344,10 @@ class ProjectItem {
       stack: (j['stack'] as List<dynamic>?)?.map((e) => e as String).toList() ?? [],
       projectLinks: (j['projectLinks'] as List<dynamic>?)
               ?.map((e) => ProjectLink.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
+      institutions: (j['institutions'] as List<dynamic>?)
+              ?.map((e) => ProjectInstitution.fromJson(e as Map<String, dynamic>))
               .toList() ??
           [],
     );

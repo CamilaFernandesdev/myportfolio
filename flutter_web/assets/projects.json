@@ -1,6 +1,102 @@
 {
   "projects": [
     {
+      "title": "Portfólio (este site)",
+      "date": "2025",
+      "category": "Web",
+      "projectType": "web",
+      "slug": "portfolio-flutter-web",
+      "thumbnailLabel": "Portfólio",
+      "description": "Site de portfólio profissional em Flutter Web. Layout responsivo com seções de apresentação, sobre, stack, projetos (filtros por categoria) e detalhes de cada projeto com carrossel de imagens. Dados carregados dinamicamente via JSON (portfolio.json e projects.json). Tema customizado, navegação suave e design moderno.",
+      "imageUrls": [],
+      "stack": ["Flutter", "Dart", "Flutter Web"],
+      "projectLinks": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/CamilaFernandesdev/myportfolio",
+          "icon": "code"
+        }
+      ]
+    },
+    {
+      "title": "Landing Page onADV",
+      "date": "2024",
+      "category": "Web",
+      "projectType": "web",
+      "slug": "landing-onadv",
+      "thumbnailLabel": "onADV Landing",
+      "description": "Landing page moderna e elegante para o onADV, com design minimalista inspirado na Apple. Tipografia Inter, gradientes sutis e micro-interações fluidas. Hero impactante com título em gradiente, CTAs, estatísticas animadas e preview 3D da aplicação. Modais de login e registro com backdrop blur e validação em tempo real. Layout responsivo mobile-first, menu hambúrguer animado, seções de recursos, planos de preços e download (Windows, macOS, Linux). Performance otimizada com CSS custom properties, JavaScript modular, lazy loading e debounce/throttle. Paleta e conteúdo voltados ao mercado jurídico.",
+      "imageUrls": [],
+      "stack": ["HTML5", "CSS3", "JavaScript ES6+", "Flexbox", "Grid", "Intersection Observer"],
+      "projectLinks": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/CamilaFernandesdev/onAdv/tree/main/landing",
+          "icon": "code"
+        }
+      ],
+      "institutions": [
+        {
+          "name": "Uniopet",
+          "type": "faculdade",
+          "url": "https://uniopet.edu.br",
+          "logoUrl": "https://uniopet.edu.br/favicon.ico"
+        }
+      ]
+    },
+    {
+      "title": "Smart Home - Projeto Integrador",
+      "date": "2024",
+      "category": "Mobile",
+      "projectType": "mobile",
+      "slug": "smart-home-projeto-integrador",
+      "thumbnailLabel": "Smart Home",
+      "description": "Aplicativo móvel em Flutter para controle de duas lâmpadas via Wi-Fi, conectando-se a um dispositivo ESP32. Desenvolvido na disciplina Projeto Integrador da UTFPR (Universidade Tecnológica Federal do Paraná). Interface intuitiva, controle individual das lâmpadas e suporte a Android e iOS. Requer ESP32 configurado na rede para uso.",
+      "imageUrls": [],
+      "stack": ["Flutter", "Dart", "Provider", "HTTP", "ESP32", "Google Fonts"],
+      "projectLinks": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/CamilaFernandesdev/smart_home_projeto_integrador",
+          "icon": "code"
+        }
+      ],
+      "institutions": [
+        {
+          "name": "UTFPR",
+          "type": "faculdade",
+          "url": "https://www.utfpr.edu.br",
+          "logoUrl": "https://www.utfpr.edu.br/++theme++utfpr.portal/favicon.ico"
+        }
+      ]
+    },
+    {
+      "title": "Dashboards Power BI - Geração de Energia",
+      "date": "2023",
+      "category": "Dados",
+      "projectType": "dados",
+      "slug": "dashboards-power-bi-geracao",
+      "thumbnailLabel": "Power BI - Geração",
+      "description": "Conjunto de dashboards em Power BI desenvolvidos no âmbito da Copel (Companhia Paranaense de Energia), com foco em geração de energia. Utilizam dados e indicadores vinculados ao ONS (Operador Nacional do Sistema Elétrico) e ao setor elétrico. Os relatórios são de uso interno e não possuem links públicos; há autorização para divulgação de imagens e descrição do trabalho neste portfólio.",
+      "imageUrls": [],
+      "stack": ["Power BI", "DAX", "Power Query", "Análise de Dados"],
+      "projectLinks": [],
+      "institutions": [
+        {
+          "name": "Copel",
+          "type": "empresa",
+          "url": "https://www.copel.com",
+          "logoUrl": "https://www.copel.com/favicon.ico"
+        },
+        {
+          "name": "ONS",
+          "type": "orgao",
+          "url": "https://www.ons.org.br",
+          "logoUrl": "https://www.ons.org.br/favicon.ico"
+        }
+      ]
+    },
+    {
       "title": "Tableau Scraper",
       "date": "2024",
       "category": "Dados",
@@ -9,12 +105,20 @@
       "thumbnailLabel": "Tableau Scraper",
       "description": "Biblioteca Python para automatizar o download de dados de dashboards do Tableau usando Selenium WebDriver. Desenvolvida para a Copel (Companhia Paranaense de Energia), facilita a coleta de dados energéticos de fontes como CCEE, ONS e ANEEL. Inclui configuração YAML, logging estruturado, sistema de retry, CLI integrado e DAG completo para Apache Airflow. Licença MIT.",
       "imageUrls": [],
-      "stack": ["Python", "Selenium", "YAML", "pytest", "Apache Airflow", "Black"],
+      "stack": ["Python", "Selenium", "YAML", "pytest", "Apache Airflow"],
       "projectLinks": [
         {
           "label": "GitHub",
           "url": "https://github.com/CamilaFernandesdev/tableau_scraper",
           "icon": "code"
+        }
+      ],
+      "institutions": [
+        {
+          "name": "Copel",
+          "type": "empresa",
+          "url": "https://www.copel.com",
+          "logoUrl": "https://www.copel.com/favicon.ico"
         }
       ]
     },
@@ -25,14 +129,27 @@
       "projectType": "dados",
       "slug": "vazoes-futuras-geracao-hidreletrica",
       "thumbnailLabel": "Vazões Futuras ONS",
-      "description": "Leitura do histórico de vazões das principais usinas hidrelétricas brasileiras (por submercado, ONS) para análise estatística e previsão de vazões futuras. Desenvolvido no contexto de simulações NEWAVE-DECOMP encadeadas para a Copel GeT, com extensão de projeção de afluência via correlação de Pearson com o histórico. Usinas: FURNAS, GBM, SOBRADINHO, TUCURUÍ.",
+      "description": "Leitura do histórico de vazões das principais usinas hidrelétricas brasileiras (por submercado, ONS) para análise estatística e previsão de vazões futuras. Desenvolvido no contexto de simulações NEWAVE-DECOMP encadeadas para a Copel GeT, com extensão de projeção de afluência via correlação com o histórico. Usinas: FURNAS, GBM, SOBRADINHO, TUCURUÍ. Utiliza estatística descritiva (tabelas, medidas de posição e dispersão) e o teste qui-quadrado de Pearson para comparar dados e apoiar decisões. A correlação de Pearson (ρ entre -1 e 1) mede o grau de dependência entre variáveis, podendo ser positiva, negativa ou inexistente.",
       "imageUrls": [],
-      "stack": ["Python", "Pandas", "NumPy", "Pathlib"],
+      "stack": ["Python", "Pandas", "NumPy", "Pathlib", "Estatística Descritiva"],
       "projectLinks": [
         {
           "label": "GitHub",
           "url": "https://github.com/CamilaFernandesdev/Vazoes_Futuras_Geracao_Hidreletrica",
           "icon": "code"
+        },
+        {
+          "label": "Conceito",
+          "url": "https://github.com/CamilaFernandesdev/Vazoes_Futuras_Geracao_Hidreletrica/blob/main/Conceito.md",
+          "icon": "open_in_new"
+        }
+      ],
+      "institutions": [
+        {
+          "name": "Copel GeT",
+          "type": "empresa",
+          "url": "https://www.copel.com",
+          "logoUrl": "https://www.copel.com/favicon.ico"
         }
       ]
     },
@@ -52,6 +169,14 @@
           "url": "https://roottech.net/",
           "icon": "language"
         }
+      ],
+      "institutions": [
+        {
+          "name": "ROOT TECHNOLOGY",
+          "type": "empresa",
+          "url": "https://roottech.net/",
+          "logoUrl": null
+        }
       ]
     },
     {
@@ -69,6 +194,14 @@
           "label": "GitHub",
           "url": "https://github.com/CamilaFernandesdev/project_iphone_bootcamp",
           "icon": "code"
+        }
+      ],
+      "institutions": [
+        {
+          "name": "Santander Bootcamp",
+          "type": "empresa",
+          "url": "https://www.santander.com.br",
+          "logoUrl": null
         }
       ]
     },
@@ -93,92 +226,15 @@
           "url": "https://github.com/CamilaFernandesdev/dashboard_holoviz",
           "icon": "code"
         }
-      ]
-    },
-    {
-      "title": "App Flutter para e-commerce",
-      "date": "2025",
-      "category": "Mobile",
-      "projectType": "mobile",
-      "slug": "ecommerce-app",
-      "thumbnailLabel": "E-commerce",
-      "description": "Aplicativo de vendas com carrinho, pagamento e gestão de pedidos. Inclui catálogo de produtos, busca, favoritos e notificações push.",
-      "imageUrls": [
-        "https://picsum.photos/seed/ecom1/800/500",
-        "https://picsum.photos/seed/ecom2/800/500",
-        "https://picsum.photos/seed/ecom3/800/500"
       ],
-      "stack": ["Flutter", "Dart", "Firebase", "Stripe", "GetX"],
-      "projectLinks": [
-        { "label": "GitHub", "url": "https://github.com", "icon": "code" },
-        { "label": "Demo", "url": "https://example.com/demo", "icon": "play_circle_filled" }
+      "institutions": [
+        {
+          "name": "Copel",
+          "type": "empresa",
+          "url": "https://www.copel.com",
+          "logoUrl": "https://www.copel.com/favicon.ico"
+        }
       ]
-    },
-    {
-      "title": "Dashboard de analytics",
-      "date": "2025",
-      "category": "Web",
-      "projectType": "web",
-      "slug": "dashboard-analytics",
-      "thumbnailLabel": "Dashboard",
-      "description": "Painel de métricas e visualização de dados em tempo real. Gráficos interativos, filtros por período e exportação de relatórios.",
-      "imageUrls": [
-        "https://picsum.photos/seed/dash1/800/500",
-        "https://picsum.photos/seed/dash2/800/500"
-      ],
-      "stack": ["React", "TypeScript", "Chart.js", "Node.js", "PostgreSQL"],
-      "projectLinks": [
-        { "label": "GitHub", "url": "https://github.com", "icon": "code" },
-        { "label": "Site", "url": "https://example.com", "icon": "language" }
-      ]
-    },
-    {
-      "title": "Pipeline de dados com Python",
-      "date": "2024",
-      "category": "Dados",
-      "projectType": "dados",
-      "slug": "pipeline-dados",
-      "thumbnailLabel": "Dados",
-      "description": "ETL, análise exploratória e relatórios automatizados.",
-      "imageUrls": [],
-      "stack": [],
-      "projectLinks": []
-    },
-    {
-      "title": "API e integrações",
-      "date": "2024",
-      "category": "Web",
-      "projectType": "web",
-      "slug": "api-integrations",
-      "thumbnailLabel": "API",
-      "description": "REST API e integração com sistemas externos.",
-      "imageUrls": [],
-      "stack": [],
-      "projectLinks": []
-    },
-    {
-      "title": "Landing page responsiva",
-      "date": "2024",
-      "category": "Web",
-      "projectType": "web",
-      "slug": "landing-page",
-      "thumbnailLabel": "Web",
-      "description": "Página de conversão responsiva e acessível.",
-      "imageUrls": [],
-      "stack": [],
-      "projectLinks": []
-    },
-    {
-      "title": "App nativo iOS (Swift)",
-      "date": "2024",
-      "category": "Mobile",
-      "projectType": "mobile",
-      "slug": "app-ios",
-      "thumbnailLabel": "Mobile",
-      "description": "Aplicativo nativo para iOS com Swift e SwiftUI.",
-      "imageUrls": [],
-      "stack": [],
-      "projectLinks": []
     }
   ]
 }
