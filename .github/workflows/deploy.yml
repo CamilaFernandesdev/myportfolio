@@ -12,8 +12,6 @@ concurrency:
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   deploy:
@@ -29,9 +27,11 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.24.0"
-          channel: "stable"
+          channel: stable
           cache: true
+
+      - name: Enable Flutter web
+        run: flutter config --enable-web
 
       - name: Build Flutter Web
         run: |
@@ -40,6 +40,9 @@ jobs:
           flutter build web --release --web-renderer html --base-href /${{ github.event.repository.name }}/
         env:
           CI: true
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
