@@ -28,14 +28,25 @@ jobs:
           cd flutter_web
           flutter config --enable-web
           flutter pub get
-          flutter build web --release --base-href /${{ github.event.repository.name }}/
+          # Projeto: base em /myportfolio/; se for site de usuário (.github.io), use /
+          BASE_HREF="/${{ github.event.repository.name }}/"
+          flutter build web --release --base-href "$BASE_HREF"
+
+      - name: Verificar index.html
+        run: |
+          ls -la flutter_web/build/web/
+          test -f flutter_web/build/web/index.html || (echo "ERRO: index.html não encontrado" && exit 1)
+
+      - name: Copiar site para raiz do artefato
+        run: |
+          cp -r flutter_web/build/web _site
 
       - uses: actions/configure-pages@v4
 
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: flutter_web/build/web
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment

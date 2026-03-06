@@ -27,7 +27,7 @@ class AppTheme {
           onBackground: _onBackground,
         ),
         textTheme: _textTheme,
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
           elevation: 0,
           scrolledUnderElevation: 0,
