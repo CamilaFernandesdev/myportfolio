@@ -38,7 +38,7 @@ jobs:
         run: |
           cd flutter_web
           flutter pub get
-          flutter build web --release --web-renderer html --base-href /${{ github.event.repository.name }}/
+          flutter build web --release --base-href /${{ github.event.repository.name }}/
         env:
           CI: true
 
