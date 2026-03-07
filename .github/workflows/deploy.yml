@@ -28,7 +28,7 @@ jobs:
           flutter config --enable-web
           flutter pub get
           BASE_HREF="/${{ github.event.repository.name }}/"
-          flutter build web --release --base-href "$BASE_HREF" --web-renderer html
+          flutter build web --release --base-href "$BASE_HREF"
 
       - name: Verificar index.html
         run: |
