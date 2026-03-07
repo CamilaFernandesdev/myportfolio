@@ -1,6 +1,6 @@
-# Portfolio Flutter Web
+# myportfolio
 
-Projeto Flutter configurado para **web**, parte do repositório myportfolio.
+Portfólio em Flutter Web (projeto na raiz do repositório).
 
 ## Pré-requisitos
 
@@ -12,8 +12,9 @@ Projeto Flutter configurado para **web**, parte do repositório myportfolio.
 
 ## Como rodar
 
+Na raiz do repositório:
+
 ```bash
-cd flutter_web
 flutter pub get
 flutter run -d chrome
 ```
@@ -36,6 +37,17 @@ Os arquivos estarão em `build/web/`.
 
 ## Estrutura
 
-- `lib/main.dart` — ponto de entrada e app (contador de exemplo)
+- `lib/main.dart` — ponto de entrada e app do portfólio
+- `lib/data/` — dados (portfolio_data.dart, loaders)
+- `lib/pages/` — páginas (portfólio, projetos, detalhe do projeto)
+- `lib/widgets/` — seções e componentes (hero, about, stack, projetos, CTA, footer, nav)
+- `lib/theme/` — tema (app_theme.dart)
 - `web/index.html` — página HTML de entrada para a web
 - `web/manifest.json` — manifest PWA
+- `assets/` — JSON (portfolio.json, projects.json) e imagens; ver [assets/README.md](assets/README.md)
+
+## Deploy (GitHub Pages)
+
+O deploy é feito por **GitHub Actions** ao dar push na branch `main`. Em **Settings → Pages** use **Source: GitHub Actions**.
+
+**URL do site:** https://camilafernandesdev.github.io/myportfolio/
