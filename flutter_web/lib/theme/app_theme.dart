@@ -23,8 +23,6 @@ class AppTheme {
           onSurface: _onBackground,
           onSurfaceVariant: _onSurfaceVariant,
           outline: Color(0xFFE0E0E5),
-          background: _background,
-          onBackground: _onBackground,
         ),
         textTheme: _textTheme,
         appBarTheme: AppBarTheme(

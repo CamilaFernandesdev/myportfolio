@@ -1,4 +1,3 @@
-import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import '../data/portfolio_data.dart';
@@ -350,22 +349,4 @@ class _ProjectCardState extends State<_ProjectCard> {
       ),
     );
   }
-}
-
-class _MiniDotsPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    if (size.width <= 0 || size.height <= 0) return;
-    final rng = math.Random(42);
-    for (var i = 0; i < 50; i++) {
-      final x = rng.nextDouble() * size.width;
-      final y = rng.nextDouble() * size.height;
-      final paint = Paint()
-        ..color = const Color(0xFF4285F4).withValues(alpha: 0.2);
-      canvas.drawCircle(Offset(x, y), 1.5, paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }

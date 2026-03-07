@@ -1,4 +1,4 @@
-// ignore: avoid_web_libraries_in_flutter
+// ignore_for_file: avoid_web_libraries_in_flutter, deprecated_member_use
 import 'dart:html' as html;
 
 /// Carrega asset via HTTP no Flutter Web (evita bug do path assets/assets/).
