@@ -3,8 +3,12 @@ import 'dart:js_interop';
 import 'package:web/web.dart' as web;
 
 /// Carrega asset via HTTP no Flutter Web (evita bug do path assets/assets/).
+/// Garante base com barra final para que assets resolvam corretamente em .../myportfolio (sem /).
 Future<String> loadAssetString(String path) async {
-  final url = Uri.base.resolve(path).toString();
+  final base = Uri.base;
+  final pathSegments = base.path.endsWith('/') ? base.path : '${base.path}/';
+  final baseWithSlash = base.replace(path: pathSegments);
+  final url = baseWithSlash.resolve(path).toString();
   final response = await web.window.fetch(url.toJS).toDart;
   if (!response.ok) {
     throw Exception('Failed to load $path: ${response.status}');
