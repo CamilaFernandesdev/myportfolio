@@ -14,8 +14,79 @@ import 'widgets/footer_section.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await PortfolioData.load();
-  runApp(const MyApp());
+  try {
+    await PortfolioData.load();
+    runApp(const MyApp());
+  } catch (e, st) {
+    runApp(_ErrorApp(message: e.toString(), stack: st.toString()));
+  }
+}
+
+/// Tela exibida se o carregamento do portfólio falhar (evita tela branca).
+class _ErrorApp extends StatelessWidget {
+  const _ErrorApp({required this.message, required this.stack});
+
+  final String message;
+  final String stack;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Erro ao carregar o portfólio',
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF1A1A1A),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    message,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Color(0xFF5F5F67),
+                      fontFamily: 'monospace',
+                    ),
+                  ),
+                  if (stack.isNotEmpty) ...[
+                    const SizedBox(height: 16),
+                    const Text(
+                      'Detalhes (desenvolvedor):',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF1A1A1A),
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    SelectableText(
+                      stack,
+                      style: const TextStyle(
+                        fontSize: 11,
+                        color: Color(0xFF5F5F67),
+                        fontFamily: 'monospace',
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
