@@ -1,12 +1,14 @@
-// ignore_for_file: avoid_web_libraries_in_flutter, deprecated_member_use
-import 'dart:html' as html;
+import 'dart:js_interop';
+
+import 'package:web/web.dart' as web;
 
 /// Carrega asset via HTTP no Flutter Web (evita bug do path assets/assets/).
 Future<String> loadAssetString(String path) async {
   final url = Uri.base.resolve(path).toString();
-  final request = await html.HttpRequest.request(url);
-  if (request.status != 200) {
-    throw Exception('Failed to load $path: ${request.status}');
+  final response = await web.window.fetch(url.toJS).toDart;
+  if (!response.ok) {
+    throw Exception('Failed to load $path: ${response.status}');
   }
-  return request.responseText ?? '';
+  final jsText = await response.text().toDart;
+  return jsText.toDart;
 }
